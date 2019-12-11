@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html data-env='production' lang='en' xml:lang='en'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"faaaef6476","applicationID":"1135420","transactionName":"cAkNR0ENXQpXF0tJDUASEBxACl4R","queueTime":0,"applicationTime":93,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwYHUF9ACQIDUVVQBw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
+<script>
+  window.__o = {"channel":"culture","content_type":"article","v_buy_i":null,"h_pub_buy":null,"v_cur_i":0,"v_max_i":0,"events":"","top_channel":"culture","content_source_type":"Internal","content_source_name":"Internal","author_name":"Amanda Luz Henning Santiago","age":"0","pub_day":24,"pub_month":9,"pub_year":2018,"pub_date":"09/24/2018","sourced_from":"Internal","isPostView":true,"post_lead_type":"No Lead Image","topics":"culture,gritty,hockey,mascot,nightmare,sports,web-culture","campaign":null,"display_mode":null,"viral_video_type":null,"standalone_video_show":null,"b_flag":false,"cms_author_name":null,"cms_author_geo":"us","cms_author_team":"Edit","bp_id":81307,"shoppable":null,"voice":"Mashable","level_of_effort":"Less than one hour","content_format":"Article","video_platform_target":null,"key_topics":["Sports","Web Culture"],"job_function":"Fun/Entertaining"};
+  window._gaq = window._gaq || [];
+  window._gaq.push(['_setAccount', 'UA-92124-1']);
+  window._geo = "US";
+  window.__domStart = (new Date().getTime())
+  window.optimizely = [["setCookieExpiration", 730]];
+  !function(){var n;return n={},window.getExperimentValue=function(e,t,u){var r,i;return i=n[e]&&null!=n[e][t]&&n[e][t]||u,null!=(r="function"==typeof i?i():void 0)?r:i},window.setExperimentValue=function(e,t,u){return n[e]||(n[e]={}),n[e][t]=u}}();
+  var adonis = adonis || {};
+  adonis.conditionalAdRendering = true;
+  adonis.transport = 'https://www.adiode.com/http';
+  adonis.scriptResources = ['c.amazon-adsystem.com/aax2/', 'js-sec.indexww.com/ht/'];
+</script>
+<title>The Philadelphia Flyers revealed their new, horrifying mascot, Gritty</title>
+<link href="https://a.amz.mshcdn.com/assets/app-dfc54d8da91ae878ef784b3f3a7e03c71b7f8d8407f9faaebb0b402e8a16153c.css" media="screen" rel="stylesheet" />
+<link href="https://a.amz.mshcdn.com/assets/csshake-9978e12dfcbbd7a3e24796700c347b952e9abfe1a3158bcf694d2f7c99c90586.css" media="screen" rel="stylesheet" />
+<link href="https://a.amz.mshcdn.com/assets/posts-6b598e5fb5a0e30e679c58d1a1715746dee9b36a91d8d32973e7a04c5f7e1bb2.css" media="all" rel="stylesheet" />
+<link href='https://plus.google.com/113493854651753327245' rel='publisher'>
+<link href='http://feeds.mashable.com/Mashable' rel='alternate' title='Mashable' type='application/rss+xml'>
+<link href='https://mashable.com/apple-touch-icon-57x57.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='57x57'>
+<link href='https://mashable.com/apple-touch-icon-60x60.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='60x60'>
+<link href='https://mashable.com/apple-touch-icon-72x72.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='72x72'>
+<link href='https://mashable.com/apple-touch-icon-76x76.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='76x76'>
+<link href='https://mashable.com/apple-touch-icon-114x114.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='114x114'>
+<link href='https://mashable.com/apple-touch-icon-120x120.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='120x120'>
+<link href='https://mashable.com/apple-touch-icon-144x144.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='144x144'>
+<link href='https://mashable.com/apple-touch-icon-152x152.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='152x152'>
+<link href='https://mashable.com/apple-touch-icon-180x180.png?v=m2Pmw8zNwl' rel='apple-touch-icon' sizes='180x180'>
+<link href='https://mashable.com/favicon-32x32.png?v=m2Pmw8zNwl' rel='icon' sizes='32x32' type='image/png'>
+<link href='https://mashable.com/android-chrome-192x192.png?v=m2Pmw8zNwl' rel='icon' sizes='192x192' type='image/png'>
+<link href='https://mashable.com/favicon-96x96.png?v=m2Pmw8zNwl' rel='icon' sizes='96x96' type='image/png'>
+<link href='https://mashable.com/favicon-16x16.png?v=m2Pmw8zNwl' rel='icon' sizes='16x16' type='image/png'>
+<link href='https://mashable.com/manifest.json?v=m2Pmw8zNwl' rel='manifest'>
+<link href='https://mashable.com/favicon.ico?v=m2Pmw8zNwl' rel='shortcut icon'>
+<link href='https://a.amz.mshcdn.com/assets/mashable.touchicon-85568436777b97f88ef7182140a53fd1a4f7cec7c0fa5568a3783fcdb0d08eb5.png' rel='apple-touch-icon-precomposed'>
+
+<meta content='no' name='apple-mobile-web-app-capable'>
+<meta content='MASHABLEV1' name='zd_ptax_version'>
+<meta content='culture,gritty,hockey,mascot,nightmare,sports,web-culture,sports,web culture' name='zd_ptax'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='#da532c' name='msapplication-TileColor'>
+<meta content='/mstile-144x144.png?v=m2Pmw8zNwl' name='msapplication-TileImage'>
+<meta content='#ffffff' name='theme-color'>
+<meta content='mid:12105681' name='linkedin:owner'>
+<meta content='122071082108' property='fb:app_id'>
+<meta content='18807449704' property='fb:page_id'>
+<meta content='nYmtX7H2sSCkK8gHpQGxr7Es2526DgUaqb6PGYSX' name='readability-verification'>
+<meta content='ISmVjY0eCaVFwlI2F32P2rGooLW0ZJi4tAbKmMAapzM' name='google-site-verification'>
+
+<link data-page-subject="true" href="https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying/" rel="canonical" /><link data-page-subject="true" href="https://i.amz.mshcdn.com/R8iGI0JGketzXco5GWnWrCJfZx0=/1200x627/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" rel="image_src" /><meta content="https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying/" data-page-subject="true" property="og:url" /><meta content="The Philadelphia Flyers have a new mascot, and WTF???" data-page-subject="true" property="og:title" /><meta content="article" data-page-subject="true" property="og:type" /><meta content="Mashable" data-page-subject="true" property="og:site_name" /><meta content="&#39;Nightmare fuel&#39;" data-page-subject="true" property="og:description" /><meta content="https://i.amz.mshcdn.com/0loKTC9unYiDK3Z7WWB4dUweN9Q=/1200x630/2018%2F09%2F24%2F3c%2F36016bcb8fe947b2b69c1ac171d594e1.fa029.jpg" data-page-subject="true" property="og:image" /><meta content="2018-09-24T17:10:17Z" data-page-subject="true" property="og:article:published_time" /><meta content="2018-09-24T17:10:45Z" data-page-subject="true" property="og:article:modified_time" /><meta content="https://www.facebook.com/mashable" data-page-subject="true" property="og:article:publisher" /><meta content="The Philadelphia Flyers&#39; new mascot Gritty has been soliciting a lot of strong reactions from the internet after his reveal." data-page-subject="true" name="description" /><meta content="sports, hockey, mascot, nightmare, gritty, culture, web-culture" data-page-subject="true" name="keywords" /><meta content="The Philadelphia Flyers have a new mascot, and WTF???" data-page-subject="true" name="twitter:title" /><meta content="&#39;Nightmare fuel&#39;" data-page-subject="true" name="twitter:description" /><meta content="https://i.amz.mshcdn.com/Fa22xko1DuNp4YfZOt7DBnYM_hY=/640x360/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-page-subject="true" name="twitter:image" /><meta content="@mashable" data-page-subject="true" name="twitter:site" /><meta content="mashable" data-page-subject="true" name="twitter:via" /><meta content="https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying/" data-page-subject="true" name="twitter:url" /><meta content="@mashable" data-page-subject="true" name="twitter:creator" /><meta content="photo" data-page-subject="true" name="twitter:card" /><meta content="640" data-page-subject="true" name="twitter:image:width" /><meta content="360" data-page-subject="true" name="twitter:image:height" /><meta content="2018-09-24 17:10:17 UTC" data-page-subject="true" name="date" /><meta content="Amanda Luz Henning Santiago" data-page-subject="true" name="sailthru.author" /><meta content="https://i.amz.mshcdn.com/G_L5Tmvuapn1KF-KprcgKqA4qow=/115x115/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-page-subject="true" name="sailthru.image.thumb" /><meta content="https://i.amz.mshcdn.com/NQ9dXkICOYTSqPgkkotjFPm4GrY=/950x534/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-page-subject="true" name="sailthru.image.full" /><meta content="https://i.amz.mshcdn.com/nOEvD67edB-14Okg-ugC4DoWYFk=/600x338/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-page-subject="true" name="sailthru.lead_image" /><meta content="https://i.amz.mshcdn.com/Nnvt06VE26k6W24PLG0zxCzfb-4=/288x162/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-page-subject="true" name="sailthru.secondary_image" /><meta content="false" data-page-subject="true" name="sailthru.exclude_homepage" /><meta content="false" data-page-subject="true" name="sailthru.exclude_uk" /><meta content="false" data-page-subject="true" name="sailthru.exclude_australia" /><meta content="false" data-page-subject="true" name="sailthru.exclude_india" /><meta content="false" data-page-subject="true" name="sailthru.exclude_india" /><meta content="culture,gritty,hockey,mascot,nightmare,sports,web-culture" data-page-subject="true" name="sailthru.tags" /><meta content="The Philadelphia Flyers have a new mascot, and WTF???" data-page-subject="true" name="sailthru.title" /><meta content="2018-09-24 17:10:17 UTC" data-page-subject="true" name="sailthru.date" /><meta content="Amanda Luz Henning Santiago" data-page-subject="true" name="author" /><script type="application/ld+json">{"@context":"http://schema.org","headline":"The Philadelphia Flyers revealed their new, horrifying mascot, Gritty","url":"https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying/","keywords":["sports","hockey","mascot","nightmare","gritty","culture","web-culture"],"@type":"Article","mainEntityOfPage":"True","publisher":{"@type":"Organization","name":"Mashable","url":"https://mashable.com","logo":{"@type":"ImageObject","url":"https://a.amz.mshcdn.com/assets/mashable-publisher-logo-d1800cc5b71606b40182307b4f7158b5dbb17dee6b9c4b612a40c0be40c60bbc.png","width":"357","height":"60"}},"dateCreated":"2018-09-24T17:10:17.999Z","datePublished":"2018-09-24T17:10:17.999Z","author":"Amanda Luz Henning Santiago","creator":"Amanda Luz Henning Santiago","dateModified":"2018-09-24T17:10:45.579Z","articleSection":"culture"}</script><meta content="{&quot;page&quot;:1,&quot;omnitureData&quot;:{&quot;channel&quot;:&quot;culture&quot;,&quot;content_type&quot;:&quot;article&quot;,&quot;v_buy_i&quot;:null,&quot;h_pub_buy&quot;:null,&quot;v_cur_i&quot;:0,&quot;v_max_i&quot;:0,&quot;events&quot;:&quot;&quot;,&quot;top_channel&quot;:&quot;culture&quot;,&quot;content_source_type&quot;:&quot;Internal&quot;,&quot;content_source_name&quot;:&quot;Internal&quot;,&quot;author_name&quot;:&quot;Amanda Luz Henning Santiago&quot;,&quot;age&quot;:&quot;0&quot;,&quot;pub_day&quot;:24,&quot;pub_month&quot;:9,&quot;pub_year&quot;:2018,&quot;pub_date&quot;:&quot;09/24/2018&quot;,&quot;sourced_from&quot;:&quot;Internal&quot;,&quot;isPostView&quot;:true,&quot;post_lead_type&quot;:&quot;No Lead Image&quot;,&quot;topics&quot;:&quot;culture,gritty,hockey,mascot,nightmare,sports,web-culture&quot;,&quot;campaign&quot;:null,&quot;display_mode&quot;:null,&quot;viral_video_type&quot;:null,&quot;standalone_video_show&quot;:null,&quot;b_flag&quot;:false,&quot;cms_author_name&quot;:null,&quot;cms_author_geo&quot;:&quot;us&quot;,&quot;cms_author_team&quot;:&quot;Edit&quot;,&quot;bp_id&quot;:81307,&quot;shoppable&quot;:null,&quot;voice&quot;:&quot;Mashable&quot;,&quot;level_of_effort&quot;:&quot;Less than one hour&quot;,&quot;content_format&quot;:&quot;Article&quot;,&quot;video_platform_target&quot;:null,&quot;key_topics&quot;:[&quot;Sports&quot;,&quot;Web Culture&quot;],&quot;job_function&quot;:&quot;Fun/Entertaining&quot;}}" name="parsely-metadata" /><script type="application/javascript">window.digitalData={"page":{"pageInfo":{"title":"The Philadelphia Flyers have a new mascot, and WTF???","slug":"philadelphia-flyers--mascot-gritty-is-horrifying","lead_type":"No Lead Image","channel":"culture","supported":false,"sponsored":false,"sensitive":false,"tags":["sports","hockey","mascot","nightmare","gritty","culture","sports","web-culture"],"voice":"Mashable","level_of_effort":"Less than one hour","content_format":"Article","video_platform_target":null,"key_topics":["Sports","Web Culture"],"job_function":"Fun/Entertaining"}}}</script><meta content="500945955060" property="fb:pages" /><meta content="783687755045531" property="fb:pages" /><meta content="1588247311398272" property="fb:pages" /><meta content="509566152532329" property="fb:pages" /><meta content="1598012253812197" property="fb:pages" /><meta content="335422937918" property="fb:pages" /><meta content="340410803690" property="fb:pages" /><meta content="10150118108915437" property="fb:pages" /><meta content="1705722619660593" property="fb:pages" /><meta content="1540370916252268" property="fb:pages" /><meta content="597623103592762" property="fb:pages" /><meta content="320998960486" property="fb:pages" /><meta content="1890822731197902" property="fb:pages" /><meta content="1612601102326559" property="fb:pages" /><meta content="1433510483565957" property="fb:pages" /><meta content="139498499419544" property="fb:pages" /><meta content="282071091819646" property="fb:pages" /><meta content="18807449704" property="fb:pages" /><meta content="315957273077" property="fb:pages" /><meta content="108273123135" property="fb:pages" /><meta content="356739731067762" property="fb:pages" />
+
+<script src='https://cdn.optimizely.com/js/58011369.js'></script>
+<script src='https://content.jwplatform.com/libraries/hrrl7x1B.js'></script>
+<script debug="false" src="https://a.amz.mshcdn.com/assets/advertisement-05dc9dd632adb4df020fc426e931cbf5c678486fac51ea65ff563a9f577dc7bc.js"></script>
+<script debug="false" src="https://a.amz.mshcdn.com/assets/templates-26cbfba0c7461fa61b0d2f27996dcccd90b0065c6a4c2dd6aa759996ab75608d.js"></script>
+<script src="https://a.amz.mshcdn.com/assets/app-aff7019674df6c7c1cd492866c6d0e802b1345c81cf64b0597d256708cf572b5.js"></script>
+<link href='https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying.amp' rel='amphtml'>
+
+</head>
+<body class='body_posts body_show' data-campaign='none' data-caninterrupt data-jsid='posts/show' data-postid='bp81307' data-sec0='culture' data-sec1='' data-sec2='posts' viewport='fixed'>
+<script src='https://cdn.static.zdbb.net/js/z0WVjCBSEeGLoxIxOQVEwQ.min.js' type='text/javascript'></script>
+<script async='true' src='https://cdn.ziffstatic.com/jst/zdconsent.js' type='text/javascript'></script>
+<noscript>
+<img alt='' height='1' src='https://zdbb.net/l/z0WVjCBSEeGLoxIxOQVEwQ' style='display: none;' width='1'>
+</noscript>
+
+<script async='async' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' type='text/javascript'></script>
+<script>
+  mashKit.gdpr.trackerFactory(function() {
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({ appId: "bb9dd396-47e2-47c6-a971-56482269a79b" });
+    });
+  }).render();
+</script>
+
+<h1 class='semantic'>Mashable</h1>
+<header id='flyout-container'></header>
+<div id='peek'>
+<div id='sticky'>
+<div class='cookie-notice'>
+<div class='wrap'>
+We're using cookies to improve your experience.
+<a class="cta" href="/cookie-policy/">Click Here to find out more.</a>
+<div class='dismiss'></div>
+</div>
+</div>
+
+
+<header id='site-header'><div class='navbar'>
+<div class='navbar-inner'><ul class='inline main-menu nav us'>
+<li class='menu'><a class='icon-reorder' href='#'></a></li>
+<li class='logo us'><a class='brand' data-turbo-target='body-container' href='/'><span>Mashable</span>
+<img alt="Header logo.v2.us 6653972cc831bd09732d26dc9da67bd6be0c4d2b28757f116791336ccf2146ec" class="light" src="https://a.amz.mshcdn.com/assets/header_logo.v2.us-6653972cc831bd09732d26dc9da67bd6be0c4d2b28757f116791336ccf2146ec.png" /><img alt="Header logo.v2.us.dark dd0a18bfb3d211980944b582cfc03c24db96b9069f2a3234fb6cf064c72f58aa" class="dark" src="https://a.amz.mshcdn.com/assets/header_logo.v2.us.dark-dd0a18bfb3d211980944b582cfc03c24db96b9069f2a3234fb6cf064c72f58aa.png" /></a>
+<div class='geos-content'>
+<a class='geo' href='?geo=AS&amp;utm_cid=mash-prod-nav-geo' onclick='$.cookie(&quot;geo&quot;,&quot;AS&quot;)'>Mashable Asia</a>
+<a class='geo' href='?geo=AU&amp;utm_cid=mash-prod-nav-geo' onclick='$.cookie(&quot;geo&quot;,&quot;AU&quot;)'>Mashable Australia</a>
+<a class='geo' href='?geo=IN&amp;utm_cid=mash-prod-nav-geo' onclick='$.cookie(&quot;geo&quot;,&quot;IN&quot;)'>Mashable India</a>
+<a class='geo' href='?geo=GB&amp;utm_cid=mash-prod-nav-geo' onclick='$.cookie(&quot;geo&quot;,&quot;GB&quot;)'>Mashable UK</a>
+</div></li>
+<li class='submenu collapsable pull-right' id='sign-in'><a href='/login/'><span>Sign in</span></a></li>
+<li class='follow submenu follow-menu pull-right'><a class='follow-trigger' href='/follow-mashable/'><span class='fb'></span>
+<span class='tw'></span>
+<span class='gp'></span></a>
+<div class='dropdown-menu pull-right social-badges'>
+<ul>
+<li class='facebook-container'>
+<a class='social-stub social-share facebook like' data-default='1' data-href='https://facebook.com/mashable' data-shares='2.4m'>Like</a>
+</li>
+<li>
+<a class='twitter-follow-button' data-dnt='true' data-show-count='true' data-show-screen-name='false' href='https://twitter.com/mashable'>
+Follow
+</a>
+</li>
+<li class='linked-in'>
+<script data-counter='right' data-id='200000' type='IN/FollowCompany'></script>
+</li>
+<li>
+<iframe allowtransparency='true' border='0' frameborder='0' height='20' id='tmblrFollowBtn' scrolling='no' width='100'></iframe>
+</li>
+<li>
+<div class='pinterest'>
+<a data-pin-do='buttonFollow' href='https://www.pinterest.com/Mashable/'>
+Mashable
+</a>
+</div>
+</li>
+<li>
+<a alt='RSS Feed' class='rss' href='http://feeds.mashable.com/Mashable' title='RSS Feed'></a>
+<a alt='Email Subscriptions' class='email' href='/subscriptions/' title='Email Subscriptions'></a>
+<div class='more'>
+<a href="/follow-mashable">see more&nbsp;&nbsp;&gt;</a>
+</div>
+</li>
+</ul>
+</div></li>
+<li class='nav-search submenu pull-right'><a class='search-trigger' href='/search/'>Search</a>
+<div class='dropdown-content'>
+<div class='page-container'>
+<div class='header-search-form'>
+<form accept-charset="UTF-8" action="/search/" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div><div class='ie-search-wrapper'><input autocomplete="off" class="header-search" id="q" name="q" type="text" value="" /></div>
+<input class="btn btn-primary header-search-submit" name="commit" type="submit" value="Search" />
+</form><div class='header-search-results'></div>
+</div>
+</div>
+</div></li>
+<li class='channel' data-channel='Video' data-tags='mashable-video,scamalot,plugged-in,tl-dw,wtf-history'><a href="/videos/?utm_cid=mash-prod-nav-ch">Video</a></li>
+<li class='collapsable channel submenu' data-channel='Entertainment' data-tags='movies,gaming,television'><a href="/entertainment/?utm_cid=mash-prod-nav-ch">Entertainment</a><div class='submenu-content'>
+<div>
+<div class='page-container'>
+<ul class='channels'>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="movies" href="/category/movies/?utm_cid=mash-prod-nav-sub">Movies</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="gaming" href="/category/gaming/?utm_cid=mash-prod-nav-sub">Gaming</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="television" href="/category/television/?utm_cid=mash-prod-nav-sub">Television</a>
+</li>
+</ul>
+</div>
+</div>
+</div></li>
+<li class='collapsable channel submenu' data-channel='Culture' data-tags='web-culture,sex,celebrities,memes,parenting,social-media'><a href="/culture/?utm_cid=mash-prod-nav-ch">Culture</a><div class='submenu-content'>
+<div>
+<div class='page-container'>
+<ul class='channels'>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="web-culture" href="/category/web-culture/?utm_cid=mash-prod-nav-sub">Web Culture</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="sex" href="/category/sex/?utm_cid=mash-prod-nav-sub">Sex &amp; Relationships</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="celebrities" href="/category/celebrities/?utm_cid=mash-prod-nav-sub">Celebrities</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="memes" href="/category/memes/?utm_cid=mash-prod-nav-sub">Memes</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="parenting" href="/category/parenting/?utm_cid=mash-prod-nav-sub">Parenting</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="social-media" href="/category/social-media/?utm_cid=mash-prod-nav-sub">Social Media</a>
+</li>
+</ul>
+</div>
+</div>
+</div></li>
+<li class='collapsable channel submenu' data-channel='Tech' data-tags='business,apps,gadgets,reviews,mobile,smart-home,how-to,mashable-choice'><a href="/tech/?utm_cid=mash-prod-nav-ch">Tech</a><div class='submenu-content'>
+<div>
+<div class='page-container'>
+<ul class='channels'>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="business" href="/business/?utm_cid=mash-prod-nav-sub">Business</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="apps" href="/category/apps/?utm_cid=mash-prod-nav-sub">Apps</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="gadgets" href="/category/gadgets/?utm_cid=mash-prod-nav-sub">Gadgets</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="reviews" href="/category/reviews/?utm_cid=mash-prod-nav-sub">Reviews</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="mobile" href="/category/mobile/?utm_cid=mash-prod-nav-sub">Mobile</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="smart-home" href="/category/smart-home/?utm_cid=mash-prod-nav-sub">Smart Home</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="how-to" href="/category/how-to/?utm_cid=mash-prod-nav-sub">How To</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="mashable-choice" href="/category/mashable-choice/?utm_cid=mash-prod-nav-sub">Mashable Choice</a>
+</li>
+</ul>
+</div>
+</div>
+</div></li>
+<li class='collapsable channel submenu' data-channel='Science' data-tags='climate,space'><a href="/science/?utm_cid=mash-prod-nav-ch">Science</a><div class='submenu-content'>
+<div>
+<div class='page-container'>
+<ul class='channels'>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="climate" href="/category/climate/?utm_cid=mash-prod-nav-sub">Climate</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="space" href="/category/space/?utm_cid=mash-prod-nav-sub">Space</a>
+</li>
+</ul>
+</div>
+</div>
+</div></li>
+<li class='collapsable channel submenu' data-channel='Social Good' data-tags='lgbtq,feminism,gender-equality,activism,charity'><a href="/social-good/?utm_cid=mash-prod-nav-ch">Social Good</a><div class='submenu-content'>
+<div>
+<div class='page-container'>
+<ul class='channels'>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="lgbtq" href="/category/lgbtq/?utm_cid=mash-prod-nav-sub">LGBTQ</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="feminism" href="/category/feminism/?utm_cid=mash-prod-nav-sub">Feminism</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="gender-equality" href="/category/gender-equality/?utm_cid=mash-prod-nav-sub">Gender Equality</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="activism" href="/category/activism/?utm_cid=mash-prod-nav-sub">Activism</a>
+</li>
+<li>
+<a class="subnav-channel" data-cid="nav-sub" data-tag="charity" href="/category/charity/?utm_cid=mash-prod-nav-sub">Non-profits</a>
+</li>
+</ul>
+</div>
+</div>
+</div></li>
+<li class='submenu shopping'><a href='/category/mashable-shopping'><!-- %span=t "header.nav.shopping" -->
+<span>Shop</span></a>
+<div class='submenu-content'>
+<div class='page-container'>
+<ul class='columns'><li><ul class='column-list'>
+<li class='header'><a href="/category/vpn">VPN</a></li><li><a href="/2018/05/23/best-vpns-on-reddit-pia-purevpn-expressvpn/">Best VPN</a></li><li><a href="/roundup/best-vpns-for-china/">Best VPN for China</a></li><li><a href="/2018/02/18/best-vpn-for-mac/">Best VPN for Mac</a></li><li><a href="/2018/07/12/best-vpn-for-netflix-2018/">Best VPN for Netflix</a></li><li><a href="/2018/06/05/best-vpns-for-kodi-cyberghost-pia-nordvpn/">Best VPN for Kodi</a></li><li><a href="/2018/05/31/best-cheap-vpn-services/">Best Cheap VPN</a></li></ul></li><li><ul class='column-list'>
+<li class='header'><a href="/category/headphones">Headphones</a></li><li><a href="/roundup/best-headphones/">Best Headphones</a></li><li><a href="/roundup/best-headphones-for-running/">Best Running Headphones</a></li><li><a href="/2018/05/15/best-headphones-under-100-cheap-headphones/">Best Cheap Headphones</a></li><li><a href="/roundup/best-wireless-headphones/">Best Wireless Headphones</a></li><li><a href="/2018/05/31/best-on-ear-headphones-reviews/">Best On Ear Headphones</a></li><li><a href="/2018/05/09/best-noise-cancelling-headphones-earbuds-bose-sony-beats/">Best Noise-Cancelling Headphones</a></li></ul></li><li><ul class='column-list'>
+<li class='header'><a href="/category/speakers">Speakers</a></li><li><a href="/roundup/best-bluetooth-speakers/">Best Bluetooth Speakers</a></li><li><a href="/2018/05/23/cheap-bluetooth-speakers-online-reviews/">Best Cheap Bluetooth Speakers</a></li><li><a href="/2018/07/13/best-outdoor-speakers/">Best Outdoor Speakers</a></li><li><a href="/roundup/best-portable-bluetooth-speakers/">Best Portable Bluetooth Speakers</a></li><li><a href="/2018/02/13/best-smart-speakers-amazon-reviews/">Best Smart Speakers</a></li><li><a href="/article/amazon-all-new-echo-review/">Amazon Echo Review</a></li></ul></li><li><ul class='column-list'>
+<li class='header'><a href="/category/dating">Dating</a></li><li><a href="/roundup/best-dating-sites/">Best Dating Sites</a></li><li><a href="/roundup/dating-apps-hater-tinder-grindr-match/">Best Dating Apps</a></li><li><a href="/roundup/best-hookup-apps/">Best Hookup Apps</a></li><li><a href="/roundup/best-sexting-apps-pof-tinder-confide-match/">Best Sexting Apps</a></li><li><a href="/roundup/best-gay-dating-apps/">Best Gay Dating Apps</a></li><li><a href="/roundup/best-dating-sites-apps-working-professionals/">Best Dating Sites for Professionals</a></li></ul></li><li><ul class='column-list'>
+<li class='header'><a href="/category/laptops">Laptops</a></li><li><a href="/roundup/best-cheap-laptops-under-500/">Best Cheap Laptops</a></li><li><a href="/roundup/best-laptops-for-students/">Best Laptops for Students</a></li><li><a href="/2018/05/11/best-chromebooks-2018/">Best Chromebooks</a></li><li><a href="/2018/04/26/dell-xps-13-2018-review/">Dell XPS 13 Review</a></li><li><a href="/2018/07/16/razer-blade-15-2018-review/">Razor Blade 15 Review</a></li></ul></li></ul>
+</div>
+</div></li>
+<li class='submenu more'><a href='#'><!-- %span=t "header.nav.more" -->
+<span>More</span></a>
+<div class='submenu-content'>
+<div class='page-container'>
+<ul class='columns'><li><ul class='column-list'><li class='header'>Channels</li>
+<li><a href="/videos/">Video</a></li><li><a href="/entertainment/">Entertainment</a></li><li><a href="/culture/">Culture</a></li><li><a href="/tech/">Tech</a></li><li><a href="/science/">Science</a></li><li><a href="/social-good/">Social Good</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Company</li><li><a href="/about/">About Us</a></li><li><a href="http://www.wrightsmedia.com/sites/mashable/">Licensing &amp; Reprints</a></li><li><a href="/2015/">Archive</a></li><li><a href="/careers/">Mashable Careers</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Contact</li><li><a href="/contact-us/">Contact Us</a></li><li><a href="/submit/">Submit News</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Advertise</li><li><a href="/advertise/">Advertise</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Legal</li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/cookie-policy/">Cookie Policy</a></li><li><a href="/accessibility-statement/">Accessibility Statement</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Resources</li><li><a href="/category/travel/">Travel</a></li><li><a href="/category/security/">Security</a></li><li><a href="/category/how-to/">How To</a></li><li><a href="/category/mashable-shopping/">Mashable Deals</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Sites</li><li><a href="http://jobs.mashable.com">Job Board</a></li><li><a href="/sgs/">Social Good Summit</a></li></ul></li></ul>
+</div>
+</div></li>
+</ul></div>
+</div>
+<div id='sticky-slot'></div></header>
+</div>
+<div id='scrollable'><div class='loader'></div>
+<div id='srvSlot' style='position: absolute'><div class="ad_container ad-slot" data-overrides="{&quot;targeting&quot;:{&quot;tile&quot;:4,&quot;adnum&quot;:4,&quot;sec0&quot;:&quot;culture&quot;,&quot;sec1&quot;:&quot;&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:&quot;bp81307&quot;,&quot;posts&quot;:&quot;none&quot;}}" data-type="survey"></div></div>
+<header class='box970' id='lead-banner'>
+<div class='page-container'><center class='visible-desktop'>
+<div class="ad_container ad-slot" data-overrides="{&quot;targeting&quot;:{&quot;tile&quot;:5,&quot;adnum&quot;:1,&quot;sec0&quot;:&quot;culture&quot;,&quot;sec1&quot;:&quot;&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:&quot;bp81307&quot;,&quot;posts&quot;:&quot;none&quot;}}" data-type="desktop_banner"></div>
+</center></div>
+</header><div class='posts show' id='body-container'><div id='main'>
+<div class='page-container'>
+
+<div class='body'><hgroup class='channel page-header post-head' data-channel='culture' data-section='sec0=&amp;sec1=index&amp;sec2='>
+<h2>Culture</h2>
+<div class='follow-channel'>
+<div class='follow-buttons'>
+<a class='social-stub social-share facebook like' data-default='1' data-href='https://facebook.com/mashable' data-shares='1.7m'>Like</a>
+<a class='social-stub social-share twitter follow' data-shares='3.7m' href='https://twitter.com/intent/follow?region=follow_link&amp;screen_name=mashable&amp;tw_p=followbutton&amp;variant=2.0' target='_blank'>Follow</a>
+<a class='social-stub social-share google_plus follow' data-shares='7.1m' href='https://plus.google.com/+Mashable/auto' target='_blank'>Follow</a>
+</div>
+</div>
+</hgroup>
+
+<div class='flex-box article-container'>
+<div class='box-cell'>
+<div class='post-content'>
+<script>
+  window.variationsData = []
+</script>
+<div class='post-slider'><article class='blueprint full post story' data-bp-id='81307' data-campaign='none' data-channel='culture' data-id='5ba91a79f11b2c0721000025' data-story-type='standard' data-subchannels='' data-topic='' data-velocity='0'>
+<header class='article-header'>
+<h1 class='title' href='https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying/'>The Philadelphia Flyers have a new mascot, and WTF???</h1>
+<script>
+  window.variationsTitleElem = 'article header h1.title';
+</script>
+<aside class='shares social'>
+<div class='share-buttons'>
+<div class='share-button-boxy'><a class="social-stub social-share facebook" data-image="https://i.amz.mshcdn.com/kaR2fOMsvcS5Zp8gKMts_AMB7Y0=/1200x630/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-shares="274" data-title="The Philadelphia Flyers have a new mascot, and WTF???" data-uid="l9p" href="#" title="Like on Facebook">Share</a></div>
+<div class='share-button-boxy'><a class="social-stub social-share twitter" data-shares="0" data-tweet-text="The Philadelphia Flyers have a new mascot, and WTF???" data-uid="l9p" href="https://twitter.com/intent/tweet?original_referer=https://mashable.com/&amp;source=tweetbutton&amp;text=The+Philadelphia+Flyers+have+a+new+mascot%2C+and+WTF%3F%3F%3F&amp;url=https%3A%2F%2Fmashable.com%2Farticle%2Fphiladelphia-flyers--mascot-gritty-is-horrifying&amp;via=mashable" title="Tweet on Twitter">Tweet</a></div>
+<div class='share-button-boxy'><a class="social-stub social-share google_plus" data-image="https://i.amz.mshcdn.com/kaR2fOMsvcS5Zp8gKMts_AMB7Y0=/1200x630/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-shares="0" data-title="The Philadelphia Flyers have a new mascot, and WTF???" data-uid="l9p" href="#" title="+1 on Google+">Share</a></div>
+<div class='share-button-boxy'><a class="social-stub social-share linked_in" data-image="https://i.amz.mshcdn.com/kaR2fOMsvcS5Zp8gKMts_AMB7Y0=/1200x630/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-shares="0" data-title="The Philadelphia Flyers have a new mascot, and WTF???" data-uid="l9p" href="#" title="Share on LinkedIn"></a></div>
+<div class='share-button-boxy'><a class="social-stub social-share stumble_upon" data-image="https://i.amz.mshcdn.com/kaR2fOMsvcS5Zp8gKMts_AMB7Y0=/1200x630/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-shares="0" data-title="The Philadelphia Flyers have a new mascot, and WTF???" data-uid="l9p" href="#" title="Submit to Stumbleupon"></a></div>
+<div class='share-button-boxy'><a class="social-stub social-share pinterest" data-image="https://i.amz.mshcdn.com/kaR2fOMsvcS5Zp8gKMts_AMB7Y0=/1200x630/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg" data-shares="0" data-title="The Philadelphia Flyers have a new mascot, and WTF???" data-uid="l9p" href="#" title="Pin to Pinterest"></a></div>
+</div>
+<div class='velocity-graph tooltip-trigger' title='The Mashable Velocity graph shows how quickly people are sharing this article on the social Web.'>
+<canvas class='velocity'></canvas>
+<div class='caption'>What&#39;s This?</div>
+</div>
+</aside>
+
+
+<figure class='article-image'></figure>
+<div class="article-info"><span class="byline "><a href="/author/amanda-henning/"><img alt="2018%2f07%2f27%2fa0%2fscreenshot20180711at4.45.35pm.85f8d" class="author_image" src="https://i.amz.mshcdn.com/XgvEq2pbi6RMXJUhPMVTXmPIipA=/90x90/2018%2F07%2F27%2Fa0%2FScreenShot20180711at4.45.35PM.85f8d.png" /></a><span class="author_name">By <a href="/author/amanda-henning/">Amanda Luz Henning Santiago</a></span><time datetime="Mon, 24 Sep 2018 17:10:17 +0000">2018-09-24 17:10:17 UTC</time></span></div>
+
+</header>
+<section class="article-content blueprint">
+
+<p __label="main">The Philadelphia Flyers revealed its new mascot Gritty ??? and he will haunt you for the rest of your foreseeable days.</p>
+<p __label="main">The scraggly, googly-eyed, orange-haired mascot was made public Monday morning, and looks like the result of an unholy union between the Babadook and a Muppet from Fraggle Rock.</p>
+<div class="see-also"><p class="see-also-link" style="display: block;">SEE ALSO: <a href="http://mashable.com/article/mascot-shoots-himself-with-t-shirt-gun?utm_cid=a-seealso">Try not to wince watching this mascot accidentally shoot himself with a T-shirt gun</a></p><div class="inline-ad-seealso"><div id="gpt-ad-7" adonis-marker="" data-slot="article_inline_video_see_also" class="ad_container gpt" style="text-align: center;"><script>mashKit.util.viewable.watch("gpt-ad-7").then(function() {
+      mashKit.ads.slot.display("gpt-ad-7", "article_inline_video_see_also", "4585/mash.to/culture/undefined_300x1_7");
+    });</script></div></div></div>
+<p __label="main">Gritty is probably the last thing anyone needs, or wants to see at any sports arena. But hey, here we are.</p>
+<div class="twitter-wrapper sort-rerender"><div><twitterwidget class="twitter-tweet twitter-tweet-rendered" id="twitter-widget-0" style="position: static; visibility: visible; display: block; transform: rotate(0deg); max-width: 100%; width: 500px; min-width: 220px; margin-top: 10px; margin-bottom: 10px;" data-tweet-id="1044244550485774336"></twitterwidget></div></div>
+<p __label="main">Though, perhaps worse than the mascot's appearance is his name. According to the Flyers' <a href="https://www.nhl.com/flyers/fans/gritty" target="_blank">website</a>, Gritty got his, uh, unique nickname "for possessing an attitude so similar to the team he follows."&nbsp;</p>
+<p __label="main">That makes sense, I suppose. But the website also contains some additional and somewhat troubling information regarding Gritty's backstory, like the fact that his father was a "bully," he eats ice straight from the Zamboni machine, and has a voracious love of hot dogs.&nbsp;</p>
+<p __label="main">Really makes you wonder whose job it is to create mascots, and whether or not they're OK.</p>
+<p __label="main">Naturally, the internet has been having some pretty strong reactions to Gritty's reveal, wavering from frightened to slightly less frightened, calling Gritty both "nightmare fuel" and "an absolute dream haunter."&nbsp;</p>
+<p __label="main">The sports blog <a href="https://www.crossingbroad.com/2018/09/the-flyers-new-mascot-is-here-to-murder-you.html" target="_blank">Crossing Broad</a> even published an article titled, "The Flyers??? New Mascot Is Here To Murder You." And, honestly, I don't know that they're wrong.</p>
+<div class="twitter-wrapper sort-rerender"><div><twitterwidget class="twitter-tweet twitter-tweet-rendered" id="twitter-widget-1" style="position: static; visibility: visible; display: block; transform: rotate(0deg); max-width: 100%; width: 500px; min-width: 220px; margin-top: 10px; margin-bottom: 10px;" data-tweet-id="1044250303783145475"></twitterwidget></div></div>
+<div class="twitter-wrapper sort-rerender"><div><twitterwidget class="twitter-tweet twitter-tweet-rendered" id="twitter-widget-2" style="position: static; visibility: visible; display: block; transform: rotate(0deg); max-width: 100%; width: 500px; min-width: 220px; margin-top: 10px; margin-bottom: 10px;" data-tweet-id="1044251178001944582"></twitterwidget></div></div>
+<div class="twitter-wrapper sort-rerender"><div><twitterwidget class="twitter-tweet twitter-tweet-rendered" id="twitter-widget-3" style="position: static; visibility: visible; display: block; transform: rotate(0deg); max-width: 100%; width: 500px; min-width: 220px; margin-top: 10px; margin-bottom: 10px;" data-tweet-id="1044252386125139968"></twitterwidget></div></div>
+<div class="twitter-wrapper sort-rerender"><div><twitterwidget class="twitter-tweet twitter-tweet-rendered" id="twitter-widget-4" style="position: static; visibility: visible; display: block; transform: rotate(0deg); max-width: 100%; width: 500px; min-width: 220px; margin-top: 10px; margin-bottom: 10px;" data-tweet-id="1044251916992217088"></twitterwidget></div></div>
+<div class="twitter-wrapper sort-rerender"><div><twitterwidget class="twitter-tweet twitter-tweet-rendered" id="twitter-widget-5" style="position: static; visibility: visible; display: block; transform: rotate(0deg); max-width: 100%; width: 500px; min-width: 220px; margin-top: 10px; margin-bottom: 10px;" data-tweet-id="1044250042557771776"></twitterwidget></div></div>
+<div class="twitter-wrapper sort-rerender"><div><twitterwidget class="twitter-tweet twitter-tweet-rendered" id="twitter-widget-6" style="position: static; visibility: visible; display: block; transform: rotate(0deg); max-width: 100%; width: 500px; min-width: 220px; margin-top: 10px; margin-bottom: 10px;" data-tweet-id="1044254743391023104"></twitterwidget></div></div>
+<p __label="main">Welp, looks like Gritty's here to stay. Here's hoping he cheers the Flyers onto victory and is unable to enter into our unconscious without our consent.</p>
+<div class="bonus-video-card">
+<h2 class="title"><a href="https://mashable.com/video/the-shining-bad-foley?utm_cid=a-bonusvideo" target="_blank">WATCH: We made that scene from 'The Shining' a lot less scary with bad foley</a></h2>
+<div class="content-mash-video" data-source="blueprint" data-template="bonus" data-video="xgldO58zn7"><div data-reactroot=""><div class="mash-video-player" id="jw-xgldO58zn7" data-jwplayer-id="jw-xgldO58zn7" style="background-image: url(&quot;https://i.amz.mshcdn.com/lhfCnZa2aaEultqMsmmyRhc41ok=/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fvideo_uploaders%2Fdistribution_thumb%2Fimage%2F86358%2Ff80bf62c-6d8b-40e0-ad0e-5afc9560a88c.png&quot;);"><div class="spin-loader"></div></div><noscript>Javascript is required to watch this video</noscript></div></div>
+</div>
+<script>      window._msla=window.loadScriptAsync||function(src,id){if(document.getElementById(id))return;var js=document.createElement('script');js.id=id;js.src=src;document.getElementsByTagName('script')[0].parentNode.insertBefore(js,fjs);};
+_msla("https://platform.twitter.com/widgets.js","twitter_jssdk");</script>
+
+
+
+</section><div class='fb-quote'></div><footer class='article-topics'>
+Topics:
+<a href="/category/culture/">Culture</a>, <a href="/category/gritty/">gritty</a>, <a href="/category/hockey/">hockey</a>, <a href="/category/mascot/">mascot</a>, <a href="/category/nightmare/">nightmare</a>, <a href="/category/sports/">Sports</a>
+</footer>
+<footer>
+<div class='image-credit'>
+Image:  GrittyNHL/twitter
+</div>
+</footer>
+<div class='2017-boost-slot'><div class="ad_container ad-slot" data-overrides="{&quot;targeting&quot;:{&quot;tile&quot;:1,&quot;adnum&quot;:1,&quot;sec0&quot;:&quot;culture&quot;,&quot;sec1&quot;:&quot;&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:&quot;bp81307&quot;,&quot;posts&quot;:&quot;none&quot;}}" data-type="btf_article_mobile_rec"></div></div>
+<div id='after-page-recirc'></div>
+<div class="zerg-widgets"><div class="zergnet-container" data-zsection="61187" id="zergnet-widget-61187"></div><div class="zergnet-container" data-zsection="64649" id="zergnet-widget-64649"></div></div>
+<div data-display-daily-newsletter="hide" id="newsletter-signup"></div>
+<script>
+  if (window.pageChanged) {
+    window.omni({"channel":"culture","content_type":"article","v_buy_i":null,"h_pub_buy":null,"v_cur_i":0,"v_max_i":0,"events":"","top_channel":"culture","content_source_type":"Internal","content_source_name":"Internal","author_name":"Amanda Luz Henning Santiago","age":"0","pub_day":24,"pub_month":9,"pub_year":2018,"pub_date":"09/24/2018","sourced_from":"Internal","isPostView":true,"post_lead_type":"No Lead Image","topics":"culture,gritty,hockey,mascot,nightmare,sports,web-culture","campaign":null,"display_mode":null,"viral_video_type":null,"standalone_video_show":null,"b_flag":false,"cms_author_name":null,"cms_author_geo":"us","cms_author_team":"Edit","bp_id":81307,"shoppable":null,"voice":"Mashable","level_of_effort":"Less than one hour","content_format":"Article","video_platform_target":null,"key_topics":["Sports","Web Culture"],"job_function":"Fun/Entertaining"});
+    metaData = {"link":[["canonical","https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying/"],["image_src","https://i.amz.mshcdn.com/R8iGI0JGketzXco5GWnWrCJfZx0=/1200x627/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg"]],"meta_property":[["og:url","https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying/"],["og:title","The Philadelphia Flyers have a new mascot, and WTF???"],["og:type","article"],["og:site_name","Mashable"],["og:description","'Nightmare fuel'"],["og:image","https://i.amz.mshcdn.com/0loKTC9unYiDK3Z7WWB4dUweN9Q=/1200x630/2018%2F09%2F24%2F3c%2F36016bcb8fe947b2b69c1ac171d594e1.fa029.jpg"],["og:article:published_time","2018-09-24T17:10:17Z"],["og:article:modified_time","2018-09-24T17:10:45Z"],["og:article:publisher","https://www.facebook.com/mashable"]],"meta_name":[["description","The Philadelphia Flyers&#39; new mascot Gritty has been soliciting a lot of strong reactions from the internet after his reveal."],["keywords","sports, hockey, mascot, nightmare, gritty, culture, web-culture"],["twitter:title","The Philadelphia Flyers have a new mascot, and WTF???"],["twitter:description","'Nightmare fuel'"],["twitter:image","https://i.amz.mshcdn.com/Fa22xko1DuNp4YfZOt7DBnYM_hY=/640x360/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg"],["twitter:site","@mashable"],["twitter:via","mashable"],["twitter:url","https://mashable.com/article/philadelphia-flyers--mascot-gritty-is-horrifying/"],["twitter:creator","@mashable"],["twitter:card","photo"],["twitter:image:width","640"],["twitter:image:height","360"],["date","2018-09-24 17:10:17 UTC"],["sailthru.author","Amanda Luz Henning Santiago"],["sailthru.image.thumb","https://i.amz.mshcdn.com/G_L5Tmvuapn1KF-KprcgKqA4qow=/115x115/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg"],["sailthru.image.full","https://i.amz.mshcdn.com/NQ9dXkICOYTSqPgkkotjFPm4GrY=/950x534/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg"],["sailthru.lead_image","https://i.amz.mshcdn.com/nOEvD67edB-14Okg-ugC4DoWYFk=/600x338/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg"],["sailthru.secondary_image","https://i.amz.mshcdn.com/Nnvt06VE26k6W24PLG0zxCzfb-4=/288x162/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fstory%2Fthumbnail%2F81307%2F36016bcb-8fe9-47b2-b69c-1ac171d594e1.jpg"],["sailthru.exclude_homepage",false],["sailthru.exclude_uk",false],["sailthru.exclude_australia",false],["sailthru.exclude_india",false],["sailthru.exclude_india",false],["sailthru.tags","culture,gritty,hockey,mascot,nightmare,sports,web-culture"],["sailthru.title","The Philadelphia Flyers have a new mascot, and WTF???"],["sailthru.date","2018-09-24T17:10:17.999Z"],["author","Amanda Luz Henning Santiago"]]};
+  }
+  
+  mashKit.gdpr.trackerFactory(function() {
+    dom_trackers = {
+      ad_tracker: null,
+      iframes: null,
+      images: null,
+      simplereach: null
+    };
+    for (var tracker in dom_trackers) {
+      $('section.article-content').append(dom_trackers[tracker]);
+    }
+    $('head').append(null)
+  }).render();
+</script>
+</article>
+<div id='after-page-mobile-recirc'></div>
+</div>
+</div>
+</div>
+<aside class='box-cell sidebar'>
+<div class='ad sidebar-inset sidebar-drop'>
+<div class="ad_container ad-slot" data-overrides="{&quot;targeting&quot;:{&quot;tile&quot;:2,&quot;adnum&quot;:1,&quot;sec0&quot;:&quot;culture&quot;,&quot;sec1&quot;:&quot;&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:&quot;bp81307&quot;,&quot;posts&quot;:&quot;none&quot;}}" data-type="right_rail"></div>
+
+</div>
+<div class='sidebar-inset' id='big-stories'></div>
+<div class='zerg-container'>
+<div id='zergnet-widget-28849'></div>
+</div>
+</aside>
+</div>
+<div id='pathing-banner'></div>
+<div id='pathing-recirc'></div>
+
+<!-- Analytics -->
+
+<!-- Twitter Ad Tracker -->
+<noscript>
+<img alt='' height='1' src='https://analytics.twitter.com/i/adsct?txn_id=l4o6d&amp;p_id=Twitter' style='display:none;' width='1'>
+<img alt='' height='1' src='https://t.co/i/adsct?txn_id=l4o6d&amp;p_id=Twitter' style='display:none;' width='1'>
+</noscript>
+<img class='bluekai-test-img' height='0' src='https://mashable.com/favicon-16x16.png?bk_uuid=$_BK_UUID&amp;BK_SWAP_DEST=19275' width='0'>
+</div>
+</div>
+<!-- scroll load stub - do not remove -->
+<div class='after-page-container'></div>
+<script id='banner-template' type='text/template'>
+<div class='banner-ad-wrapper'>
+<div class="ad_container ad-slot" data-overrides="{&quot;targeting&quot;:{&quot;tile&quot;:3,&quot;adnum&quot;:3,&quot;sec0&quot;:&quot;culture&quot;,&quot;sec1&quot;:&quot;&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:&quot;bp81307&quot;,&quot;posts&quot;:&quot;none&quot;,&quot;ad_num&quot;:1,&quot;pathing&quot;:true,&quot;pathingtype&quot;:&quot;article&quot;}}" data-type="banner"></div>
+</div>
+</script>
+
+</div><div id='fb-root'></div><script>
+  if(window.initPage) { window.initPage() }
+  else { $(function() { window.initPage && window.initPage(); })}
+</script>
+</div><footer id='site-footer-wrapper'>
+<div class='page-container' id='site-footer'><ul class='nav'><li><a href="/about/">About Us</a></li><li><a href="http://jobs.mashable.com">Jobs</a></li><li><a href="/advertise/">Advertise</a></li><li><a href="/2011/05/09/connect-with-mashable/">Subscribe</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li></ul><ul class='social'><li><a class='facebook' href='https://www.facebook.com/mashable/' target='_social'></a></li>
+<li><a class='twitter' href='https://twitter.com/mashable' target='_social'></a></li>
+<li><a class='gplus' href='https://plus.google.com/+Mashable' target='_social'></a></li>
+<li><a class='rss' href='http://feeds.mashable.com/Mashable' target='_social'></a></li>
+<li><a class='pinterest' href='https://pinterest.com/mashable/' target='_social'></a></li>
+<li><a class='youtube' href='https://www.youtube.com/user/mashable' target='_social'></a></li>
+<li><a class='stumbleupon' href='https://www.stumbleupon.com/channel/Mashable' target='_social'></a></li>
+<li><a class='linkedin' href='https://www.linkedin.com/company/mashable' target='_social'></a></li></ul>
+<div class='about'>
+<a class='brand' href='/'>
+Mashable
+</a>
+<span class='blurb'>is a global, multi-platform media and entertainment company. Powered by its own proprietary technology, Mashable is the go-to source for tech, digital culture and entertainment content for its dedicated and influential audience around the globe.</span>
+</div>
+<div class='copyright-and-legal'>
+<div>
+&copy;2018
+Mashable, Inc. All Rights Reserved.
+</div>
+<div>
+Mashable, MashBash and Mashable House are among the federally registered trademarks of Ziff Davis, LLC and may not be used by third parties without explicit permission.
+</div>
+</div>
+</div>
+
+</footer>
+
+<noscript>
+<img src='https://sb.scorecardresearch.com/p?c1=2&amp;c2=8750086&amp;cv=2.0&amp;cj=1'>
+</noscript>
+</div>
+</div>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1453039084979896');
+  if (window.mashKit) {
+    mashKit.gdpr.trackerFactory(function() {
+      fbq('track', "PageView");
+    }).render();
+  }
+</script>
+<noscript>
+<img height='1' src='https://www.facebook.com/tr?id=1453039084979896&amp;ev=PageView&amp;noscript=1' style='display: none' width='1'>
+</noscript>
+
+<script>
+  window.detectStaffEditableLink && window.detectStaffEditableLink();
+</script>
+<script>
+  if(!window.cnxCommonUtils) {
+    window.cnxCommonUtils = {
+      getHref: function() {
+        return document.location.href;
+      }
+    }
+  }
+  if(!window.getExperimentValue('vendors', 'disableScript', '').match(/connatix/)) {
+    (function(){
+      var s = document.createElement('script');
+      s.async = true;
+      s.type = 'text/javascript';
+      s.src = 'https://cdn.connatix.com/min/connatix.handler.dfp.min.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+    })();
+  }
+</script>
+
+</body>
+</html>

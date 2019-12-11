@@ -1,0 +1,659 @@
+<html><head>
+
+  
+ <style type="text/css">
+<!--
+*
+{
+    visibility: visible !important;
+    overflow: visible !important;
+    user-select:normal !important;
+    -moz-user-select:normal !important;
+    -webkit-user-select:normal !important;
+    user-focus:normal !important;
+    -moz-user-focus:normal !important;
+    -webkit-user-focus:normal !important;
+    filter:none !important;
+}
+BODY {
+    overflow: auto !important;
+}
+
+.x-nc-sel0 { text-decoration:none; display:block !important; visibility:visible !important; }
+.x-nc-sel1 { text-decoration:none; background-color: #42ffa1 !important; color: black !important; display:block !important; visibility:visible !important; }
+.x-nc-sel2 { text-decoration:none; background-color: #ffff42 !important; color: black !important; display:block !important; visibility:visible !important; }
+.x-nc-sel3 { text-decoration:none; background-color: #ff42ff !important; color: black !important; display:block !important; visibility:visible !important; }
+.x-nc-sel4 { text-decoration:none; background-color: #ffa142 !important; color: black !important; display:block !important; visibility:visible !important; }
+.x-nc-sel5 { text-decoration:none; background-color: #00ffff !important; color: black !important; display:block !important; visibility:visible !important; }
+
+BODY.x-nc-linearized *
+{
+    float: none !important;
+    position: static !important;
+    overflow: visible !important;
+}
+BODY.x-nc-linearized DIV {
+    width:auto !important;
+    height:auto !important;
+}
+
+BODY.x-nc-linearized table, BODY.x-nc-linearized tbody, BODY.x-nc-linearized td, BODY.x-nc-linearized tfoot, BODY.x-nc-linearized th, BODY.x-nc-linearized thead, BODY.x-nc-linearized tr
+{
+    display: block !important;
+    position: static !important;
+}
+
+-->
+</style>
+
+
+
+<title>
+Bloomberg.com:             Muse
+</title>
+<link media="screen" type="text/css" href="/styles/main2.css" rev="stylesheet06/homepage/bbganywhere2.gif" usemap="#bba">
+
+</head><body>
+<div id="log">
+</div>
+<div id="updatebar">
+<div class="updatetext">
+<b>
+<span x-text-density="1.0" x-link-density="0.0">Updated:&nbsp;&nbsp;</span>
+</b>
+<b>
+<span x-text-density="2.0" x-link-density="0.0">New York</span>
+</b>
+<span x-text-density="3.0" x-link-density="0.0">,       Jan 16 06:47</span>
+</div>
+<div class="updatetext">
+<b>
+<span x-text-density="1.0" x-link-density="0.0">London</span>
+</b>
+<span x-text-density="3.0" x-link-density="0.0">,       Jan 16 11:47</span>
+</div>
+<div class="updatetext">
+<b>
+<span x-text-density="1.0" x-link-density="0.0">Tokyo</span>
+</b>
+<span x-text-density="3.0" x-link-density="0.0">,       Jan 16 20:47</span>
+</div>
+<form accept-charset="UTF-8" action="javascript:void(0)" id="sitesearch" name="search">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="middle">
+<td>
+<img src="http://images.bloomberg.com/r06/homepage/searchnews.gif" width="82" border="0" height="10" hspace="6">
+
+</td>
+<td>
+<input maxlength="256" size="32" name="q" class="grayfield" type="text">
+
+<input class="x-nc-invisible">
+
+<input class="x-nc-invisible">
+
+<input class="x-nc-invisible">
+
+<input class="x-nc-invisible">
+
+<input class="x-nc-invisible">
+
+<input class="x-nc-invisible">
+
+<input class="x-nc-invisible">
+
+<input class="x-nc-invisible">
+
+<input class="x-nc-invisible">
+
+</td>
+<td>
+<input src="http://images.bloomberg.com/r06/navigation/btn-go.gif" value="submit" name="submit" autocomplete="off" type="image">
+
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+<div id="tickerbar">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td>
+<form name="quotesresearch">
+<table id="tickerbarform" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="middle">
+<td>
+<a href="javascript:void(0)" >
+<img src="http://images.bloomberg.com/r06/navigation/helpquestion.gif" width="13" border="0" height="13" hspace="5">
+
+</a>
+</td>
+<td>
+<input value="Enter Symbol" class="grayfield" id="myticker" name="myticker" size="25" autocomplete="off">
+
+</td>
+<td>
+<input value="quote" src="http://images.bloomberg.com/r06/navigation/quote_quote_btn.gif" type="image" hspace="6">
+
+</td>
+<td>
+<input value="charts" src="http://images.bloomberg.com/r06/navigation/quote_chart_btn.gif" type="image" hspace="6">
+
+</td>
+<td>
+<input value="news" src="http://images.bloomberg.com/r06/navigation/quote_news_btn.gif" type="image" hspace="6">
+
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img src="http://images.bloomberg.com/r06/navigation/symlookup.gif" width="50" border="0" height="27" hspace="6">
+
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</td>
+<td>
+<div id="ticker">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="graybottom leaderboard">
+<noscript class="x-nc-invisible">
+</noscript>
+</div>
+<div id="navbar">
+<div id="nav">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<a href="javascript:void(0)" >
+<img id="menu8" name="menu8" src="http://images.bloomberg.com/r06/navigation/home-off.gif" width="70" border="0" height="28">
+
+</a>
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img name="but1" src="http://images.bloomberg.com/r06/navigation/news-on.gif" width="69" border="0" height="28">
+
+</a>
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img name="but2" src="http://images.bloomberg.com/r06/navigation/market-data-off.gif" width="125" border="0" height="28">
+
+</a>
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img name="but3" src="http://images.bloomberg.com/r06/navigation/investment-off.gif" width="163" border="0" height="28">
+
+</a>
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img name="but4" src="http://images.bloomberg.com/r06/navigation/tv-radio-off.gif" width="113" border="0" height="28">
+
+</a>
+</td>
+<td>
+<img src="http://images.bloomberg.com/r06/global/1x1.gif" width="89" border="0" height="5">
+
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img id="menu5" name="menu5" src="http://images.bloomberg.com/r06/navigation/about-bbg-off.gif" width="159" border="0" height="28">
+
+</a>
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img id="menu6" name="menu6" src="http://images.bloomberg.com/r06/navigation/careers-off.gif" width="90" border="0" height="28">
+
+</a>
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img id="menu7" name="menu7" src="http://images.bloomberg.com/r06/navigation/contact-us-off.gif" width="108" border="0" height="28">
+
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<table class="graytop graybottom" id="primarystructure" width="992" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td id="ps1">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td width="154">
+<a href="javascript:void(0)" >
+<img src="http://images.bloomberg.com/r06/global/heading/news_hd.gif" width="154" border="0" height="54">
+
+</a>
+<div id="secondarynav">
+<ul class="news">
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Exclusive</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Worldwide</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Regions</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Markets</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Economy</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Politics</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Industries</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Opinion</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Invest</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Sports</span>
+</a>
+</li>
+<li class="secondaryOn">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Muse</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">Spend</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="3.0" x-link-density="1.0">Audio/Video Reports</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="3.0" x-link-density="1.0">Bloomberg Markets Magazine</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="2.0" x-link-density="1.0">Special Report</span>
+</a>
+</li>
+</ul>
+<br clear="all">
+<br>
+<div class="graytop padbox">
+<b class="resource">
+<span x-text-density="1.0" x-link-density="0.0">RESOURCES</span>
+</b>
+<br>
+<br>
+<ul>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="2.0" x-link-density="1.0">Bloomberg TV</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="2.0" x-link-density="1.0">Bloomberg Radio</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="2.0" x-link-density="1.0">Bloomberg Podcasts</span>
+</a>
+</li>
+<li class="secondary">
+<a href="javascript:void(0)" >
+<span x-text-density="2.0" x-link-density="1.0">Bloomberg Press</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+<td width="1" bgcolor="#464646">
+<img src="http://images.bloomberg.com/r06/global/odot.gif" width="1" border="0" height="1">
+
+</td>
+<td valign="top" width="515" bgcolor="#000000">
+<div class="articlepage">
+<br>
+<br>
+<div class="contentbox article">
+<span class="news_story_title">
+<span class="x-nc-sel2"><span x-text-density="10.0" x-link-density="0.0"><span class="x-nc-sel1">Sarkozy Ex-Wife Loses Bid to Bar Book's Distribution (Update4)</span></span></span>
+</span>
+<br>
+<br>
+<p>
+<span x-text-density="3.0" x-link-density="0.0">By Heather Smith</span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="12.5" x-link-density="0.0">Jan. 11 (Bloomberg) -- French President Nicolas Sarkozy's ex-wife lost a legal bid to block publication of a book that quotes her making critical comments about him.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="12.0" x-link-density="0.0">Judge Anne-Marie Sauteraud issued the seven-page ruling today on the suit that Cecilia Sarkozy, 50, filed Jan. 9, against journalist Anna Bitton and Paris publisher Flammarion SA.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="12.75" x-link-density="0.0">Excerpts of the book ``Cecilia,'' which went on sale Jan. 9 and ranked as the top-seller today on Amazon.com Inc.'s French site, cited comments attributed to her that criticized the president's personality and lifestyle. Her suit came a day after the 52-year-old president hinted he'll marry model-turned-singer Carla Bruni. The former first couple divorced in October.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="13.0" x-link-density="0.0">After noting protections given to ``every person, whatever his notoriety may be'' under French law, the judge wrote that ``certain news events or subjects of general interest can justify in any case a publication based on the public's right to know and the principles of freedom of expression.''</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="14.0" x-link-density="0.0">The lawsuit said the excerpts were evidence that the book ``constitutes an imminent danger and shows a violation of Mrs. Sarkozy's right to the respect of the intimacy of her private life.''</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="12.0" x-link-density="0.0">Cecilia Sarkozy, who sued under her maiden name of Ciganer- Albeniz, appealed the decision today, her lawyer, Michele Cahen, said in a telephone interview. ``This is a decision that is clearly contestable,'' Cahen said.</span></span>
+</p>
+<p>
+<span x-text-density="2.0" x-link-density="0.0">`Coherent Decision'</span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="13.5" x-link-density="0.0">``The book will be able to be published and sold'' while awaiting the appeal, which will likely be heard in several months, Christophe Bigot, a lawyer for Flammarion, said today in a telephone interview.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="13.5" x-link-density="0.0">Today's ruling ``is a coherent decision because Cecilia Sarkozy has put her own life in the public eye,'' Bigot said. Flammarion plans to present Bitton's interview notes as proof of the book's allegations, the lawyer said.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="12.25" x-link-density="0.0">Francois Mitterrand's family succeeded in banning the publication of ``The Big Secret,'' a book by the former president's doctor in January 1996. Mitterrand hid his 1981 diagnosis for prostate cancer and subsequent treatment throughout his 14-year presidency. He died in 1996, after Jacques Chirac was elected to succeed him.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="13.0" x-link-density="0.0">Claude Gubler, the president's doctor, said he had been asked not to mention in presidential health bulletins Mitterrand's diagnosis. Gubler's book appeared nine days after the former president died, detailing Mitterrand's illness and arguing that he wasn't able to fulfill his tasks starting in 1994, the year before he left office.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="13.0" x-link-density="0.0">French civil law is not guided by precedent as U.S. law often is.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="13.0" x-link-density="0.0">Yesterday's suit was the second time Cecilia Sarkozy has sought to keep a book off the market. In 2005, First Publishing's head Vincent Barbare suspended the distribution of ``Cecilia, Between Heart and Reason'' and 25,000 copies were stashed in a warehouse after he met with then Interior Minister Nicolas Sarkozy.</span></span>
+</p>
+<p>
+<span class="x-nc-sel2"><span x-text-density="12.0" x-link-density="0.0">To contact the reporter on this story: Heather Smith in Paris at</span></span>
+<span class="httplink">
+<a href="javascript:void(0)" >
+<span x-text-density="1.0" x-link-density="1.0">hsmith26@bloomberg.net</span>
+</a>
+</span>
+</p>
+<i>
+<span class="x-nc-sel2"><span x-text-density="7.0" x-link-density="0.0"><span class="x-nc-sel3">Last Updated: January 11, 2008  11:43 EST</span></span></span>
+</i>
+<p>
+</p>
+<table class="newstools" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td class="crNW">
+<img class="corner" src="http://images.bloomberg.com/r06/news/story_tl.gif" width="4" border="0" height="4">
+
+</td>
+<td rowspan="2">
+<img src="http://images.bloomberg.com/r06/news/news-tools.gif" width="65" border="0" height="15">
+
+</td>
+<td rowspan="2">
+<table class="newslinks" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr valign="middle">
+<td>
+<a href="javascript:void(0)" >
+<img src="http://images.bloomberg.com/r06/news/email_icon.gif" width="18" border="0" height="15" hspace="5">
+
+</a>
+</td>
+<td>
+<a class="block" href="javascript:void(0)" >
+<span x-text-density="3.0" x-link-density="1.0">Email this article</span>
+</a>
+</td>
+<td>
+<a href="javascript:void(0)" >
+<img src="http://images.bloomberg.com/r06/news/print_icon.gif" width="17" border="0" height="15" hspace="5">
+
+</a>
+</td>
+<td>
+<a class="block" href="javascript:void(0)" >
+<span x-text-density="3.0" x-link-density="1.0">Printer friendly format</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class="crNE" width="4" height="14">
+<img class="corner" src="http://images.bloomberg.com/r06/news/story_tr.gif" width="4" border="0" height="4">
+
+</td>
+</tr>
+<tr valign="bottom">
+<td class="crSW">
+<img class="corner" src="http://images.bloomberg.com/r06/news/story_bl.gif" width="4" border="0" height="4">
+
+</td>
+<td class="crSE">
+<img class="corner" src="http://images.bloomberg.com/r06/news/story_br.gif" width="4" border="0" height="4">
+
+</td>
+</tr>
+</tbody>
+</table>
+<div class="textad">
+<noscript class="x-nc-invisible">
+</noscript>
+</div>
+</div>
+<p>
+</p>
+<div style="background-color: white;">
+<img class="block" src="http://images.bloomberg.com/r06/global/1x1.gif" width="10" border="0" height="1">
+
+</div>
+</div>
+<div class="graytop">
+<div class="contentbox smallertext">
+<br>
+<br>
+<img src="http://images.bloomberg.com/r06/global/heading/sponsored-links.gif" width="117" border="0" height="18">
+
+<br>
+<br>
+<br>
+<br>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="1" bgcolor="#464646">
+<img src="http://images.bloomberg.com/r06/global/odot.gif" width="1" border="0" height="1">
+
+</td>
+<td valign="top" width="327" bgcolor="">
+<div class="ad">
+<noscript class="x-nc-invisible">
+</noscript>
+</div>
+<table width="327" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<div class="related_media_box">
+<br>
+<br>
+<div class="related_media_bar">
+<div class="sm_news_roundtop">
+<img class="x-nc-invisible">
+
+</div>
+<p>
+<span x-text-density="2.0" x-link-density="0.0">More News</span>
+</p>
+<div class="sm_news_roundbottom">
+<img class="x-nc-invisible">
+
+</div>
+</div>
+<div class="related_media_headlines">
+<ul class="headlines" id="headlines">
+<li class="headline">
+<a href="javascript:void(0)" >
+<span x-text-density="12.0" x-link-density="1.0">Oral Sex Among Teens Shouldn't Fluster Oprah: Ask the Undercover Economist</span>
+</a>
+</li>
+</ul>
+<ul class="headlines" id="headlines">
+<li class="headline">
+<a href="javascript:void(0)" >
+<span x-text-density="10.0" x-link-density="1.0">`Atonement,' Daniel Day-Lewis Nominated for BAFTA 2008 Awards in London</span>
+</a>
+</li>
+</ul>
+<ul class="headlines" id="headlines">
+<li class="headline">
+<a href="javascript:void(0)" >
+<span x-text-density="13.0" x-link-density="1.0">Forget Foam, Expect Fish, Chips in 2008, Say London's Chefs: Richard Vines</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="3" width="998">
+<div class="graytop">
+<div class="contentbox" id="footer">
+<div xmlns:webad="http://www.bloomberg.com/webad" id="footer_toprow">
+<a href="javascript:void(0)" >
+<img class="toprow_img" src="http://images.bloomberg.com/r06/navigation/bloomberg.gif" width="133" border="0" height="21">
+
+</a>
+<a href="javascript:void(0)" >
+<span x-text-density="9.0" x-link-density="0.8">NEWS</span>
+</a>
+<span x-text-density="9.0" x-link-density="0.8">|</span>
+<a href="javascript:void(0)" >
+<span x-text-density="9.0" x-link-density="0.8">MARKET DATA</span>
+</a>
+<span x-text-density="9.0" x-link-density="0.8">|</span>
+<a href="javascript:void(0)" >
+<span x-text-density="9.0" x-link-density="0.8">INVESTMENT TOOLS</span>
+</a>
+<span x-text-density="9.0" x-link-density="0.8">|</span>
+<a href="javascript:void(0)" >
+<span x-text-density="9.0" x-link-density="0.8">TV AND RADIO</span>
+</a>
+<span x-text-density="9.0" x-link-density="0.8">|</span>
+<a href="javascript:void(0)" >
+<span x-text-density="9.0" x-link-density="0.8">ABOUT BLOOMBERG</span>
+</a>
+<span x-text-density="9.0" x-link-density="0.8">|</span>
+<a href="javascript:void(0)" >
+<span x-text-density="9.0" x-link-density="0.8">CAREERS</span>
+</a>
+<span x-text-density="9.0" x-link-density="0.8">|</span>
+<a href="javascript:void(0)" >
+<span x-text-density="9.0" x-link-density="0.8">CONTACT US</span>
+</a>
+<span x-text-density="9.0" x-link-density="0.8">|</span>
+<a href="javascript:void(0)" >
+<span x-text-density="9.0" x-link-density="0.8">LOG IN/REGISTER</span>
+</a>
+</div>
+<span xmlns:webad="http://www.bloomberg.com/webad" class="imgcopyright">
+<img src="http://images.bloomberg.com/r06/navigation/copyright.gif" border="0">
+
+</span>
+<a xmlns:webad="http://www.bloomberg.com/webad" href="javascript:void(0)" >
+<span x-text-density="8.0" x-link-density="0.75757575">Terms of Service</span>
+</a>
+<span x-text-density="8.0" x-link-density="0.75757575">|</span>
+<a xmlns:webad="http://www.bloomberg.com/webad" href="javascript:void(0)" >
+<span x-text-density="8.0" x-link-density="0.75757575">Privacy Policy</span>
+</a>
+<span x-text-density="8.0" x-link-density="0.75757575">|</span>
+<a xmlns:webad="http://www.bloomberg.com/webad" href="javascript:void(0)" >
+<span x-text-density="8.0" x-link-density="0.75757575">Trademarks</span>
+</a>
+<span x-text-density="8.0" x-link-density="0.75757575">|</span>
+<a xmlns:webad="http://www.bloomberg.com/webad" href="javascript:void(0)" >
+<span x-text-density="8.0" x-link-density="0.75757575">Site Map</span>
+</a>
+<span x-text-density="8.0" x-link-density="0.75757575">|</span>
+<a xmlns:webad="http://www.bloomberg.com/webad" href="javascript:void(0)" >
+<span x-text-density="8.0" x-link-density="0.75757575">Help</span>
+</a>
+<span x-text-density="8.0" x-link-density="0.75757575">|</span>
+<a xmlns:webad="http://www.bloomberg.com/webad" href="javascript:void(0)" >
+<span x-text-density="8.0" x-link-density="0.75757575">Feedback</span>
+</a>
+<span x-text-density="8.0" x-link-density="0.75757575">|</span>
+<a xmlns:webad="http://www.bloomberg.com/webad" href="javascript:void(0)" >
+<span x-text-density="8.0" x-link-density="0.75757575">Advertising</span>
+</a>
+<span x-text-density="8.0" x-link-density="0.75757575">|</span>
+<a xmlns:webad="http://www.bloomberg.com/webad" href="javascript:void(0)" >
+<span x-text-density="8.0" x-link-density="0.75757575">??????</span>
+</a>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<script class="x-nc-invisible">
+</script>
+   
+</body></html>

@@ -1,0 +1,731 @@
+<html lang="en">
+ <body bgcolor="#ffffff">
+  <text encoding="utf8" id="http://www.programmersheaven.com/2/Whats-New-in-C-Sharp2-Misc-New-Feature" title="Whats-New-in-C-Sharp2-Misc-New-Feature at Programmers Heaven">
+   <title>
+    <span __boilernet_label="0">
+     &lt;span __num="0"&gt;     Whats-New-in-C-Sharp2-Misc-New-Feature at Programmers Heaven    &lt;/span&gt;
+    </span>
+   </title>
+   <div id="body">
+    <div id="header">
+     <a href="/">
+      <img alt="Programmers Heaven logo" class="logo" height="40" src="http://68.142.114.67/images/logothin.gif" width="781"/>
+     </a>
+     <div id="ad">
+      <a href="/aspnet/common/webcounter.aspx">
+       <img alt="" border="0" height="1" src="/images/spacer.gif" width="1"/>
+      </a>
+     </div>
+    </div>
+    <div id="content">
+     <div id="margin-left-right">
+      <br/>
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+       <h2>
+        <span __boilernet_label="1">
+         What’s New – C# 2.0 Series
+        </span>
+       </h2>
+       <p>
+        <span __boilernet_label="1">
+         In this C# what’s new series, we will introduce and discuss the new editions in C# 2.0 programming language. We will explain the new features like generics, partial classes, object oriented and other language enhancements and demonstrate it with sample source code. The series is most suitable for people who have worked with C# in Visual Studio.Net o r Visual Studio.Net 2003. However, people coming from different background like VB.Net, C++ and Java will also find it useful if they are planning to learn or move to C# in near future.
+        </span>
+       </p>
+       <p>
+       </p>
+       <h3>
+        <span __boilernet_label="1">
+         Miscellaneous Features
+        </span>
+       </h3>
+       <p>
+        <span __boilernet_label="1">
+         In this article about the new features of C# 2.0 programming language we will discuss features like Fixed sized buffers, Friend assemblies, extern keyword, #pragma warnings and :: operator (global keyword).
+        </span>
+       </p>
+       <p>
+       </p>
+       <h3>
+        <span __boilernet_label="1">
+         Fixed Sized Buffers
+        </span>
+       </h3>
+       <p>
+        <span __boilernet_label="1">
+         In C# 1.x, when we declare an array, it is merely a reference (or pointer) that points to a sequence of elements. For example if we declare a structure like this:
+        </span>
+       </p>
+       <p>
+       </p>
+       <pre class="sourcecode"><span __boilernet_label="1">    struct Test    {        char[] letters;    }</span></pre>
+       <p>
+        <span __boilernet_label="1">
+         It will only take 4 bytes in memory because what it contains is a reference (or pointer) which is of int type. Several times with legacy code written in C/C++ programming language we need to pass data structures which accepts the fixed sized buffers and not only the pointer of the buffer. C# 2.0 provides this feature with its ‘fixed sized buffers’ declared with the keyword ‘fixed’
+        </span>
+       </p>
+       <p>
+       </p>
+       <pre class="sourcecode"><span __boilernet_label="1">    struct Test    {        fixed char letters[10];    }</span></pre>
+       <p>
+        <span __boilernet_label="1">
+         Now the structure will take up 20 bytes (a Unicode character takes 2 bytes) in memory. But there are few important points and restrictions for using fixed sized buffers:
+        </span>
+       </p>
+       <p>
+       </p>
+       <ul>
+        <li>
+         <span __boilernet_label="1">
+          Fixed sized buffers can only be contained in unsafe code
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          They can only exist as instance members and not the local members of a method
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          We must have to declare the size of the fixed sized buffer when we declare them. It is an error to write fixed char letters[]
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          They can only be one dimensional. Multi-dimensional fixed sized buffers are not allowed
+         </span>
+        </li>
+       </ul>
+       <p>
+       </p>
+       <h3>
+        <span __boilernet_label="1">
+         Friend Assemblies
+        </span>
+       </h3>
+       <p>
+        <span __boilernet_label="1">
+         In C# 2.0, you can designate an assembly as a friend of yours assembly. A friend assembly can access all the non-public types of your assembly. You can declare an assembly as a friend of your assembly using the assembly: InternalsVisibleTo() attribute defined in the System.Runtime.CompilerServices namespace which takes the name of assembly and its public key token
+        </span>
+       </p>
+       <p>
+       </p>
+       <pre class="sourcecode"><span __boilernet_label="1">[assembly: InternalsVisibleTo("AssemblyB, PublicKeyToken=32ab4ba45e0a69a1")]</span></pre>
+       <p>
+        <span __boilernet_label="1">
+         You may require this in some project where you need one assembly to access types defined in your assembly and you separated the two assemblies for logical or deployment reasons. There are few important points to remember here:
+        </span>
+       </p>
+       <p>
+       </p>
+       <ul>
+        <li>
+         <span __boilernet_label="1">
+          You must know not only the name of assembly to be marked as friend but also its public key token
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Friendship achieved by friend assemblies is not symmetric, that is, if an assembly B is defined as a friend of an assembly A then it does not mean that A is also a friend of B. In easier word, in the example above, AssemblyB can access all the non-public types in our assembly but it does not mean that our assembly can also access all the non-public types of AssemblyB
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Also the friendship thus achieved is not transitive, that is, if A defines B as its friend and B defines C as its friend then it does not mean that C is also a friend of A extern Keyword
+         </span>
+        </li>
+       </ul>
+       <p>
+        <span __boilernet_label="1">
+         The ‘extern’ keyword can either be used with a method or for assembly alias. When used with methods it specifies that the method body is externally defined in some unmanaged code (mostly specified with DllImport()). The following code demonstrates the extern method
+        </span>
+       </p>
+       <p>
+       </p>
+       <pre class="sourcecode"><span __boilernet_label="1">   [DllImport("User32.dll")]   public static extern int MessageBox(int h, string m, string c, int type);</span></pre>
+       <p>
+        <span __boilernet_label="1">
+         Here we specified that the method MessageBox() is defined in an external unmanaged DLL (user32.dll). Note that the method declaration ends with semicolon as it is body is not defined here. The method can later be used in the program just like any other method.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The extern keyword can also be used as assembly alias. It is useful when we want to use different versions of an assembly at the same time in a single assembly. You can look for its description in MSDN
+        </span>
+       </p>
+       <p>
+       </p>
+       <h3>
+        <span __boilernet_label="1">
+         #pragma Warnings
+        </span>
+       </h3>
+       <p>
+        <span __boilernet_label="1">
+         Sometimes you like to tell your compiler not to display certain warnings; you can do this by #pragma keyword which is used to enable or disable specified warnings. You need to know the number of warning you want to enable or disable
+        </span>
+       </p>
+       <p>
+       </p>
+       <pre class="sourcecode"><span __boilernet_label="1">#pragma warning disable 414, 3021</span></pre>
+       <p>
+        <span __boilernet_label="1">
+         The above code will disable warnings number 414 and 3021. Similarly you can enable warnings like:
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         #pragma warning enable 3021
+        </span>
+       </p>
+       <p>
+       </p>
+       <h3>
+        <span __boilernet_label="1">
+         :: Operator and global keyword
+        </span>
+       </h3>
+       <p>
+        <span __boilernet_label="1">
+         Suppose you have defined your own class with name ‘System’ and inside it you want to use the Console class of the .Net System namespace, what will you do?
+        </span>
+       </p>
+       <p>
+       </p>
+       <pre class="sourcecode"><span __boilernet_label="1">namespace MyNameSpace{    class System    {        static void Main(string[] args)        {            System.Console.WriteLine("Hello, world");            System.Console.ReadLine();        }    }}</span></pre>
+       <p>
+        <span __boilernet_label="1">
+         With C# 2.0, you can use the :: operator with global keyword to achieve this. It allows you to access members in the global namespace.
+        </span>
+       </p>
+       <p>
+       </p>
+       <pre class="sourcecode"><span __boilernet_label="1">namespace MyNameSpace{    class System    {        static void Main(string[] args)        {           global:: System.Console.WriteLine("Hello, world");           global:: System.Console.ReadLine();        }    }}</span></pre>
+       <p>
+        <span __boilernet_label="1">
+         It tells the compiler to search for the global namespace named ‘System’.
+        </span>
+       </p>
+       <p>
+       </p>
+       <h3>
+        <span __boilernet_label="1">
+         About the Author
+        </span>
+       </h3>
+       <p>
+        <span __boilernet_label="1">
+         Faraz Rasheed is the Masters Research student at Kyung Hee University, South Korea and a professional technical writer of Programmers Heaven. He graduated from the University of Karachi, Pakistan. He has a keen interest in the design and development of software systems. He has worked in .Net and Java application development platforms. Currently, he is working for the Ubiquitous Computing Research Project at Real Time &amp; Multimedia Lab of Kyung Hee University (
+        </span>
+        <a href="http://oslab.khu.ac.kr" target="_blank" title="External Link">
+         <span __boilernet_label="1">
+          http://oslab.khu.ac.kr
+         </span>
+        </a>
+        <span __boilernet_label="1">
+         ). He can be accessed via
+        </span>
+        <a href="mailto:faraz@oslab.khu.ac.kr">
+         <span __boilernet_label="1">
+          faraz@oslab.khu.ac.kr
+         </span>
+        </a>
+        <span __boilernet_label="1">
+         or
+        </span>
+        <a href="mailto:frazrasheed@yahoo.com">
+         <span __boilernet_label="1">
+          frazrasheed@yahoo.com
+         </span>
+        </a>
+       </p>
+      </font>
+      <p>
+       <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+        <a href="/2/Whats-New-in-C-Sharp2-Covariance-Contravariance">
+         <span __boilernet_label="0" __num="46">
+          Back
+         </span>
+        </a>
+        <br/>
+       </font>
+       <font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+       </font>
+       <br/>
+       <br/>
+       <a href="/phwiki/printer.aspx?w=2&amp;p=Whats-New-in-C-Sharp2-Misc-New-Feature">
+        <img alt="Printer friendly version of the Whats-New-in-C-Sharp2-Misc-New-Feature page" border="0" height="33" src="/images/print1.jpg" width="135"/>
+       </a>
+       <br/>
+       <br/>
+      </p>
+      <div class="blue">
+       <h2>
+        <span __boilernet_label="0" __num="47">
+         Partners
+        </span>
+       </h2>
+      </div>
+      <div class="smaller">
+       <div class="bg">
+        <strong>
+         <span __boilernet_label="1">
+          Partners
+         </span>
+        </strong>
+        <a href="http://www.aspalliance.com/" target="_blank">
+         <span __boilernet_label="0" __num="49">
+          ASP Alliance
+         </span>
+        </a>
+        <a href="http://www.codeproject.com/" target="_blank">
+         <span __boilernet_label="0" __num="50">
+          Code Project
+         </span>
+        </a>
+        <a href="http://www.developersdex.com/" target="_blank">
+         <span __boilernet_label="0" __num="51">
+          Developers Dex
+         </span>
+        </a>
+        <a href="http://www.developerfusion.co.uk/" target="_blank">
+         <span __boilernet_label="0" __num="52">
+          Developer Fusion
+         </span>
+        </a>
+        <a href="http://www.devguru.com/" target="_blank">
+         <span __boilernet_label="0" __num="53">
+          DevGuru
+         </span>
+        </a>
+        <a href="http://www.planet-source-code.com/" target="_blank">
+         <span __boilernet_label="0" __num="54">
+          Planet Source Code
+         </span>
+        </a>
+        <a href="http://www.tek-tips.com/" target="_blank">
+         <span __boilernet_label="0" __num="55">
+          Tek-Tips Forums
+         </span>
+        </a>
+       </div>
+       <div class="bg2">
+        <strong>
+         <span __boilernet_label="1">
+          More Partners
+         </span>
+        </strong>
+        <br/>
+        <a href="http://www.otel.com/hotels/cairo.htm" target="_blank">
+         <span __boilernet_label="0" __num="57">
+          Cairo hotels
+         </span>
+        </a>
+        <a href="http://www.dooyoo.co.uk/" target="_blank">
+         <span __boilernet_label="0" __num="58">
+          Price Comparison
+         </span>
+        </a>
+        <a href="http://www.codecomments.com" target="_blank">
+         <span __boilernet_label="0" __num="59">
+          Programming discussions
+         </span>
+        </a>
+        <a href="http://www.iwantapropertyinspain.uk.com/developments/dona-julia/vinas-del-golf.php" target="_blank">
+         <span __boilernet_label="0" __num="60">
+          Costa Del Sol Property
+         </span>
+        </a>
+        <a href="/2/MorePartners" target="_blank">
+         <span __boilernet_label="1">
+          More Partners
+         </span>
+        </a>
+       </div>
+       <div class="bg">
+        <strong>
+         <span __boilernet_label="1">
+          Web site services
+         </span>
+        </strong>
+        <br/>
+        <a href="http://www.123domainnames.co.uk/" target="_blank">
+         <span __boilernet_label="0" __num="63">
+          Domain Names UK
+         </span>
+        </a>
+        <a href="http://www.net2.co.uk/" target="_blank">
+         <span __boilernet_label="0" __num="64">
+          UK Domain Registration
+         </span>
+        </a>
+        <br/>
+       </div>
+       <br/>
+      </div>
+     </div>
+     <div id="right-col">
+      <h2 class="black">
+       <span __boilernet_label="1">
+        Advertisement
+       </span>
+      </h2>
+      <div class="right-box">
+      </div>
+      <br/>
+      <br/>
+      <h2 class="black">
+       <span __boilernet_label="1">
+        Free Magazine
+       </span>
+      </h2>
+      <div class="right-box">
+       <img alt="Free Magazines" class="mag" src="/images/magazines/ewc2.gif" width="80"/>
+       <br/>
+       <span __boilernet_label="1">
+        eWeek The essential technology information source for builders of e-business....
+       </span>
+       <a href="http://programmersheaven.tradepub.com/free/ew/" target="_blank">
+        <span __boilernet_label="1">
+         subscribe now
+        </span>
+       </a>
+      </div>
+     </div>
+    </div>
+    <div id="left-col">
+     <div class="left2">
+      <div class="top2">
+       <div class="bot2">
+        <div class="right2">
+         <div class="left-top2">
+          <div class="right-top2">
+           <div class="left-bot2">
+            <div class="right-bot2">
+             <div class="pad2">
+              <p class="nomargin">
+               <img alt="Members" class="members" height="22" src="http://68.142.114.67/images/Rub_Members.gif" width="132"/>
+              </p>
+              <form action="/c/login/login.asp" method="post">
+               <label for="user">
+                <span __boilernet_label="0" __num="69">
+                 Username
+                </span>
+               </label>
+               <br/>
+               <br/>
+               <label for="pass">
+                <span __boilernet_label="0" __num="70">
+                 Password
+                </span>
+               </label>
+               <br/>
+               <br/>
+               <a href="/c/login/auto_login_info.htm">
+                <label for="autologin">
+                 <span __boilernet_label="0" __num="71">
+                  Auto-login
+                 </span>
+                </label>
+               </a>
+               <br/>
+              </form>
+              <a href="/c/login/register_agreement.asp">
+               <span __boilernet_label="0" __num="72">
+                Register
+               </span>
+              </a>
+              <br/>
+              <a href="/c/login/registerwhy.htm">
+               <span __boilernet_label="0" __num="73">
+                Why register?
+               </span>
+              </a>
+              <br/>
+              <a href="/c/login/forgot_pwd_form.htm">
+               <span __boilernet_label="0" __num="74">
+                Forgot Password?
+               </span>
+              </a>
+              <br/>
+              <br/>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="left2">
+      <div class="top2">
+       <div class="bot2">
+        <div class="right2">
+         <div class="left-top2">
+          <div class="right-top2">
+           <div class="left-bot2">
+            <div class="right-bot2">
+             <div class="pad2">
+              <p>
+               <a href="/jobs/">
+                <span __boilernet_label="0" __num="75">
+                 Jobs
+                </span>
+               </a>
+               <img alt="new Job section" height="11" src="/images/new.gif" width="28"/>
+               <br/>
+               <a href="/webtools/default.aspx">
+                <span __boilernet_label="0" __num="76">
+                 Webtools
+                </span>
+               </a>
+               <br/>
+               <a href="/c/MsgBoard/grouplist.asp">
+                <span __boilernet_label="0" __num="77">
+                 Message Boards
+                </span>
+               </a>
+               <br/>
+               <a href="/2/FAQ">
+                <span __boilernet_label="0" __num="78">
+                 FAQ
+                </span>
+               </a>
+               <br/>
+               <a href="http://www.codepedia.com">
+                <span __boilernet_label="0" __num="79">
+                 CodePedia
+                </span>
+               </a>
+               <br/>
+               <a href="http://programmersheaven.tradepub.com/" target="_blank">
+                <span __boilernet_label="0" __num="80">
+                 Free Magazines
+                </span>
+               </a>
+               <br/>
+               <a href="/other/BookSamples/index.htm">
+                <span __boilernet_label="0" __num="81">
+                 Sample Chapters
+                </span>
+               </a>
+               <br/>
+               <a href="/c/usersearch/usersearch.asp">
+                <span __boilernet_label="0" __num="82">
+                 User search
+                </span>
+               </a>
+               <br/>
+               <a href="/other/LatestFiles.htm">
+                <span __boilernet_label="0" __num="83">
+                 What's New
+                </span>
+               </a>
+               <br/>
+               <a href="/other/topfiles.htm">
+                <span __boilernet_label="0" __num="84">
+                 Top lists
+                </span>
+               </a>
+               <br/>
+               <a href="/app/rss/rssfeeds.aspx">
+                <span __boilernet_label="0" __num="85">
+                 RSS Feeds
+                </span>
+               </a>
+               <a href="/app/rss/rssfeeds.aspx">
+                <img align="middle" alt="RSS Feeds" class="rss" height="14" src="/images/rssfeed_icon.gif" width="36"/>
+               </a>
+              </p>
+              <form action="/app/search/searchall.aspx" method="post">
+               <label for="searchtxt">
+               </label>
+               <br/>
+               <br/>
+               <a href="/app/search/AdvSearch.aspx">
+                <span __boilernet_label="0" __num="86">
+                 Advanced Search
+                </span>
+               </a>
+               <br/>
+              </form>
+              <br/>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="left2">
+      <div class="top2">
+       <div class="bot2">
+        <div class="right2">
+         <div class="left-top2">
+          <div class="right-top2">
+           <div class="left-bot2">
+            <div class="right-bot2">
+             <div class="pad2">
+              <p class="nomargin">
+               <img alt="Newsletter" class="members" height="22" src="http://68.142.114.67/images/Rub_Newsletter.gif" width="132"/>
+              </p>
+              <form action="/app/newsletter/newsletter.aspx" method="post">
+               <label for="email">
+                <span __boilernet_label="0" __num="87">
+                 Email
+                </span>
+               </label>
+               <br/>
+               <br/>
+               <br/>
+               <a href="/app/newsletter/newsletter.aspx">
+                <span __boilernet_label="0" __num="88">
+                 More information
+                </span>
+               </a>
+              </form>
+              <br/>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="left">
+     <div class="top">
+      <div class="bot">
+       <div class="right">
+        <div class="left-top">
+         <div class="right-top">
+          <div class="left-bot">
+           <div class="right-bot">
+            <div class="pad">
+             <div class="xtra-div">
+              <a href="/other/newsletterpage.htm">
+               <span __boilernet_label="0" __num="89">
+                Newsletter
+               </span>
+              </a>
+              <span __boilernet_label="0" __num="90">
+               |
+              </span>
+              <a class="pad-left" href="/other/submission.htm">
+               <span __boilernet_label="0" __num="91">
+                Submit Content
+               </span>
+              </a>
+              <span __boilernet_label="0" __num="92">
+               |
+              </span>
+              <a class="pad-left" href="/other/about.htm">
+               <span __boilernet_label="0" __num="93">
+                About
+               </span>
+              </a>
+              <span __boilernet_label="0" __num="94">
+               |
+              </span>
+              <a class="pad-left" href="/other/advertise.htm">
+               <span __boilernet_label="0" __num="95">
+                Advertising
+               </span>
+              </a>
+              <span __boilernet_label="0" __num="96">
+               |
+              </span>
+              <a class="pad-left" href="/other/awards.htm">
+               <span __boilernet_label="0" __num="97">
+                Awards
+               </span>
+              </a>
+              <span __boilernet_label="0" __num="98">
+               |
+              </span>
+              <a class="pad-left" href="/other/contact_us.htm">
+               <span __boilernet_label="0" __num="99">
+                Contact Us
+               </span>
+              </a>
+              <span __boilernet_label="0" __num="100">
+               |
+              </span>
+              <a class="pad-left" href="/other/linktous.htm">
+               <span __boilernet_label="0" __num="101">
+                Link to us
+               </span>
+              </a>
+              <span __boilernet_label="0" __num="102">
+               |
+              </span>
+              <img alt="" class="skip" height="6" src="/images/spacer.gif" width="111"/>
+             </div>
+             <div id="smallprint">
+              <strong>
+               <span __boilernet_label="0" __num="104">
+                © 1996-2006
+               </span>
+               <a href="/other/about.htm" target="_blank">
+                <span __boilernet_label="0" __num="105">
+                 128K-Communications Ltd.
+                </span>
+               </a>
+               <span __boilernet_label="0" __num="106">
+                All rights reserved.
+               </span>
+              </strong>
+              <span __boilernet_label="0" __num="107">
+               Reproduction in whole or in part, in any form or medium without express written permission is prohibited. Violators of this policy may be subject to legal action. Please read
+              </span>
+              <strong>
+               <a href="/other/disclaimer.htm">
+                <span __boilernet_label="0" __num="108">
+                 Terms Of Use
+                </span>
+               </a>
+              </strong>
+              <span __boilernet_label="0" __num="109">
+               and
+              </span>
+              <strong>
+               <a href="/other/privacy.htm">
+                <span __boilernet_label="0" __num="110">
+                 Privacy Statement
+                </span>
+               </a>
+              </strong>
+              <span __boilernet_label="0" __num="111">
+               for more information. Development by
+              </span>
+              <a href="http://www.synchrondata.com" target="_blank">
+               <strong>
+                <span __boilernet_label="0" __num="112">
+                 Synchron Data
+                </span>
+               </strong>
+              </a>
+              <span __boilernet_label="0" __num="113">
+               .
+              </span>
+             </div>
+             <br/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <br/>
+    <br/>
+   </div>
+  </text>
+ </body>
+</html>

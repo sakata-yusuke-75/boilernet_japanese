@@ -1,0 +1,373 @@
+<html>
+ <head> 
+ </head> 
+ <body bgcolor="#ffffff" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0"> 
+  <text encoding="utf8" id="http://today.java.net/pub/a/today/2004/07/06/3ddesktop.html" title="java.net: Behind The Scenes of Project Looking Glass"> 
+   <meta content="text/html; charset=utf-8" http-equiv="content-type"> 
+   <title>    &lt;span __num="0"&gt;     java.net: Behind The Scenes of Project Looking Glass    &lt;/span&gt;   </title> 
+   <meta content="Interview with Hideya Kawahara, lead developer of Project Looking Glass, a 3D, Java-powered desktop environment." name="description"> 
+   <meta content="java.net,Hideya Kawahara,Will Iverson,Project Looking Glass,3D,desktop,window manager,GUI, Research,Will Iverson," name="keywords"> 
+   <meta content="Jul. 06, 2004" name="date"> 
+   <!--  CSS stylesheet  --> 
+   <link href="/css/main.css" rel="stylesheet" type="text/css"> 
+   <link href="/favicon.ico" rel="shortcut icon"> 
+   <!-- stopindex --> 
+   <!--  Common body tag  --> 
+   <a name="top"> </a> 
+   <!--  Masthead  --> 
+   <div class="topline"> 
+    <div class="topbar"> 
+     <table border="0" cellpadding="0" cellspacing="0" height="25" width="100%"> 
+      <tbody> 
+       <tr> 
+        <td rowspan="2" width="100%"> <a href="http://www.java.net"> <img alt="The Source for Java Technology Collaboration" border="0" height="60" src="/images/header_jnet_new.jpg" width="500"> </a> </td> 
+        <td nowrap style="vertical-align:middle"> 
+         <div id="login"> 
+          <form action="https://www.dev.java.net/servlets/TLogin" id="loginform" method="post" name="loginform"> 
+           <input name="redir" type="hidden" value="http://today.java.net/pub/a/today/2004/07/06/3ddesktop.html"> 
+           <div> 
+            <strong> <span __num="1"> User: </span> </strong> 
+            <input id="loginID" maxlength="32" name="loginID" size="7" type="text" value=""> 
+            <strong> <span __num="2"> Password: </span> </strong> 
+            <input id="password" maxlength="32" name="password" size="7" type="password" value=""> 
+            <input class="buttonred" id="Button" name="Login" type="submit" value="Login"> 
+           </div> 
+           <div align="right" class="small"> 
+            <strong> <a href="https://www.dev.java.net/servlets/Join"> <span __num="3"> Register </span> </a> <span __num="4"> | </span> <a href="https://www.dev.java.net/servlets/TLogin"> <span __num="5"> Login help </span> </a> </strong> 
+           </div> 
+          </form> 
+         </div> </td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+    <!--  Tabs  --> 
+    <noindex> 
+     <div class="tabs" id="toptabs"> 
+      <table border="0" cellpadding="4" cellspacing="0"> 
+       <tbody> 
+        <tr> 
+         <td> <a href="https://www.dev.java.net/servlets/StartPage"> <span __num="6"> My pages </span> </a> </td> 
+         <td> <a href="http://community.java.net/projects/"> <span __num="7"> Projects </span> </a> </td> 
+         <td> <a href="http://community.java.net"> <span __num="8"> Communities </span> </a> </td> 
+         <th> <a href="http://www.java.net"> <span __num="9"> java.net </span> </a> </th> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+    </noindex> 
+    <table border="0" cellpadding="2" cellspacing="2" id="main" width="100%"> 
+     <tbody> 
+      <tr valign="top"> 
+       <td id="leftcol" rowspan="2" width="150"> <img height="1" src="/im/a.gif" width="150"> <br> 
+        <div id="navcolumn"> 
+         <!--   COMMUNITY LINKS   --> 
+         <noindex> 
+          <div class="toolgroup" id="communitylinks"> 
+           <div class="label"> 
+            <strong> <span __num="10"> Get Involved </span> </strong> 
+           </div> 
+           <div class="body"> 
+            <div> 
+             <a href="https://java-net.dev.java.net/"> <span __num="11"> java-net Project </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://www.java.net/request_project.csp"> <span __num="12"> Request a Project </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://community.java.net/help_wanted/"> <span __num="13"> Project&nbsp;Help&nbsp;Wanted&nbsp;Ads </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://community.java.net/projects/publicize.csp"> <span __num="14"> Publicize your Project </span> </a> 
+            </div> 
+            <!-- <div><a href="#">Success Stories</a></div>  --> 
+            <div> 
+             <a href="http://today.java.net/cs/user/create/bl"> <span __num="15"> Submit Content </span> </a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="toolgroup" id="communitylinks"> 
+           <div class="label"> 
+            <strong> <span __num="16"> Get Informed </span> </strong> 
+           </div> 
+           <div class="body"> 
+            <div> 
+             <a href="http://www.java.net/about.csp"> <span __num="17"> About java.net </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://today.java.net/pub/q/articles"> <span __num="18"> Articles </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://weblogs.java.net/"> <span __num="19"> Weblogs </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://today.java.net/today/news/"> <span __num="20"> News </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://www.java.net/events"> <span __num="21"> Events </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://today.java.net/today/alsotoday.csp"> <span __num="22"> Also in Java Today </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://safari.java.net"> <span __num="23"> java.net Online Books </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://today.java.net/today/archive/"> <span __num="24"> java.net Archives </span> </a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="toolgroup" id="communitylinks"> 
+           <div class="label"> 
+            <strong> <span __num="25"> Get Connected </span> </strong> 
+           </div> 
+           <div class="body"> 
+            <div> 
+             <a href="http://forums.java.net"> <span __num="26"> java.net Forums </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://wiki.java.net/"> <span __num="27"> Wiki </span> </a> 
+             <span __num="28"> and </span> 
+             <a href="http://wiki.java.net/bin/view/Javapedia/WebHome"> <span __num="29"> Javapedia </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://wiki.java.net/bin/view/People/WebHome"> <span __num="30"> People </span> </a> 
+             <span __num="31"> , </span> 
+             <a href="http://partners.java.net"> <span __num="32"> Partners </span> </a> 
+             <span __num="33"> , and </span> 
+             <a href="http://wiki.java.net/bin/viewauth/Javanet/JobsWiki"> <span __num="34"> Jobs </span> </a> 
+            </div> 
+            <div> 
+             <a href="http://community.java.net/jugs/listing.csp"> <span __num="35"> Java User Groups </span> </a> 
+            </div> 
+            <div> 
+             <!--  <a href="https://java-net.dev.java.net/servlets/ProjectMailingListList">Newsletters</a> and  --> 
+             <a href="http://today.java.net/pub/q/rsschannels"> <span __num="36"> RSS Feeds </span> </a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="toolgroup" id="communitylinks"> 
+           <div class="label"> 
+            <b> <span __num="37"> Search </span> </b> 
+           </div> 
+           <div class="body"> 
+            <form action="http://onesearch.sun.com/search/onesearch/index.jsp"> 
+             <div> 
+              <span __num="38"> Web and Projects: </span> 
+             </div> 
+             <div> 
+              <input class="medium" name="qt" onfocus="if( this.value==this.defaultValue ) this.value='';" size="14" type="text" value=""> 
+              <input name="col" type="hidden" value="all-unfiltered"> 
+              <input name="qt" type="hidden" value="+url:java.net"> 
+              <input border="0" class="buttonred" type="submit" value=" » "> 
+             </div> 
+            </form> 
+            <div> 
+             <span __num="39"> Online Books: </span> 
+            </div> 
+            <form action="http://safari.java.net/JVXSL.asp" method="post"> 
+             <input name="s" type="hidden" value="1"> 
+             <input name="b" type="hidden" value="1"> 
+             <input name="t" type="hidden" value="1"> 
+             <input name="f" type="hidden" value="1"> 
+             <input name="c" type="hidden" value="1"> 
+             <input name="l" type="hidden" value="1"> 
+             <input name="view" type="hidden" value="section"> 
+             <div> 
+              <input class="medium" name="se_text" size="14" type="text" value=""> 
+              <input border="0" class="buttonred" type="submit" value=" » "> 
+             </div> 
+            </form> 
+            <div> 
+             <a href="/search.csp"> <span __num="40"> Advanced Search </span> </a> 
+            </div> 
+           </div> 
+          </div> 
+         </noindex> 
+        </div> <br> </td> 
+       <td colspan="2" height="3"> <img height="3" src="/im/a.gif" width="1"> <br> </td> 
+      </tr> 
+      <tr> 
+       <td width="10"> <img height="1" src="/im/a.gif" width="10"> </td> 
+       <td valign="top" width="100%"> 
+        <!-- startindex --> 
+        <!--  Begin SiteCatalyst code  --> <script language="JavaScript">         <span __num="41">          &lt;!--var s_channel="technical articles";//--&gt;         </span>        </script> 
+        <!--  End SiteCatalyst code  --> 
+        <!--  begin discuss-print-email-blog options  --> 
+        <noindex> 
+         <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+          <tbody> 
+           <tr> 
+            <td class="smaller" valign="top"> </td> 
+            <td width="10"> </td> 
+            <td align="right" valign="bottom"> 
+             <div class="sitelinks" style="padding:0px;"> 
+              <table border="0" cellpadding="0" cellspacing="0"> 
+               <tbody> 
+                <tr> 
+                 <!--  email option  --> 
+                 <td align="right" valign="bottom"> <img alt=" " border="0" height="12" hspace="4" src="/im/ic_email.gif" vspace="1" width="14"> </td> 
+                 <td class="smaller" nowrap valign="bottom"> <a href="mailto:?subject=Behind The Scenes of Project Looking Glass&amp;body=http://today.java.net/pub/a/today/2004/07/06/3ddesktop.html"> <span __num="42"> E-mail </span> </a> </td> 
+                 <!--  print option  --> 
+                 <td> </td> 
+                 <td align="right" valign="bottom"> <img alt=" " border="0" height="12" hspace="4" src="/im/ic_print.gif" width="14"> </td> 
+                 <td class="smaller" nowrap valign="bottom"> <a href="/lpt/a/105"> <span __num="43"> Print </span> </a> </td> 
+                 <!--  discuss  --> 
+                 <td> </td> 
+                 <td align="right" valign="bottom"> <img alt=" " border="0" height="12" hspace="4" src="/im/ic_discuss.gif" width="13"> </td> 
+                 <td class="smaller" nowrap valign="bottom"> <a href="/pub/a/today/2004/07/06/3ddesktop.html?page=last#thread"> <span __num="44"> Discuss </span> </a> </td> 
+                 <!--  blog  --> 
+                 <td> </td> 
+                 <td align="right" valign="bottom"> <img alt=" " border="0" height="12" hspace="4" src="/im/ic_blog.gif" width="14"> </td> 
+                 <td class="smaller" nowrap valign="bottom"> <a href="/cs/user/print/a/105?x-t=blog_link.view&amp;x-layout=blank" onclick="window.open('/cs/user/print/a/105?x-t=blog_link.view&amp;x-layout=blank','Blog','toolbar=no,width=600,height=400,status=no,location=no,scrollbars=yes,resizable=yes,menubar=yes');return false"> <span __num="45"> Blog </span> </a> </td> 
+                </tr> 
+               </tbody> 
+              </table> 
+             </div> </td> 
+           </tr> 
+          </tbody> 
+         </table> 
+        </noindex> 
+        <!--  end discuss-print-email-blog options  --> 
+        <div style="clear:both"> 
+        </div> 
+        <div class="contentdivider"> 
+         <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%"> 
+          <tbody> 
+           <tr> 
+            <td> <img alt=" " border="0" height="4" src="/im/a.gif" width="1"> </td> 
+           </tr> 
+          </tbody> 
+         </table> 
+        </div> 
+        <!--  content here  --> 
+        <!-- CS_PAGE_BREAK --> <h2> <img align="left" alt="Behind The Scenes of Project Looking Glass" border="0" height="91" hspace="10" src="/images/tiles/111-looking_glass.gif" vspace="0" width="111"> <span __num="46" __label="true"> Behind The Scenes of Project Looking Glass </span> </h2> <span __num="47" __label="true"> by </span> <a href="/pub/au/13"> <span __num="48" __label="true"> Will Iverson </span> </a> <br> <span __num="49" __label="true"> 07/06/2004 </span> <br clear="all"> <br> 
+        <!--  sidebar begins  --> 
+        <!--  don't move sidebars  --> 
+        <!--  sidebar ends  --> <p> <span __num="50" __label="true"> I recently had the opportunity to sit down with Hideya Kawahara, lead developer for 3D </span> <a href="http://wwws.sun.com/software/project-looking-glass/"> <span __num="51" __label="true"> Project Looking Glass </span> </a> <span __num="52" __label="true"> , Sun's 3D desktop technology </span> <a href="http://lg3d.dev.java.net"> <span __num="53" __label="true"> open source project on java.net </span> </a> <span __num="54" __label="true"> . </span> </p> <p> <span __num="55" __label="true"> Before meeting with Hideya, I must confess that I had been operating under the mistaken assumption that Project Looking Glass was intended as a replacement </span> <a href="http://en.wikipedia.org/wiki/Window_manager"> <span __num="56" __label="true"> window manager </span> </a> <span __num="57" __label="true"> for Linux, a 3D novelty of no more consequence than any of a long list of failed attempts at reinventing the traditional, 2D desktop in a new, 3D world. </span> </p> <p> <span __num="58" __label="true"> Instead, what I found was considerably more interesting. In effect, Project Looking Glass is a rational approach toward using the latest 3D hardware advances to provide a state-of-the-art desktop environment, familiar yet far more engaging for a traditional 2D desktop user. </span> </p> <p> <span __num="59" __label="true"> The demonstration Hideya gave me of the system was quite dynamic. Windows spin and zoom, stack, become translucent, flip to reveal additional information on the back, and more. A sample 3D audio CD selector can be dragged around, and the elements move in a manner that conveys an appealing weight and physicality. </span> </p> <p> <span __num="60" __label="true"> The demonstration basically fell into two areas, a theoretical next generation window manager and examples of user interface elements in a 3D environment. By providing integration with the X windowing system, the demonstration shows existing 2D applications spinning and flying about, with transparency and video running seamlessly as the windows move. By open sourcing the environment, Hideya hopes that as the platform matures not only will existing 2D applications spin and fly, but that third party developers will be able to use Project Looking Glass to build rich, interactive 3D applications with a whole new suite of interactions. </span> </p> <p> <span __num="61" __label="true"> One additional revelation: Project Looking Glass is actually built using Java 3D as a key foundation technology, and the primary programmatic interface for 3D-aware applications in this release is Java technology. So, conceptually, a write-once-run-anywhere application could be built using Project Looking Glass, providing desktop applications with rich 3D interactivity. </span> </p> <p> <span __num="62" __label="true"> With all of this in mind, Hideya spoke about the past, present and future of Project Looking Glass. </span> </p> <p> <strong> <span __num="63" __label="true"> What was the motivation behind Project Looking Glass? </span> </strong> </p> <p> <span __num="64" __label="true"> We were interested in breaking boundaries. The boundaries fall into two areas: a 2D vision of a desktop, defined twenty years ago on much more limited hardware, and the relative stagnation of desktop innovation because of, in my humble opinion, a sort of closed fashion of evolution. </span> </p> <p> <span __num="65" __label="true"> Recently, there has been tremendous innovation in the 3D capabilities of the personal computer, driven by innovation in games. The idea is not to throw away the existing research in user interfaces developed for the 2D world, but instead to build on it. 3D is a very challenging problem — there have been several attempts at trying to solve this over the years. In order to get innovation started in this area, we are open sourcing the research we have done so the broadest possible group of people can work with it. We believe that the open development model works great for the exploration of this new 3D frontier - with vast possibilities. </span> </p> <p> <strong> <span __num="66" __label="true"> How is this different from previous attempts at building a 3D interface? </span> </strong> </p> <p> <span __num="67" __label="true"> We aren't moving the desktop into a 3D world per se, we are trying to enhance the view of a 2D world by adding 3D functionality where it makes sense. For a user of a traditional 2D environment, at first blush this will simply look like a much, much nicer extension of their existing environment. For example, a 3D application might leverage the "back" of a window, allowing a user to flip a window over to take notes. As a more complex example, consider a modal dialog. As an example, our prototype window manager flips a window over to display a modal dialog on the "back" of the window that owns the dialog. </span> </p> <p> <strong> <span __num="68" __label="true"> Doesn't that obscure the window contents? </span> </strong> </p> <p> <span __num="69" __label="true"> Well, yes, but that's part of the point of the whole exercise: considering new, innovative user interface elements that are possible based on 3D technology. </span> </p> <p> <span __num="70" __label="true"> One of the more realistic concepts is the way our demonstration window manager slides windows over at an angle. You can rotate a window to put it in the background, so you can still see the window contents in a useful way. At a more basic level, you can make some much more dynamic and interesting desktop backgrounds. That's where things get blurry for some people trying to sort out where the Project Looking Glass platform ends and a real window manager begins. </span> </p> <p> <strong> <span __num="71" __label="true"> Are you looking at integration with the popular windows managers, such as GNOME and KDE? </span> </strong> </p> <p> <span __num="72" __label="true"> The issues with regard to GNOME/KDE and the profusion of desktop environments are really orthogonal to Project Looking Glass. For example, Mac OS X differentiates between various technology layers — for example, BSD, Aqua, Cocoa, all are different layers in the overall environment. Similarly, Linux needs to evolve into a more complex environment with different layers. To keep Linux competitive, we need to think about how to move forward into the next generation. The goal here is not to introduce a new desktop model, but to provide the underpinnings for the next generation. </span> </p> <p> <span __num="73" __label="true"> By integrating 3D into the window manager, it's an easy way for existing 2D applications to obtain 3D functionality, in a sense, "for free." </span> </p> <p> <span __num="74" __label="true"> We want to be sure that we are aligned with the open source world. We pay attention to the different issues that are going on, and we are working with X.org to develop the proper integration and extensions. </span> </p> <p> <span __num="75" __label="true"> We view the current proof-of-concept's primitive windowing system as a demonstration. For example, we would like to see GNOME move into a world that is more 3D in nature. </span> </p> <p> <strong> <span __num="76" __label="true"> What about shipping an app with Project Looking Glass platform bundled in? For example, one of the demos is a mockup of a 3D audio CD player. Could a developer build an application on top of Project Looking Glass platform and ship it for multiple platforms? </span> </strong> </p> <p> <span __num="77" __label="true"> It is our vision to allow this sort of usage. We haven't built demos with this in mind, but I don't see anything to prevent this. We do hope that many developers create sample 3D applications that run on the Project Looking Glass platform and have a place in our open source community for those applications on </span> <a href="http://lg3d-demo-apps.dev.java.net/"> <span __num="78" __label="true"> http://lg3d-demo-apps.dev.java.net </span> </a> </p> <p> <strong> <span __num="79" __label="true"> Why would I use Project Looking Glass instead of OpenGL? </span> </strong> </p> <p> <span __num="80" __label="true"> Project Looking Glass is actually built on top of Java 3D, which in turn supports OpenGL. One way to think about Project Looking Glass is as a 3D application framework focused on building 3D desktop applications and user interfaces. </span> </p> <p> <span __num="81" __label="true"> Project Looking Glass defines a new suite of events and integration. For example, a traditional application might use 3D just as one portion of the functionality, such as depicting the information on a chart in a spreadsheet. Project Looking Glass defines a lot more semantics for how the 3D scene graph is developed and interactions between the objects onscreen. </span> </p> <p> <span __num="82" __label="true"> One way to think about this — in any 3D application, a key part of the functionality is the manner in which the 3D objects interact. In a typical 3D game, the objects represent elements that run around and do things, such as opening doors and shooting at each other. One of big goals of Project Looking Glass is to define an environment in which the events and object information are suited to the operation of a desktop environment. </span> </p> <p> <strong> <span __num="83" __label="true"> Can you explain a bit more about the software that is being made available? </span> </strong> </p> <p> <span __num="84" __label="true"> We have been working for several months on cleaning the software up, providing basic features and functionality key to 3D window management. A key focus was looking at the existing 2D desktop apps, ensuring minimal compatibility and performance problems. The next step is to look what else we can do to foster real world 3D interactivity. We decided to open source this at a very early stage to ensure that we got good feedback from the community. </span> </p> <p> <span __num="85" __label="true"> The original proof-of-concept blurred the X client/server model more that we would like. Also, it didn't define any reasonable APIs. Our goal for this release was to refine the architecture and reimplement everything from scratch in order to ensure that the client/server model is preserved. We are also defining clear APIs for 3D apps and desktop development. We leveraged the Java 3D API for this. We want to ensure client isolation remains solid and the platform provides well abstracted API. </span> </p> <p> <span __num="86" __label="true"> Also, we wanted to ensure that the platform is still high performance while at the same time achieving the client isolation. So, we are looking at low level details involved in this. We would like to make sure that moving the client to 3D would still a solid performer, and to ensure that the isolation between the 3D scenegraph server and the client applications is very high, so that the server can be made as stable as possible. </span> </p> <p> <strong> <span __num="87" __label="true"> Linux only? </span> </strong> </p> <p> <span __num="88" __label="true"> Linux only right now, Solaris operating environment shortly. </span> </p> <p> <span __num="89" __label="true"> Much of the current environment is actually rendered using Java technology. There is no legacy application support for Windows, but you can run the Project Looking Glass environment on Windows, just as you can run any Java 3D application. </span> </p> <p> <span __num="90" __label="true"> We don't want to exclude Windows developers. The compatibility stuff with X, obviously, doesn't work for existing Windows applications. So, if you want to build a 3D application on top of the Project Looking Glass platform, you could still get a write-once, run-anywhere 3D application that also exhibits more sophisticated. </span> </p> <p> <span __num="91" __label="true"> The current version of Project Looking Glass relies on JDK 1.5. We are waiting for JDK 1.5 support on Mac OS X before we can release there. </span> </p> <p> <strong> <span __num="92" __label="true"> How does this break down for cross-platform application developers? </span> </strong> </p> <p> <span __num="93" __label="true"> We hope a normal application developer can build an application that respects this 3D environment. In conjunction with the Java desktop integration APIs, this could allow a developer to build a 3D app that can integrate with the other 3D apps, regardless of platform. </span> </p> <p> <span __num="94" __label="true"> So, let's say a user has a 3D app that they want to run on Linux, with GNOME support. All of the environment will respect the 3D aspects. That same app eventually should be able to run on Windows, where it will interact properly with the other 3D applications. For example, a 3D version of a notepad and the 3D CD player should be able to have interesting, dynamic 3D interactions regardless of the host platform. </span> </p> <p> <strong> <span __num="95" __label="true"> Video card support? </span> </strong> </p> <p> <span __num="96" __label="true"> We expect this to run on 32MB VRAM video cards and above. We leverage the GPU to help push the performance down into lower layers, keeping the computational hit off the main CPU. Geforce2 and above. In particular, texture support is very important, as the rendering of traditional 2D applications involves that sort of surface. Obviously, support for 2D applications are simpler than what most games require. But we also want to set a baseline for 3D graphics support. For example, many laptops have an integrated video, and we want to support those as well as we can. </span> </p> <p> <strong> <span __num="97" __label="true"> My PC laptop (a Dell Inspiron) has a 32MB RADEON Mobility 7500. Will that work? </span> </strong> </p> <p> <span __num="98" __label="true"> A: It should — that's the same card that's in my development laptop. </span> </p> <p> <strong> <span __num="99" __label="true"> Tell me a bit more about how an application developer can work with Project Looking Glass. Are there Java bindings? </span> </strong> </p> <p> <span __num="100" __label="true"> This is Java 3D-based. We used the Java 3D scene graph model to help manage the relationship between objects. </span> </p> <p> <span __num="101" __label="true"> The current version, Java 3D 1.3.1, is the product of several years of investment. It is a very high performance, solid, 3D rendering engine for Java technology. So, the 3D demos and even the example desktop itself are actually written in Java. Right now, if you wanted to create a first class, fully 3D app using Project Looking Glass, you would actually write that in Java. We hope to have bindings for C/C++ developers in the future — obviously. </span> </p> <p> <span __num="102" __label="true"> So, Project Looking Glass is actually a very Java-centric technology. </span> </p> <p> <span __num="103" __label="true"> We looked at several different environments, but obviously Java is a very productive language. For us to test out the different ideas, we wanted to be able to work very quickly. If we hadn't used Java technology, Project Looking Glass probably wouldn't exist. To the extent that Project Looking Glass is an exploration of 3D environments, Java technology is very key. </span> </p> <p> <strong> <span __num="104" __label="true"> So, the current environment actually provides Java interfaces, not C/C++ bindings? How do you expect C/C++ developers to work with Project Looking Glass? </span> </strong> </p> <p> <span __num="105" __label="true"> To be able to support traditional 2D applications, such as OpenOffice, we talked to their engineers and are brainstorming how to approach this. Obviously, we are very interested in supporting native applications. We aren't just paying lip service to this — it is very important to Sun to be able to do this. </span> </p> <p> <span __num="106" __label="true"> We attended the X Developers conference in April. It was a great place to meet the X server, GNOME, and KDE developers. We got a lot of great feedback, how they would like to see the C++ bindings develop. The slides are </span> <a href="http://wwws.sun.com/software/looking_glass/docs/LG-Xdevconf.pdf"> <span __num="107" __label="true"> posted at the Looking Glass site </span> </a> <span __num="108" __label="true"> (pdf). I would highly recommend looking them over, especially if you are an X developer. </span> </p> <p> <strong> <span __num="109" __label="true"> I noticed that you are running the demo on the Sun Java Desktop System. Project Looking Glass is very Java technology centric — is this a step toward deeper support for Java at the desktop environment level? </span> </strong> </p> <p> <span __num="110" __label="true"> Yes, exactly. Although we are in an Advanced Software Development group, we also work very closely with the Sun Java Desktop System group. We hope to add more Java interfaces where it makes sense and adds value. For example, we are looking at how this 3D interactivity can best be extended to the semantics of drag-and-drop in a future desktop environment. </span> </p> <p> <strong> <span __num="111" __label="true"> For a typical Java developer, classic desktop application development is done with Swing. Any thoughts there, perhaps adding a 3D-enabled look and feel implementation? </span> </strong> </p> <p> <span __num="112" __label="true"> Yes, that gives a nice integration story for Swing developers. We can add 3D effects, perhaps as a Swing look-and-feel, for a 3D environment. We aren't there yet, but we are looking at it. This is an extremely interesting and exciting area to explore, we think. </span> </p> <p> <strong> <span __num="113" __label="true"> Swing developers have several tools available. What about tools for building a 3D application? </span> </strong> </p> <p> <span __num="114" __label="true"> It turns out that tools are very challenging for moving to a 3D world. We are interested in some sort of 3D modeling tool. If you are building a 3D application, you need some sort of system for building the interface elements. For example, the 3D audio CD player demonstrates what a challenge it is for a designer to mock up and prototype this kind of rich desktop application. In the 3D game world, you have tools like Maya. It would be nice to provide a way to incorporate such 3D designer's tool into a tool chain to develop 3D apps and desktop. Also, it would be great to have something on the level of Sun Java Creator or Visual Basic for creating 3D applications, lowering the bar for developers getting started. </span> </p> <p> <span __num="115" __label="true"> Consider motion and animation effects — again the 3D CD player serves as an excellent example. For a designer to build a prototype of this kind of interactivity is quite a challenge. That's one of the problems for even the latest generation of 2D environments — for example, even Windows XP doesn't do zooming rectangles when you open a window or folder — something the original Mac OS had back in 1984. You open a window or dialog on Windows XP, and it just pops to the front, with no connection to where that window or dialog came from. </span> </p> <p> <span __num="116" __label="true"> That's going to be a big challenge and opportunity — building tools for creating 3D user desktop interfaces. </span> </p> <p> <strong> <span __num="117" __label="true"> What is the goal for the open source license? </span> </strong> </p> <p> <span __num="118" __label="true"> We are still discussing this — by the time this article is published, we hope to have those details ironed out. Our current thinking is to release the binaries under a free, business-friendly license, and the source under the GPL or something similar. So, anyone can redistribute released binaries freely. </span> </p> <p> <span __num="119" __label="true"> For more information on the open source Project Looking Glass, see </span> <a href="http://lg3d.dev.java.net"> <span __num="120" __label="true"> 3D Desktop - Project Looking Glass </span> </a> <span __num="121" __label="true"> on java.net and Sun's </span> <a href="http://www.sun.com/software/project-looking-glass/"> <span __num="122" __label="true"> Project Looking Glass page </span> </a> <span __num="123" __label="true"> . </span> </p> <p> <em> <a href="/pub/au/13"> <span __num="124" __label="true"> Will Iverson </span> </a> <span __num="125" __label="true"> served as Developer Relations Manager for the VisualCaf?group at Symantec, as the Java &amp; Runtimes Product Manager at AppleComputer and has led Cascade Technology Group, a private consultingfirm, since 1999. </span> </em> </p> 
+        <div class="pad3x0"> 
+         <table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+          <tbody> 
+           <tr> 
+            <td> <img alt=" " border="0" height="1" src="http://today.java.net/im/a.gif" width="1"> </td> 
+           </tr> 
+          </tbody> 
+         </table> 
+        </div> 
+        <!--  end content  --> <img alt=" " height="1" src="/images/trans.gif" width="490"> <br> <p> <span __num="126"> View all </span> <a href="http://today.java.net/pub/q/articles"> <span __num="127"> java.net Articles </span> </a> <span __num="128"> . </span> </p> <a name="thread"> </a> 
+        <div class="feedback"> 
+         <div class="rbox"> 
+          <div class="rboxtop"> 
+           <div> 
+           </div> 
+          </div> 
+          <div class="rbcontent"> 
+           <b> <span __num="129"> Will Project Looking Glass become your desktop? </span> </b> 
+           <br> 
+           <div class="clear"> 
+           </div> 
+           <div class="tb_left"> 
+            <a href="/cs/user/create/cs_msg?x-lr=cs_disc/1729&amp;x-lr2=a/105&amp;page="> <img alt="Post Comment" border="0" height="20" src="/images/button_post.gif" vspace="4" width="118"> </a> 
+           </div> 
+           <!--  rbcontent & rbox closed in cs_disc/thread_header.view  --> 
+           <div class="tb_right"> 
+            <a href="/pub/a/today/2004/07/06/3ddesktop.html?page=last&amp;x-maxdepth=0#thread"> <img alt="Full Threads" border="0" hspace="6" src="/images/button_main_threads.gif" title="Display main threads only" vspace="4"> </a> 
+            <a href="/pub/a/today/2004/07/06/3ddesktop.html?page=last&amp;x-order=date#thread"> <img alt="Oldest First" border="0" src="/images/button_old.gif" title="Sort oldest posts first" vspace="4"> </a> 
+           </div> 
+           <div class="clear"> 
+           </div> 
+           <!--  closing divs from a/print.view, et al  --> 
+          </div> 
+          <div class="rboxbot"> 
+           <div> 
+           </div> 
+          </div> 
+         </div> 
+         <p> <span __num="130"> Showing messages 1 through 6 of 6. </span> </p> 
+         <ul> 
+          <li> <a name="6950"> </a> <b> <span __num="131"> Novel but nova </span> </b> <br> <span __num="132"> 2004-09-16 21:49:53&nbsp;ricahrdc[ </span> <a href="/cs/user/create/cs_msg?x-lr=cs_msg/6950&amp;x-lr2=a/105" title="Reply to this message"> <span __num="133"> Reply </span> </a> <span __num="134"> | </span> <a href="/cs/user/view/cs_msg/6950"> <span __num="135"> View </span> </a> <span __num="136"> ] </span> <br> <br> <span __num="137"> Nova as in no go in spanish. Its just that we allready have a standard. Iv used it and frankly theres just not enough power in it as of right now to warrent the training for what is in my opinion little more than eye candy. </span> </li> 
+         </ul> 
+         <ul> 
+          <li> <a name="5624"> </a> <b> <span __num="138"> Looking glass installation </span> </b> <br> <span __num="139"> 2004-07-15 22:15:51&nbsp;patryckson[ </span> <a href="/cs/user/create/cs_msg?x-lr=cs_msg/5624&amp;x-lr2=a/105" title="Reply to this message"> <span __num="140"> Reply </span> </a> <span __num="141"> | </span> <a href="/cs/user/view/cs_msg/5624"> <span __num="142"> View </span> </a> <span __num="143"> ] </span> <br> <br> <span __num="144"> ok.. i have a linux instaled on my pc.... i already install a jdk1.5.0 beta 2, Java 3D SDK 1.3.2-build4, Java Advanced Imaging API (JAI) 1.1.2 JDK and lg3d-0.5.tar.gz... but i have a problem when i run the lg3d-dev aplication.. nothing happens...just appears at screen this message: </span> <br> <span __num="145"> /home/knoppix/plg/lg3d/bin /home/knoppix/plg/lg3d/bin </span> <br> <span __num="146"> /home/knoppix/plg/lg3d/bin </span> <br> <span __num="147"> [1] 1042 </span> <br> <span __num="148"> what i must to do to solve this problem? </span> <br> <br> <span __num="149"> patryckson@hotmail.com </span> </li> 
+          <ul> 
+           <li> <a name="7246"> </a> <b> <span __num="150"> Looking glass installation </span> </b> <br> <span __num="151"> 2004-10-26 07:23:51&nbsp;blackhex[ </span> <a href="/cs/user/create/cs_msg?x-lr=cs_msg/7246&amp;x-lr2=a/105" title="Reply to this message"> <span __num="152"> Reply </span> </a> <span __num="153"> | </span> <a href="/cs/user/view/cs_msg/7246"> <span __num="154"> View </span> </a> <span __num="155"> ] </span> <br> <br> <span __num="156"> I have same problem on Fedora Core 2 :-( </span> </li> 
+          </ul> 
+          <ul> 
+           <li> <a name="6222"> </a> <b> <span __num="157"> Looking glass installation </span> </b> <br> <span __num="158"> 2004-08-13 03:34:07&nbsp;bobitavu[ </span> <a href="/cs/user/create/cs_msg?x-lr=cs_msg/6222&amp;x-lr2=a/105" title="Reply to this message"> <span __num="159"> Reply </span> </a> <span __num="160"> | </span> <a href="/cs/user/view/cs_msg/6222"> <span __num="161"> View </span> </a> <span __num="162"> ] </span> <br> <br> <span __num="163"> Hi, </span> <br> <span __num="164"> what's your videocard? Did you follow all insrtuctions about screendepth ? </span> </li> 
+          </ul> 
+          <ul> 
+           <li> <a name="5631"> </a> <b> <span __num="165"> Looking glass installation </span> </b> <br> <span __num="166"> 2004-07-16 05:18:45&nbsp;wiverson[ </span> <a href="/cs/user/create/cs_msg?x-lr=cs_msg/5631&amp;x-lr2=a/105" title="Reply to this message"> <span __num="167"> Reply </span> </a> <span __num="168"> | </span> <a href="/cs/user/view/cs_msg/5631"> <span __num="169"> View </span> </a> <span __num="170"> ] </span> <br> <br> <span __num="171"> You should post these problems to the forums/mailing lists at: </span> <br> <br> <span __num="172"> https://lg3d.dev.java.net/ </span> </li> 
+          </ul> 
+         </ul> 
+         <ul> 
+          <li> <a name="5471"> </a> <b> <span __num="173"> I am definitely looking forward for it. </span> </b> <br> <span __num="174"> 2004-07-07 18:11:31&nbsp;roguexz[ </span> <a href="/cs/user/create/cs_msg?x-lr=cs_msg/5471&amp;x-lr2=a/105" title="Reply to this message"> <span __num="175"> Reply </span> </a> <span __num="176"> | </span> <a href="/cs/user/view/cs_msg/5471"> <span __num="177"> View </span> </a> <span __num="178"> ] </span> <br> <br> <span __num="179"> After having seen a demo of OSX and the way it has animation induced into its desktop environment, i am definitely looking forward to have a 3-D desktop environment on my m/c ;) </span> <br> <br> <span __num="180"> -rogue </span> </li> 
+         </ul> 
+        </div> 
+        <!-- stopindex --> </td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <!--  BEGIN VNV5 FOOTER   --> 
+    <!--  BEGIN VNV5 FOOTER   --> 
+    <table border="0" cellpadding="0" cellspacing="10" width="100%"> 
+     <tbody> 
+      <tr> 
+       <td> <a href="http://today.java.net/pub/q/java_net_rss"> <img align="absmiddle" alt="XML" border="0" height="14" src="/images/xml.gif" width="36"> </a> <b> <span __num="181"> java.net RSS </span> </b> <br> 
+        <div class="grayline"> 
+        </div> 
+        <table border="0" cellpadding="0" cellspacing="0" class="vatop" width="100%"> 
+         <tbody> 
+          <tr> 
+           <td> <img alt=" " border="0" height="1" src="/im/a.gif" width="190"> <br> <a href="http://www.sun.com"> <img alt=" " border="0" height="29" src="/im/logo_sun_small.gif" vspace="5" width="61"> </a> </td> 
+           <td valign="top" width="60%"> 
+            <div class="footer"> 
+             <a href="https://java-net.dev.java.net/feedback.html"> <span __num="182"> Feedback </span> </a> 
+             <span __num="183"> | </span> 
+             <a href="http://java.net/faq.csp"> <span __num="184"> FAQ </span> </a> 
+             <span __num="185"> | </span> 
+             <a href="http://java.net/presscenter/"> <span __num="186"> Press </span> </a> 
+             <span __num="187"> | </span> 
+             <a href="http://java.net/terms.csp"> <span __num="188"> Terms of Use </span> </a> 
+             <br> 
+             <a href="http://www.sun.com/privacy/"> <span __num="189"> Privacy </span> </a> 
+             <span __num="190"> | </span> 
+             <a href="http://www.sun.com/suntrademarks/"> <span __num="191"> Trademarks </span> </a> 
+             <span __num="192"> | </span> 
+             <a href="https://java-net.dev.java.net/sitemap.html"> <span __num="193"> Site Map </span> </a> 
+             <br> 
+             <span class="sp5"> </span> 
+             <br> 
+             <span __num="194"> Your use of this web site or any of its content or software indicates your agreement to be bound by these </span> 
+             <a href="http://java.net/terms.csp"> <span __num="195"> Terms of Participation </span> </a> 
+             <span __num="196"> . </span> 
+             <br> 
+             <span class="sp5"> </span> 
+             <br> 
+             <span __num="197"> Copyright © 1995-2006 Sun Microsystems, Inc. </span> 
+            </div> </td> 
+           <td align="right" valign="top" width="40%"> 
+            <div class="footer"> 
+             <a href="http://www.oreilly.com"> <img alt="Oreilly Logo" border="0" height="19" src="/images/montague_logo_oreilly.gif" width="74"> </a> 
+             <a href="http://www.collab.net/"> <img alt="Collabnet Logo" border="0" height="19" src="/images/montague_logo_collabnet.gif" width="85"> </a> 
+             <br> 
+             <span __num="198"> Powered by Sun Microsystems, Inc., </span> 
+             <br> 
+             <span __num="199"> O'Reilly and CollabNet </span> 
+            </div> </td> 
+          </tr> 
+          <!--  <tr><td colspan="3" valign="top" class="grey3"><img src="/im/a.gif" width="1" height="2" border="0" alt=" " /></td></tr>  --> 
+         </tbody> 
+        </table> 
+        <div class="grayline"> 
+        </div> </td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <!--  END VNV5 FOOTER  --> 
+    <!--  Begin SiteCatalyst code  --> 
+    <script language="JavaScript" src="http://www.java.net/s_code_remote.js">    </script> 
+    <!--  End SiteCatalyst code  --> 
+   </div> 
+  </text> 
+ </body>
+</html>

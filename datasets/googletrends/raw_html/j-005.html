@@ -1,0 +1,1229 @@
+<html class="mlbv2  device-desktop js flexbox no-touch csscolumns" lang="en-US"><!--<![endif]--><head>
+<title>
+Active Roster | MLB.com
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="max-age=1800">
+<meta http-equiv="Pragma" content="max-age=1800">
+<meta http-equiv="Expires" content="Wed, 31 Oct 2018 13:04:28 EDT">
+<meta http-equiv="content-language" content="en-US">
+<meta name="description" content="The official website of the Los Angeles Dodgers with the most up-to-date information on scores, schedule, stats, tickets, and team news.">
+<meta name="keywords" content="MLB, Baseball, Major League Baseball">
+<meta itemprop="image" content="http://losangeles.dodgers.mlb.com/mlb/images/team_logos/social_media/og_1200x630_image/la_1200x630.jpg">
+<meta property="og:title" content="Active Roster">
+<meta itemprop="name" content="Active Roster">
+<meta property="og:site_name" content="Los Angeles Dodgers">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://losangeles.dodgers.mlb.com/mlb/images/team_logos/social_media/og_1200x630_image/la_1200x630.jpg">
+<meta property="og:url" content="http://m.dodgers.mlb.com/roster/">
+<meta property="fb:app_id" content="7848098180">
+<meta property="fb:pages" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="env" content="prodweb2">
+<meta name="serverTime" content="2018-10-31T09:34:28-07:00">
+<meta name="flipTime" content="11:00">
+<meta name="flipTimeZoneOffset" content="-0700">
+<link rel="shortcut icon" href="http://ui.bamstatic.com/baseball/images/team-logos/current/favicon/la.ico">
+<meta name="clubId" content="la">
+<meta name="club-code" content="lad">
+<meta name="club" content="Los Angeles Dodgers">
+<meta name="sectionId" content="roster">
+<meta name="apple-itunes-app" content="app-id=493619333, affiliate-data=at=10l3Hj&amp;ct=mobile_AtBat_MLBintent, app-argument=http://m.mlb.com/la/roster">
+<link rel="canonical" href="http://m.dodgers.mlb.com/roster/">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="http://ui.bamstatic.com/fedapp/headers/builds/1.0.1/style/header.legacy.css" />
+<link rel="stylesheet" type="text/css" href="http://ui.bamstatic.com/fedapp/headers/club-builds/1.0.1/la/style/la.legacy.css" />
+<link rel="stylesheet" type="text/css" href="http://ui.bamstatic.com/fedapp/footers/builds/footer/0.0.0/styles/footer.css" />
+<link rel="stylesheet" type="text/css" href="http://ui.bamstatic.com/fedapp/footers/builds/club-styles/la/0.0.0/styles/la.css" />
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<link rel="stylesheet" type="text/css" href="http://ui.bamstatic.com/fedapp/headers/builds/1.0.1/style/header.css">
+<link rel="stylesheet" type="text/css" href="http://ui.bamstatic.com/fedapp/headers/club-builds/1.0.1/la/style/la.css">
+<link rel="stylesheet" type="text/css" href="http://ui.bamstatic.com/fedapp/footers/builds/footer/0.0.0/styles/footer.css">
+<link rel="stylesheet" type="text/css" href="http://ui.bamstatic.com/fedapp/footers/builds/club-styles/la/0.0.0/styles/la.css">
+<!--<![endif]-->
+<!--[if (lte IE 9)&(gt IE 7) ]>
+<script type="text/javascript" src="http://ui.bamstatic.com/bridge/core/shims/ie8/es5shim.js"></script>
+<script type="text/javascript" src="http://ui.bamstatic.com/bridge/core/shims/ie8/html5shiv.js"></script>
+<![endif]-->
+<script async="" src="http://tags.bkrtx.com/js/bk-coretag.js"></script><script async="" type="text/javascript" src="http://rtax.criteo.com/delivery/rta/rta.js?netId=3665&amp;cookieName=crtg_mlb&amp;rnd=24885137722&amp;varName=crtg_content"></script><script async="" type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-555T3L"></script><script type="text/javascript" async="" src="http://cdn.krxd.net/controltag/rja6bo8zd.js"></script><script>
+/**
+* Detect and classify some device specific information via userAgent.
+* Detects browser, browser version, os, form-factor.
+* @name Device
+*/
+(function (root, factory) {
+if ((typeof define === 'function' && define.amd) && !(typeof bam !== "undefined" && typeof bam.define === "function")) {
+// AMD.
+define([], factory);
+} else {
+// Browser globals
+root.deviceBootstrap = factory();
+}
+}(this, function () {
+var OPEN='(',
+CLOSE=')',
+CASE='i',
+PIPE='|',
+OTHER = 'desktop', //treating other as desktop - chromebooks were getting classified as other
+VERSION = 'version',
+EMPTY = "",
+Regex=function(regex,flags){return new RegExp(regex,flags||CASE)},
+ios ="iP(?:hone|ad|od)",
+bb ="(?:BlackBerry|BB10| RIM )",
+android ="Android",
+windows ="Windows",
+winpdsk ="WPDesktop", //Windows Phone Desktop Mode
+winpold = windows+" Phone",
+winphone="Trident(?:.*?Touch(?:.*?Mobile))",
+linux ="Linux(?!.*Android)",
+mac ="Macintosh",
+chromebook = "CrOS",
+desktop=OPEN+"?:"+[mac,windows,linux,chromebook].join(PIPE)+CLOSE,
+rSEP=/[\._]/,
+rPLATFORM={
+windowsphone: Regex(winphone+PIPE+winpold+PIPE+winpdsk),
+windows : Regex(windows),
+ios : Regex(ios),
+blackberry : Regex(bb),
+android : Regex(android),
+linux : Regex(linux),
+macintosh : Regex(mac),
+chromebook : Regex(chromebook)
+},
+rmsFORMFACTOR={
+/*
+* Microsoft platform specific form factor tests to address their UA nonsense without affecting other platforms
+* treating Xbox as Tablet to avoid Flash issues / push into apps when appropriate
+*/
+desktop : /(?:Windows NT(?!.*WPDesktop)(?!.*Xbox))/i,
+tablet : Regex(OPEN+(['Tablet|iPad','\\sNT.*?'+winphone,android+'(?!.*Mobi)','silk',bb+'.*?Tablet','xbox'].join(PIPE))+CLOSE),
+phone : Regex(OPEN+['Mobi|Mobile','WPDesktop',ios,winphone,bb].join(PIPE)+CLOSE)
+},
+rFORMFACTOR={
+/* Use Mobi for android partial match to also include Opara mobile for android
+* @todo NT+winp can report incorrect matches for touch enabled win 8 desktop */
+tablet : Regex(OPEN+(['Tablet|iPad','\\sNT.*?'+winphone,android+'(?!.*Mobi)','silk',bb+'.*?Tablet'].join(PIPE))+CLOSE),
+phone : Regex(OPEN+['Mobi|Mobile',ios,winphone,bb].join(PIPE)+CLOSE),
+desktop : Regex(desktop)
+},
+rBROWSER ={
+msie : /msie|iemobile|trident/i,
+edge : /edge/i,
+android : /android(?!.+(?:chrome|silk))/i,
+chrome : /chrome|crios/i,
+firefox : /firefox/i,
+opera : /opera(?!.*?mini)\//i,
+operamini : /opera mini/i,
+silk : /silk/i,
+safari : /safari/i
+},
+rBROWSERCORE ={
+webkit : /AppleWebKit/i,
+gecko : /gecko\//i,
+trident : /trident/i,
+edge : /Edge/i
+},
+rNOTPOLYFILL=/\[\s*native code\s*\]/,
+FORMFACTORS = {
+desktop: "desktop",
+other : OTHER,
+phone : "phone",
+tablet : "tablet"
+},
+deviceCache={},
+queue;
+function safeArray(ar,index){
+return ar && index ? ar[index] : ar;
+}
+function version(vstr){
+var varr=vstr.split(rSEP).slice(0,3);
+if(vstr && varr.length<2){
+varr.push(0);
+}
+return varr.join('.');
+}
+/**
+* Build a device descriptor object via a userAgent string.
+* Identifies the platform, browser name and version, and os version.
+* Attempts to classify the device's form factor as either Phone, Tablet, or Desktop.
+* Parsed devices are cached internally to reduce processing, and provide a mechanism
+* for updating properties on the fly as need (@see getOrientation).
+* @constructor
+* @param {string} [ua] Optional userAgent string to consume. Defaults to navigator.userAgent.
+*/
+function Device(ua){
+ua=ua||navigator.userAgent;
+if(deviceCache[ua]){
+return deviceCache[ua];
+}
+if(!(this instanceof Device)){
+return new Device(ua);
+}
+deviceCache[ua]=this;
+this.userAgent=ua;
+this.is={};
+this.platform=this.getPlatform();
+this.platformVersion=this.getPlatformVersion();
+this.browser=this.getBrowser();
+this.browserVersion=this.getBrowserVersion();
+this.formFactor=this.getFormFactor();
+}
+Device.prototype={
+/**
+* Determine os from a known set of values. If not readily classifiable,
+* the platform will be 'other'.
+* @see rPLATFORMS
+* @return {string} Platform name or 'other'.
+*/
+getPlatform : function(){
+return this.test(rPLATFORM)||OTHER;
+},
+/**
+* Attempt to determing the version of the parsed platform.
+* Version will be formatted as MAJOR.MINOR.PATCH (if availble).
+* @return {string} Version string of the determined platform. In unknown, value is "".
+*/
+getPlatformVersion : function() {
+return version(this.match(Regex("(?:"+ (this.is.blackberry? VERSION:this.platform )+"|"+winpold+"|OS)[^\\d]+([\\d\\.\\_]+)","ig"),1));
+},
+/**
+* Determine the browser name from the defined set.
+* @see rBrowser
+* @return {string} Matched browser name from rBrowser. Defaults to 'other'.
+*/
+getBrowser : function() {
+this.test(rBROWSERCORE);
+return (this.test(rBROWSER)||OTHER);
+},
+/**
+* Attempt to match the device to the form factor set {tablet, phone, desktop, other} where possible.
+* @return {string} Form factor label, or 'other'.
+*/
+getFormFactor: function() {
+var formFactorTest = "";
+//different tests per platform?
+if (this.is.msie) {
+formFactorTest = rmsFORMFACTOR;
+} else {
+formFactorTest = rFORMFACTOR;
+}
+return FORMFACTORS[this.test(formFactorTest)]||FORMFACTORS.other;
+},
+/**
+* Parse out the browser version as a MAJOR.MINOR.PATCH formatted string.
+* @note BUILD fragment is discarded.
+* @return {string} Parsed version string of the form MAJOR.MINOR.PATCH.
+*/
+getBrowserVersion : function() {
+var searchBrowser=this.browser,
+delimiter = "[\\/\\s]";
+if(this.is.chrome && this.is.ios){
+searchBrowser="crios";
+}else if(this.is.opera){
+searchBrowser=VERSION
+}else if(this.is.msie){
+searchBrowser = searchBrowser + PIPE + "IEMobile"+PIPE+"rv";
+delimiter = "[\\/\\:\\s]";
+}
+return version(this.match((Regex("(?:"+searchBrowser+PIPE+VERSION+")"+delimiter+"([\\d\\.]+)","i")),1));
+},
+/**
+* Helper method for safely running regex matches against the instances userAgent.
+* @param {regexp} regex Regex to match.
+* @param {number} [index] Optional captured match to return. If no index is supplied,
+* the entire match set is return as an array.
+* @return {mixed} String when used with index, or array of matches.
+*/
+match : function(regex,index){
+return safeArray(regex.exec(this.userAgent),index)||EMPTY;
+},
+test : function(map){
+var key,
+check,
+result,
+ua=this.userAgent;
+for(key in map){
+check=map[key].test(ua);
+this.is[key]=this.is[key] || (check && !result);
+if(check && !result){
+result=key;
+}
+}
+return result;
+}
+};
+return Device;
+}));
+window.getStartupDeviceTypeString = function() {
+var type = ''
+if (window.deviceBootstrap) {
+type = !type ? window.deviceBootstrap().formFactor : type
+} else {
+console.error('Device Detection', 'Module was not loaded.')
+}
+return type
+}
+document.getElementsByTagName('html')[0].className += ' device-' + getStartupDeviceTypeString()
+window.DeviceType = {
+device: window.getStartupDeviceTypeString()
+}
+</script>
+<link rel="stylesheet" type="text/css" href="http://m.dodgers.mlb.com/bundler?less=/style/reset.less&amp;less=/style/global.less&amp;less=/style/web.less&amp;less=/style/header/header.less&amp;less=/style/debug.less&amp;css=http://mlb.mlb.com/style/la.css&amp;v=1.4">
+<link rel="stylesheet" type="text/css" href="http://m.dodgers.mlb.com/bundler?less=/sections/roster/style/roster.less&amp;v=1.4">
+<style>
+/* Fonts */
+@font-face {
+font-family: "mlb_primary";
+font-style: normal;
+font-weight: bold;
+src: url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-2.eot");
+src: url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-2.eot?#iefix") format('embedded-opentype'),
+url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-3.woff") format('woff'),
+url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-1.ttf") format('truetype'),
+url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-4.svg#web") format('svg');
+}
+@font-face {
+font-family: "mlb_secondary";
+font-style: normal;
+font-weight: bold;
+src: url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-2.eot");
+src: url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-2.eot?#iefix") format('embedded-opentype'),
+url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-3.woff") format('woff'),
+url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-1.ttf") format('truetype'),
+url("http://ui.bamstatic.com/clubs/mlb/fonts/benton_sans_cond_medium/6ec61f10-00ea-4ffd-a36b-26e2577a83f1-4.svg#web") format('svg');
+}
+/* Team Color Values */
+body.team #main-header .navigation-wrapper,
+h4,
+dt {
+background: #004d85;
+}
+body.mlb #nav-teams {
+background-color: #00375E;
+}
+body.team #nav-teams {
+background-color: #003C68;
+}
+h1, h2 {
+color: #005A9C;
+}
+h5, dt {
+color: #003963;
+}
+a,
+select.changed,
+.done-button.abled,
+.promo-date {
+color: #005A9C;
+}
+.team-dark-background {
+background-color: #003963;
+}
+.team-home {
+background: #005A9C;
+}
+.team-away {
+color: #005A9C;
+}
+.game-home.team-home-primary, .schedule-legend-home.team-home-primary {
+background: #005A9C !important;
+}
+.game-away.team-away-primary {
+background: #eeeeef!important;
+}
+.team-away-primary a {
+color: #333333;
+}
+.team-home-primary a .game-opponent, .team-away-primary a .game-opponent {
+font-weight: bold;
+}
+.footer a {
+color: #BBC4C7;
+}
+#main-header {
+background-color: #005a9c;
+}
+.search-select .select-style,
+.reset-button {
+background-color: #005A9C;
+}
+</style>
+<!-- BEGIN Krux ControlTag for "rja6bo8zd" -->
+<script src="http://ui.bamstatic.com/bridge/core/js/kruxid.js"></script>
+<script class="kxct" data-id="rja6bo8zd" data-timing="async" data-version="3.0" type="text/javascript">
+window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+(function(){
+var k=document.createElement('script');k.type='text/javascript';k.async=true;
+k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/rja6bo8zd.js';
+var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+}());
+</script>
+<!-- END Krux ControlTag -->
+<!-- BEGIN Krux Interchange -->
+<script class="kxint" data-namespace="mlb" type="text/javascript">
+(function(){
+function retrieve(n){
+var k= 'kx'+'mlb_'+n, ls=(function(){
+try { return window.localStorage; } catch(e) { return null; }
+})();
+if (ls) { return ls[k] || ''; }
+else if (navigator.cookieEnabled) { var m = document.cookie.match(k+'=([^;]*)'); return (m && unescape(m[1])) || ''; }
+else { return ''; }}
+Krux.user = retrieve('user');
+Krux.segments = retrieve('segs') ? retrieve('segs').split(',') : [];
+})();
+</script>
+<!-- END Krux Interchange -->
+</head>
+<body id="roster_index" class="lang-en team la  is-landscape is-windows is-webkit is-chrome is-desktop" data-ad-id="dodgers.mlb/roster">
+<div class="app-web wrapper wrapper-web"><div id="top-ad" class="ad-responsive-slot">
+<div id="ad_container_320x50" class="ad-responsive-size" data-thresholds="[0,1,2]" data-sizes="[[320,50]]" style="display: none;"></div>
+<div id="ad_container_728x90" class="ad-responsive-size" data-thresholds="[3,4]" data-sizes="[[728,90]]" style="display: block;"></div>
+</div>
+<div class="menu-container">
+<div class="languagebar">
+<div class="width-container">
+<a class="languagebar__logo" href="https://www.mlb.com/" data-phone-href="https://www.mlb.com/"><img src="/images/mlb_tag_logo.png" alt=""></a>
+<nav class="languagebar__site-language">
+<a href="http://mlbjapan.tumblr.com/" data-phone-href="">日本語</a>
+<a href="http://losangeles.dodgers.mlb.com/es/index.jsp?c_id=la" data-phone-href="http://m.es.dodgers.mlb.com">Los Dodgers</a>
+</nav>
+<span class="languagebar__title">The Official Site of the Los Angeles Dodgers</span>
+</div>
+</div>
+<div class="main-container">
+<div class="logobar-container">
+<div class="width-container">
+<a class="logobar__logo" href="http://losangeles.dodgers.mlb.com/index.jsp?c_id=la" data-phone-href="http://m.dodgers.mlb.com/"><img src="/documents/2/0/6/111246206/lad_logo_crop_white_zz0cbxdk_o7coq44n.svg" class="tag-logo" alt="LA Wired Logo" onerror="this.onerror=null;this.src='/assets/images/4/1/0/111246410/cuts/LAD_1x_jlbsdlwr_ke639ch6.png';"></a>
+<div class="logobar__marketing">
+<a class="logobar__clubdotcom" href="http://losangeles.dodgers.mlb.com/index.jsp?c_id=la" data-phone-href="http://m.dodgers.mlb.com/"><img src="/documents/1/0/0/111247100/LAD_url_logo_sftibgxq.svg" onerror="this.onerror=null;this.src='/assets/images/5/4/6/111246546/cuts/lad_url_logo_erwgm64l_zidu64r0.png';"></a>
+<div class="buttonContainer">
+<span class="searchButton__container">
+<form action="http://mlb.mlb.com/search/?c_id=la" class="searchForm" id="searchForm">
+<input name="ps_lastname" class="searchForm__input" placeholder="Search" type="text" value="" autocomplete="off" autocorrect="off" autocapitalization="off">
+<div class="searchButton__icon"></div>
+<ul></ul>
+</form>
+</span>
+<span class="accountButton__container"><span class="accountButton__wrapper">
+    <span class="accountButton__button" data-toggle="accountButton__dropdown" data-not-logged-in="">
+        <a href="https://securea.mlb.com/enterworkflow.do?flowId=registration.connect.wizard&amp;c_id=mlb&amp;template=mobile&amp;forwardUrl=http://m.dodgers.mlb.com/roster/" title="MLB.com Login">
+        </a>
+    </span>
+
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar-container">
+<div class="width-container">
+<nav class="navbar-container__navbar">
+<button class="navbar-container__button"><span class="button__label">Sections</span><span class="arrow arrow__down"></span></button><a href="https://www.mlb.com/dodgers/news" data-phone-href="https://www.mlb.com/dodgers/news" class="menu-item menu-item--news" data-wired-order="1" data-no-panel="">News</a><a href="https://www.mlb.com/dodgers/video" data-phone-href="https://www.mlb.com/dodgers/video" class="menu-item menu-item--video" data-wired-order="2" data-no-panel="">Video</a><a href="https://www.mlb.com/dodgers/scores" data-phone-href="https://www.mlb.com/dodgers/scores" class="menu-item menu-item--scoreboard" data-wired-order="3" data-no-panel="">Scores</a><a href="https://www.mlb.com/dodgers/tickets" data-phone-href="https://www.mlb.com/dodgers/tickets" class="menu-item menu-item--tickets" data-wired-order="4" data-no-panel="">Tickets</a><a href="https://www.mlb.com/dodgers/schedule" data-phone-href="https://www.mlb.com/dodgers/schedule" class="menu-item menu-item--schedule" data-wired-order="5" data-no-panel="">Schedule</a><a href="http://losangeles.dodgers.mlb.com/stats/sortable.jsp?c_id=la#playerType=ALL" data-phone-href="http://m.dodgers.mlb.com/stats" class="menu-item menu-item--stats" data-wired-order="6" data-no-panel="">Stats</a><a href="http://m.dodgers.mlb.com/roster" data-phone-href="http://m.dodgers.mlb.com/roster" class="menu-item menu-item--roster menu-item--is-active" data-wired-order="7" data-no-panel="">Roster</a><a href="https://www.mlb.com/dodgers/community" data-phone-href="https://www.mlb.com/dodgers/community" class="menu-item menu-item--community" data-wired-order="8" data-no-panel="">Community</a><a href="https://www.mlb.com/dodgers/fans" data-phone-href="https://www.mlb.com/dodgers/fans" class="menu-item menu-item--fan_forum" data-wired-order="9" data-no-panel="">Fans</a><a href="https://www.mlb.com/dodgers/ballpark" data-phone-href="https://www.mlb.com/dodgers/ballpark" class="menu-item menu-item--ballpark" data-wired-order="10" data-no-panel="">Dodger Stadium</a><a href="https://www.mlb.com/dodgers/apps" data-phone-href="https://www.mlb.com/dodgers/apps" class="menu-item menu-item--mobile" data-wired-order="11" data-no-panel="">Apps</a><a href="https://www.mlbshop.com/los-angeles-dodgers/t-25999800+z-9904333-3863247963?_s=bm-mlbcom-lad" data-phone-href="https://www.mlbshop.com/los-angeles-dodgers/t-25999800+z-9904333-3863247963?_s=bm-mlbcom-lad" class="menu-item menu-item--shop" data-wired-order="12" data-no-panel="">Shop</a><a href="https://www.mlb.com/live-stream-games/subscribe?&amp;affiliateId=clubMENU" data-phone-href="https://www.mlb.com/live-stream-games/subscribe?&amp;affiliateId=clubMENU" class="menu-item menu-item--mlbtv" data-wired-order="13" data-no-panel="">MLB.TV</a><a href="http://losangeles.dodgers.mlb.com/mlb/fantasy/?tcid=mm_la_fantasy" data-phone-href="http://m.mlb.com/fantasy" class="menu-item menu-item--fantasy" data-wired-order="14" data-no-panel="">Fantasy</a><a href="https://www.mlb.com/team" data-phone-href="http://m.dodgers.mlb.com/teams" class="menu-item menu-item--teams" data-wired-order="15" data-no-panel="">Teams</a><a href="https://www.mlb.com/dodgers/tickets/season-tickets/holders/rewards" data-phone-href="" class="menu-item menu-item--la_rewards" data-wired-order="16" data-no-panel="">Rewards</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+<nav class="navbar-container__overflow">
+<ul class="menu-container__overflow"><li class="menu-item menu-item--news" data-wired-order="1" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/news" data-phone-href="https://www.mlb.com/dodgers/news">News</a>
+</li><li class="menu-item menu-item--video" data-wired-order="2" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/video" data-phone-href="https://www.mlb.com/dodgers/video">Video</a>
+</li><li class="menu-item menu-item--scoreboard" data-wired-order="3" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/scores" data-phone-href="https://www.mlb.com/dodgers/scores">Scores</a>
+</li><li class="menu-item menu-item--tickets" data-wired-order="4" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/tickets" data-phone-href="https://www.mlb.com/dodgers/tickets">Tickets</a>
+</li><li class="menu-item menu-item--schedule" data-wired-order="5" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/schedule" data-phone-href="https://www.mlb.com/dodgers/schedule">Schedule</a>
+</li><li class="menu-item menu-item--stats" data-wired-order="6" data-no-panel="">
+<a class="menu-item--link" href="http://losangeles.dodgers.mlb.com/stats/sortable.jsp?c_id=la#playerType=ALL" data-phone-href="http://m.dodgers.mlb.com/stats">Stats</a>
+</li><li class="menu-item menu-item--roster menu-item--is-active" data-wired-order="7" data-no-panel="">
+<a class="menu-item--link" href="http://m.dodgers.mlb.com/roster" data-phone-href="http://m.dodgers.mlb.com/roster">Roster</a>
+</li><li class="menu-item menu-item--community" data-wired-order="8" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/community" data-phone-href="https://www.mlb.com/dodgers/community">Community</a>
+</li><li class="menu-item menu-item--fan_forum" data-wired-order="9" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/fans" data-phone-href="https://www.mlb.com/dodgers/fans">Fans</a>
+</li><li class="menu-item menu-item--ballpark" data-wired-order="10" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/ballpark" data-phone-href="https://www.mlb.com/dodgers/ballpark">Dodger Stadium</a>
+</li><li class="menu-item menu-item--mobile" data-wired-order="11" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/apps" data-phone-href="https://www.mlb.com/dodgers/apps">Apps</a>
+</li><li class="menu-item menu-item--shop" data-wired-order="12" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlbshop.com/los-angeles-dodgers/t-25999800+z-9904333-3863247963?_s=bm-mlbcom-lad" data-phone-href="https://www.mlbshop.com/los-angeles-dodgers/t-25999800+z-9904333-3863247963?_s=bm-mlbcom-lad">Shop</a>
+</li><li class="menu-item menu-item--mlbtv" data-wired-order="13" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/live-stream-games/subscribe?&amp;affiliateId=clubMENU" data-phone-href="https://www.mlb.com/live-stream-games/subscribe?&amp;affiliateId=clubMENU">MLB.TV</a>
+</li><li class="menu-item menu-item--fantasy" data-wired-order="14" data-no-panel="">
+<a class="menu-item--link" href="http://losangeles.dodgers.mlb.com/mlb/fantasy/?tcid=mm_la_fantasy" data-phone-href="http://m.mlb.com/fantasy">Fantasy</a>
+</li><li class="menu-item menu-item--teams" data-wired-order="15" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/team" data-phone-href="http://m.dodgers.mlb.com/teams">Teams</a>
+</li><li class="menu-item menu-item--la_rewards" data-wired-order="16" data-no-panel="">
+<a class="menu-item--link" href="https://www.mlb.com/dodgers/tickets/season-tickets/holders/rewards" data-phone-href="">Rewards</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="layout layout-roster">
+<section class="column primary span-7 left">
+<header>
+<!-- Everyone Else's Roster Header -->
+<h2 __label="title">Dodgers Roster &amp; Staff</h2>
+</header>
+<div id="content" class="page page-index">
+<div class="nav-tabset-container">
+<nav class="nav-tabset">
+<ul class="quadruple">
+<li class="active" title="Full Roster"><a href="/la/roster/" class="js-link"><span class="desktop">Active</span><span class="mobile">Active</span></a></li>
+<li title="40-man"><a href="/la/roster/40-man/" class="js-link"><span class="desktop">40-man</span><span class="mobile">40-man</span></a></li>
+<li title="Staff"><a href="/la/roster/coaches/" class="js-link"><span class="desktop">Coaches</span><span class="mobile">Coaches</span></a></li>
+<li title="Transactions"><a href="/la/roster/transactions/" class="js-link"><span class="desktop">Transactions</span><span class="mobile">Moves</span></a></li>
+</ul>
+</nav>
+</div>
+<section class="module" __label="main">
+<h4>Pitchers</h4>
+<table class="data roster_table" summary="Dodgers Active Roster">
+<colgroup><col class="dg-jersey_number">
+<col class="dg-player_headshot">
+<col class="dg-name_display_first_last">
+<col class="dg-bats_throws">
+<col class="dg-height">
+<col class="dg-weight">
+<col class="dg-date_of_birth">
+</colgroup><thead>
+<tr>
+<th tabindex="0" index="0" class="dg-jersey_number"><abbr>#</abbr></th>
+<th tabindex="0" index="1" class="dg-player_headshot">&nbsp;</th>
+<th tabindex="0" index="2" class="dg-name_display_first_last">Name</th>
+<th tabindex="0" index="3" class="dg-bats_throws"><abbr>B/T</abbr></th>
+<th tabindex="0" index="4" class="dg-height"><abbr>Ht</abbr></th>
+<th tabindex="0" index="5" class="dg-weight"><abbr>Wt</abbr></th>
+<th tabindex="0" index="6" class="dg-date_of_birth"><abbr>DOB</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">75</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/518397@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/518397/scott-alexander">Scott Alexander</a>
+</td>
+<td index="3" class="dg-bats_throws">L/L</td>
+<td index="4" class="dg-height">6'2"</td>
+<td index="5" class="dg-weight">190lbs</td>
+<td index="6" class="dg-date_of_birth">7/10/89</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">52</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/520980@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/520980/pedro-baez">Pedro Baez</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'0"</td>
+<td index="5" class="dg-weight">230lbs</td>
+<td index="6" class="dg-date_of_birth">3/11/88</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">21</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/621111@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/621111/walker-buehler">Walker Buehler</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'2"</td>
+<td index="5" class="dg-weight">175lbs</td>
+<td index="6" class="dg-date_of_birth">7/28/94</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">47</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/608638@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/608638/jt-chargois">JT Chargois</a>
+</td>
+<td index="3" class="dg-bats_throws">S/R</td>
+<td index="4" class="dg-height">6'3"</td>
+<td index="5" class="dg-weight">200lbs</td>
+<td index="6" class="dg-date_of_birth">12/3/90</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">54</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/571561@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/571561/tony-cingrani">Tony Cingrani</a>
+</td>
+<td index="3" class="dg-bats_throws">L/L</td>
+<td index="4" class="dg-height">6'4"</td>
+<td index="5" class="dg-weight">214lbs</td>
+<td index="6" class="dg-date_of_birth">7/5/89</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">64</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/657571@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/657571/caleb-ferguson">Caleb Ferguson</a>
+</td>
+<td index="3" class="dg-bats_throws">R/L</td>
+<td index="4" class="dg-height">6'3"</td>
+<td index="5" class="dg-weight">215lbs</td>
+<td index="6" class="dg-date_of_birth">7/2/96</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">46</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/451661@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/451661/josh-fields">Josh Fields</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'0"</td>
+<td index="5" class="dg-weight">195lbs</td>
+<td index="6" class="dg-date_of_birth">8/19/85</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">51</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/571670@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/571670/dylan-floro">Dylan Floro</a>
+</td>
+<td index="3" class="dg-bats_throws">L/R</td>
+<td index="4" class="dg-height">6'2"</td>
+<td index="5" class="dg-weight">205lbs</td>
+<td index="6" class="dg-date_of_birth">12/27/90</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">63</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/554340@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/554340/yimi-garcia">Yimi Garcia</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'1"</td>
+<td index="5" class="dg-weight">220lbs</td>
+<td index="6" class="dg-date_of_birth">8/18/90</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">44</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/448179@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/448179/rich-hill">Rich Hill</a>
+</td>
+<td index="3" class="dg-bats_throws">L/L</td>
+<td index="4" class="dg-height">6'5"</td>
+<td index="5" class="dg-weight">220lbs</td>
+<td index="6" class="dg-date_of_birth">3/11/80</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">74</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/445276@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/445276/kenley-jansen">Kenley Jansen</a>
+</td>
+<td index="3" class="dg-bats_throws">S/R</td>
+<td index="4" class="dg-height">6'5"</td>
+<td index="5" class="dg-weight">275lbs</td>
+<td index="6" class="dg-date_of_birth">9/30/87</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">22</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/477132@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/477132/clayton-kershaw">Clayton Kershaw</a>
+</td>
+<td index="3" class="dg-bats_throws">L/L</td>
+<td index="4" class="dg-height">6'4"</td>
+<td index="5" class="dg-weight">228lbs</td>
+<td index="6" class="dg-date_of_birth">3/19/88</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">18</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/628317@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/628317/kenta-maeda">Kenta Maeda</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'1"</td>
+<td index="5" class="dg-weight">175lbs</td>
+<td index="6" class="dg-date_of_birth">4/11/88</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">59</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/573127@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/573127/zac-rosscup">Zac Rosscup</a>
+</td>
+<td index="3" class="dg-bats_throws">R/L</td>
+<td index="4" class="dg-height">6'2"</td>
+<td index="5" class="dg-weight">220lbs</td>
+<td index="6" class="dg-date_of_birth">6/9/88</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">68</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/548389@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/548389/ross-stripling">Ross Stripling</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'3"</td>
+<td index="5" class="dg-weight">210lbs</td>
+<td index="6" class="dg-date_of_birth">11/23/89</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">7</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/628711@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/628711/julio-urias">Julio Urias</a>
+</td>
+<td index="3" class="dg-bats_throws">L/L</td>
+<td index="4" class="dg-height">6'0"</td>
+<td index="5" class="dg-weight">215lbs</td>
+<td index="6" class="dg-date_of_birth">8/12/96</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">43</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/519381@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/519381/pat-venditte">Pat Venditte</a>
+</td>
+<td index="3" class="dg-bats_throws">L/S</td>
+<td index="4" class="dg-height">6'1"</td>
+<td index="5" class="dg-weight">185lbs</td>
+<td index="6" class="dg-date_of_birth">6/30/85</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">57</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/622072@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/622072/alex-wood">Alex Wood</a>
+</td>
+<td index="3" class="dg-bats_throws">R/L</td>
+<td index="4" class="dg-height">6'4"</td>
+<td index="5" class="dg-weight">215lbs</td>
+<td index="6" class="dg-date_of_birth">1/12/91</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="module" __label="main">
+<h4>Catchers</h4>
+<table class="data roster_table" summary="Dodgers Active Roster">
+<colgroup><col class="dg-jersey_number">
+<col class="dg-player_headshot">
+<col class="dg-name_display_first_last">
+<col class="dg-bats_throws">
+<col class="dg-height">
+<col class="dg-weight">
+<col class="dg-date_of_birth">
+</colgroup><thead>
+<tr>
+<th tabindex="0" index="0" class="dg-jersey_number"><abbr>#</abbr></th>
+<th tabindex="0" index="1" class="dg-player_headshot">&nbsp;</th>
+<th tabindex="0" index="2" class="dg-name_display_first_last">Name</th>
+<th tabindex="0" index="3" class="dg-bats_throws"><abbr>B/T</abbr></th>
+<th tabindex="0" index="4" class="dg-height"><abbr>Ht</abbr></th>
+<th tabindex="0" index="5" class="dg-weight"><abbr>Wt</abbr></th>
+<th tabindex="0" index="6" class="dg-date_of_birth"><abbr>DOB</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">15</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/605131@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/605131/austin-barnes">Austin Barnes</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">5'10"</td>
+<td index="5" class="dg-weight">190lbs</td>
+<td index="6" class="dg-date_of_birth">12/28/89</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">17</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/571657@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/571657/kyle-farmer">Kyle Farmer</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'0"</td>
+<td index="5" class="dg-weight">214lbs</td>
+<td index="6" class="dg-date_of_birth">8/17/90</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">58</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/502570@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/502570/rocky-gale">Rocky Gale</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'1"</td>
+<td index="5" class="dg-weight">185lbs</td>
+<td index="6" class="dg-date_of_birth">2/22/88</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="module" __label="main">
+<h4>Infield</h4>
+<table class="data roster_table" summary="Dodgers Active Roster">
+<colgroup><col class="dg-jersey_number">
+<col class="dg-player_headshot">
+<col class="dg-name_display_first_last">
+<col class="dg-bats_throws">
+<col class="dg-height">
+<col class="dg-weight">
+<col class="dg-date_of_birth">
+</colgroup><thead>
+<tr>
+<th tabindex="0" index="0" class="dg-jersey_number"><abbr>#</abbr></th>
+<th tabindex="0" index="1" class="dg-player_headshot">&nbsp;</th>
+<th tabindex="0" index="2" class="dg-name_display_first_last">Name</th>
+<th tabindex="0" index="3" class="dg-bats_throws"><abbr>B/T</abbr></th>
+<th tabindex="0" index="4" class="dg-height"><abbr>Ht</abbr></th>
+<th tabindex="0" index="5" class="dg-weight"><abbr>Wt</abbr></th>
+<th tabindex="0" index="6" class="dg-date_of_birth"><abbr>DOB</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">35</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/641355@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/641355/cody-bellinger">Cody Bellinger</a>
+</td>
+<td index="3" class="dg-bats_throws">L/L</td>
+<td index="4" class="dg-height">6'4"</td>
+<td index="5" class="dg-weight">210lbs</td>
+<td index="6" class="dg-date_of_birth">7/13/95</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">25</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/501896@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/501896/david-freese">David Freese</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'2"</td>
+<td index="5" class="dg-weight">220lbs</td>
+<td index="6" class="dg-date_of_birth">4/28/83</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">13</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/571970@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/571970/max-muncy">Max Muncy</a>
+</td>
+<td index="3" class="dg-bats_throws">L/R</td>
+<td index="4" class="dg-height">6'0"</td>
+<td index="5" class="dg-weight">210lbs</td>
+<td index="6" class="dg-date_of_birth">8/25/90</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">3</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/621035@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/621035/chris-taylor">Chris Taylor</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'1"</td>
+<td index="5" class="dg-weight">195lbs</td>
+<td index="6" class="dg-date_of_birth">8/29/90</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">10</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/457759@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/457759/justin-turner">Justin Turner</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">5'11"</td>
+<td index="5" class="dg-weight">205lbs</td>
+<td index="6" class="dg-date_of_birth">11/23/84</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">26</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/400284@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/400284/chase-utley">Chase Utley</a>
+</td>
+<td index="3" class="dg-bats_throws">L/R</td>
+<td index="4" class="dg-height">6'1"</td>
+<td index="5" class="dg-weight">195lbs</td>
+<td index="6" class="dg-date_of_birth">12/17/78</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="module" __label="main">
+<h4>Outfield</h4>
+<table class="data roster_table" summary="Dodgers Active Roster">
+<colgroup><col class="dg-jersey_number">
+<col class="dg-player_headshot">
+<col class="dg-name_display_first_last">
+<col class="dg-bats_throws">
+<col class="dg-height">
+<col class="dg-weight">
+<col class="dg-date_of_birth">
+</colgroup><thead>
+<tr>
+<th tabindex="0" index="0" class="dg-jersey_number"><abbr>#</abbr></th>
+<th tabindex="0" index="1" class="dg-player_headshot">&nbsp;</th>
+<th tabindex="0" index="2" class="dg-name_display_first_last">Name</th>
+<th tabindex="0" index="3" class="dg-bats_throws"><abbr>B/T</abbr></th>
+<th tabindex="0" index="4" class="dg-height"><abbr>Ht</abbr></th>
+<th tabindex="0" index="5" class="dg-weight"><abbr>Wt</abbr></th>
+<th tabindex="0" index="6" class="dg-date_of_birth"><abbr>DOB</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">14</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/571771@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/571771/enrique-hernandez">Enrique Hernandez</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">5'11"</td>
+<td index="5" class="dg-weight">200lbs</td>
+<td index="6" class="dg-date_of_birth">8/24/91</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">27</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/461314@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/461314/matt-kemp">Matt Kemp</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'4"</td>
+<td index="5" class="dg-weight">210lbs</td>
+<td index="6" class="dg-date_of_birth">9/23/84</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">70</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/641796@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/641796/tim-locastro">Tim Locastro</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'1"</td>
+<td index="5" class="dg-weight">200lbs</td>
+<td index="6" class="dg-date_of_birth">7/14/92</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">31</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/592626@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/592626/joc-pederson">Joc Pederson</a>
+</td>
+<td index="3" class="dg-bats_throws">L/L</td>
+<td index="4" class="dg-height">6'1"</td>
+<td index="5" class="dg-weight">220lbs</td>
+<td index="6" class="dg-date_of_birth">4/21/92</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">66</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/624577@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/624577/yasiel-puig">Yasiel Puig</a>
+</td>
+<td index="3" class="dg-bats_throws">R/R</td>
+<td index="4" class="dg-height">6'2"</td>
+<td index="5" class="dg-weight">240lbs</td>
+<td index="6" class="dg-date_of_birth">12/7/90</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">60</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/592808@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/592808/andrew-toles">Andrew Toles</a>
+</td>
+<td index="3" class="dg-bats_throws">L/R</td>
+<td index="4" class="dg-height">5'9"</td>
+<td index="5" class="dg-weight">192lbs</td>
+<td index="6" class="dg-date_of_birth">5/24/92</td>
+</tr>
+<tr index="0" tabindex="0">
+<td index="0" class="dg-jersey_number">61</td>
+<td index="1" class="dg-player_headshot"><img src="http://gdx.mlb.com/images/gameday/mugshots/mlb/657077@2x.jpg" onerror="this.src='http://mlb.mlb.com/images/players/silhouettes/generic_mug@2x.png';"></td>
+<td index="2" class="dg-name_display_first_last">
+<a href="/player/657077/alex-verdugo">Alex Verdugo</a>
+</td>
+<td index="3" class="dg-bats_throws">L/L</td>
+<td index="4" class="dg-height">6'0"</td>
+<td index="5" class="dg-weight">205lbs</td>
+<td index="6" class="dg-date_of_birth">5/15/96</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="module">
+</section>
+<section class="module">
+</section>
+</div>
+</section>
+<style>
+h5 {
+color: #005A9C!important;
+}
+</style>
+<aside class="column secondary span-5 right">
+<nav class="nav-sidebar wrap desktop-only">
+<header>
+<h5>Related Links</h5>
+</header>
+<ul class="formatted">
+<li><a href="http://mlb.mlb.com/mlb/players/?tcid=mm_mlb_players">Player Search</a></li>
+</ul>
+</nav>
+<div class="ad-responsive-slot wrap">
+<div id="ad_container_300" class="ad-responsive-size" data-thresholds="[3,4]" data-sizes="[[300,600],[300,250]]" style="display: block;"></div>
+</div>
+<nav class="nav-sidebar wrap">
+<header>
+<h5>Also in Roster</h5>
+</header>
+<ul class="formatted">
+<li><a href="/la/roster/40-man/">40-Man Roster</a></li>
+<li class="desktop-only"><a href="http://mlb.mlb.com/team/depth_chart/index.jsp?c_id=la">Depth Chart</a></li>
+<li><a href="/la/roster/coaches/">Coaches</a></li>
+<li><a href="http://m.mlb.com/prospects/2018?list=la">Top 30 Prospects</a></li>
+<li><a href="/la/roster/transactions/">Transactions</a></li>
+<li class="desktop-only"><a href="http://mlb.mlb.com/mlb/fantasy/injuries/#team119">Injury Updates</a></li>
+<li class="desktop-only"><a href="http://mlb.mlb.com/team/draft.jsp?c_id=la">Draft Results</a></li>
+<li class="desktop-only"><a href="http://mlb.mlb.com/team/front_office.jsp?c_id=la">Front Office</a></li>
+<li class="desktop-only"><a href="http://mlb.mlb.com/team/broadcasters.jsp?c_id=la">Broadcasters</a></li>
+</ul>
+</nav>
+</aside>
+</div>
+<style type="text/css">
+#global-footer-container #global-footer #sponsor-image-container #footer-mlb-logo a img {max-height: 38px; height: 38px; margin: 0 10px 0 0; width: auto;}
+</style>
+<div id="global-footer-container" class=" team">
+<div class="footer-border">
+<div id="global-footer">
+<div id="team-footer">
+<div id="club-logo-container">
+<a data-phone-href="http://m.dodgers.mlb.com/" href="http://losangeles.dodgers.mlb.com/index.jsp?c_id=la">
+<img class="footer-logo" src="/documents/1/0/0/111247100/LAD_url_logo_sftibgxq.svg" alt="LA Club.com Logo">
+</a>
+</div>
+<div id="team-footer-links">
+<ul id="club-links">
+<li><a href="https://www.mlb.com/dodgers/official-information" data-phone-href="https://www.mlb.com/dodgers/official-information">Official Info</a></li>
+<li><a href="https://www.mlb.com/dodgers/official-information/contact" data-phone-href="https://www.mlb.com/dodgers/official-information/contact">Help/Contact Us</a></li>
+<li><a href="https://www.mlb.com/official-information/accessibility" data-phone-href="https://www.mlb.com/official-information/accessibility">Accessibility</a></li>
+<li><a href="https://www.mlb.com/dodgers/team/jobs" data-phone-href="https://www.mlb.com/dodgers/team/jobs">Job Opportunities</a></li>
+<li><a href="https://www.mlb.com/dodgers/sponsorship" data-phone-href="https://www.mlb.com/dodgers/sponsorship">Advertising Opportunities</a></li>
+</ul>
+</div>
+</div>
+<div id="bottom-footer-links">
+<div id="footer-sponsor-container">
+<ul id="sponsor-image-container">
+<li id="footer-mlb-logo">
+<a data-phone-href="https://www.mlb.com/" href="https://www.mlb.com/">
+<img src="/images/mlb_tag_logo.png" class="mlb-logo" alt="">
+</a>
+</li>
+<li id="footer-bgca-logo">
+<a data-phone-href="http://www.bgca.org/meetourpartners/Pages/MLB.aspx" href="http://www.bgca.org/meetourpartners/Pages/MLB.aspx">
+<img src="/assets/images/4/4/8/269909448/cuts/1533x281/cut.png" alt="bgca_us">
+</a>
+</li>
+</ul>
+</div>
+<div id="footer-links-container">
+<ul id="footer-links">
+<li><a data-phone-href="https://www.mlb.com/official-information/terms-of-use" href="https://www.mlb.com/official-information/terms-of-use">Terms of Use</a></li>
+<li><a data-phone-href="https://www.mlb.com/official-information/privacy-policy" href="https://www.mlb.com/official-information/privacy-policy">Privacy Policy (updated May 24, 2018)</a></li>
+<li><a data-phone-href="https://www.mlb.com/official-information/legal-notices" href="https://www.mlb.com/official-information/legal-notices">Legal Notices</a></li>
+<li><a data-phone-href="https://www.mlb.com/official-information/contact" href="https://www.mlb.com/official-information/contact">Contact Us</a></li>
+</ul>
+<div id="copyright-container">© <span class="copyright-year">2018</span> MLB Advanced Media, LP. All rights reserved. </div>
+</div>
+<ul id="footer-language-links">
+<li><a href="http://www.mlb.com" target="_blank" title="MLB in English">View MLB.com in English</a></li>
+<li><a href="http://LasMayores.com" target="_blank" title="MLB en Español">En Español</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-555T3L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-555T3L');</script>
+<!-- End Google Tag Manager --><script>
+var s_account = "";
+var omTrackingBootstrap = {
+'isProd':true,
+'lang': 'en',
+'bucket':'mlbglobal08',
+'track_code_mobile':'mlbwap',
+'track_code':'mlbdodgers',
+'track_code_es':'mlbdodgerses',
+'track_code_dev':'devmlblosangeles'
+}
+</script>
+<script src="http://m.dodgers.mlb.com/bundler?js=http://ui.bamstatic.com/bridge/core/jquery/jquery.min.js&amp;js=http://ui.bamstatic.com/curveball-builds/bundles/Curveball-MLBGlobal.js&amp;js=/scripts/trackingBootstrap.js&amp;js=http://ui.bamstatic.com/bridge/core/js/mlbamscv2.js&amp;js=http://ui.bamstatic.com/bridge/lib/jquery-plugins/jquery.history.js&amp;js=http://ui.bamstatic.com/bridge/lib/jquery-plugins/jquery.lazyload.js&amp;js=/scripts/writecapture.js&amp;js=/scripts/jquery.writecapture.js&amp;js=/scripts/global.js&amp;js=/scripts/menu.js&amp;js=/scripts/link-router.js&amp;js=/scripts/autocomplete.js&amp;v=1.4"></script>
+<script type="text/javascript" src="http://ui.bamstatic.com/fedapp/headers/builds/1.0.1/scripts/header.js"></script>
+<script type="text/javascript" src="http://ui.bamstatic.com/fedapp/footers/builds/0.0.0/scripts/footer.js"></script>
+<script>
+//
+// roster
+var appTitle = "";
+var club_id = 'lad';
+if (!Curveball.Device().is.phone) {
+club_id = "";
+}
+if (Curveball.Device().is.phone) {
+appTitle = "";
+}
+Curveball.bammobile.init({
+env: 'prodweb2',
+server_url: 'http://m.dodgers.mlb.com',
+secure_url: 'https://msecure.mlb.com',
+carrier_url: 'http://m.mlb.com',
+locale: 'en_US',
+tracking_url: 'http://an.mlb.com/b/ss/' + s_account + '/1/G.5--NS/',
+admarvel_partner_id: '437a67d408cfb2be',
+admarvel_site_id: '3228',
+club: club_id,
+view_title: appTitle,
+site_appView: appTitle,
+site_title: 'Los Angeles Dodgers',
+section_title: 'Roster',
+page_title: 'Active Roster'
+});
+Curveball.mobileConfig.bannerAd = {
+container: '#ad_container',
+page_title: 'Active Roster',
+section_title: 'Roster',
+size: '320x50'
+};
+$(function() {
+s.pageName = "";
+s.channel = "Roster";
+s.prop1 = s.prop1 || '';
+s.prop60 = s.prop60 || '';
+//prod tracking suite is passed in as prop60
+var prop60 = 'mlbglobal08,mlbdodgers';
+if (Curveball.Device().is.phone) {
+prop60 = 'mlbglobal08,mlbwap,mlbdodgers';
+}
+var mobileTrackingProps = {
+'site_appView': ''
+}
+mobileTrackingProps.site_appView = appTitle;
+mobileTrackingProps.prop60 = prop60;
+if (Curveball.Cookies.get("fprt") != null) {
+mobileTrackingProps.user_loginStatus = "Logged In";
+} else {
+mobileTrackingProps.user_loginStatus = "Not Logged In";
+}
+Curveball.MobileTracking.fire(mobileTrackingProps);
+//showads? true
+var AdSupport = Curveball.AdSupport;
+AdSupport.init({
+'inventoryHierarchy' : 'dodgers.mlb/roster',
+'thresholds' : [0, 320, 480, 728, 970],
+'responsive' : true,
+"targeting" : {
+"page_id" : "index",
+"adunit" : "roster",
+"pos" : "1"
+}
+});
+function refreshAds() {
+if (!Curveball.Device().is.desktop) {
+try{
+AdSupport.refreshAds();
+//AdSupport.fireAd(Curveball.mobileConfig.bannerAd);
+} catch(err){
+}
+}
+}
+window.suspendAdRefresh = function() {
+window.clearInterval(adRefresh);
+}
+var adRefresh = window.setInterval(refreshAds, 30 * 1000);
+});
+</script>
+<script type="text/javascript">
+//delete window.getStartupDeviceTypeString;
+</script>
+<!-- Begin BlueKai Tag -->
+<script type="text/javascript">
+window.bk_async = function() {
+try {
+var bkMLBID = (typeof s.prop22!="undefined"?s.prop22:"");
+var bkSiteName = "mlbdodgers" || "";
+var bkPageName = (typeof s.pageName!="undefined"?s.pageName:"");
+var bkCurrencyCode = (typeof s.currencyCode!="undefined"?s.currencyCode:"");
+var bkChannel = (typeof s.channel!="undefined"?s.channel:"");
+var bkPageID = "index" || "";
+var bkLang = "en" || "";
+bk_addPageCtx("mlbid", bkMLBID);
+bk_addPageCtx("sitename", bkSiteName);
+bk_addPageCtx("pagename", bkPageName);
+bk_addPageCtx("cur", bkCurrencyCode);
+bk_addPageCtx("chan", bkChannel);
+bk_addPageCtx("pageid", bkPageID);
+bk_addPageCtx("lang", bkLang);
+} catch(e) {
+console.log('Blue Kai:', e);
+}
+var id = window.DeviceType.device === "phone" ? "14634" : "14633";
+BKTAG.doTag(id, 10);
+};
+(function() {
+var scripts = document.getElementsByTagName('script')[0];
+var s = document.createElement('script');
+s.async = true;
+var useSSL = 'https:' === document.location.protocol;
+s.src = (useSSL ? 'https:' : 'http:') + "//tags.bkrtx.com/js/bk-coretag.js";
+scripts.parentNode.insertBefore(s, scripts);
+}());
+</script>
+<!-- End BlueKai Tag -->
+
+</body></html>

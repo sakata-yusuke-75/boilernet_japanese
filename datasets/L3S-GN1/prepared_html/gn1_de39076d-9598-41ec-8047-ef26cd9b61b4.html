@@ -1,0 +1,1848 @@
+<html>
+ <body>
+  <span __boilernet_label="0" class="x-nc-sel0">
+   pe, fn, false );   EventCache.add(obj, type, fn);  }  else if (obj.attachEvent) {   obj["e"+type+fn] = fn;   obj[type+fn] = function() { obj["e"+type+fn]( window.event ); }   obj.attachEvent( "on"+type, obj[type+fn] );   EventCache.add(obj, type, fn);  }  else {   obj["on"+type] = obj["e"+type+fn];  } } /* EventCache Version 1.0 Copyright 2005 Mark Wubben */ var EventCache = function(){  var listEvents = [];  return {   listEvents : listEvents,   add : function(node, sEventName, fHandler){    listEvents.push(arguments);   },   flush : function(){    var i, item;    for(i = listEvents.length - 1; i &gt;= 0; i = i - 1){     item = listEvents[i];     if(item[0].removeEventListener){      item[0].removeEventListener(item[1], item[2], item[3]);     };     if(item[1].substring(0, 2) != "on"){      item[1] = "on" + item[1];     };     if(item[0].detachEvent){      item[0].detachEvent(item[1], item[2]);     };     item[0][item[1]] = null;    };   }  }; }(); addEvent(window,'unload',EventCache.flush); var hasRecommendTab = 1; var onmousednLimit = 0; var pageIsLoaded = false; function onmousednMostRecommend() {  if(pageIsLoaded) {    if(!(onmousednLimit &gt;0)) {     document.getElementById('iframeSLMostRecommend').src = 'http://www.reuters.com/assets/mostrecommend/load';     onmousednLimit ++;    }  }  onmousednLimit ++; }
+  </span>
+  <div class="grid" id="grid">
+   <div class="header" id="header">
+    <div class="headerWrap">
+     <div class="logo">
+      <a href="javascript:void(0)" id="headerLogoLink">
+       <img border="0" src="/resources/images/refreshLogo.gif"/>
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="searchbar">
+    <div class="searchbarWrap">
+     <div class="toolbarTicker">
+     </div>
+     <div class="toolbarSearch">
+      <div class="toolbarNews" id="headerSearchBox">
+       <form action="javascript:void(0)">
+       </form>
+      </div>
+      <div class="toolbarDivider" id="toolbarDivider">
+      </div>
+      <div class="toolbarUtilities">
+       <div class="x-nc-invisible">
+       </div>
+       <div class="x-nc-invisible">
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="linebreak">
+   </div>
+   <div class="bannerad" id="banner">
+    <div class="ad225x90">
+     <div>
+      <div class="NONE" style="margin-bottom: 0px;">
+       <span modulename="B010408_1358_DEALS" name="trackingEnabledModule">
+        <div class="marketingPromo">
+         <div class="promoPhoto">
+          <a href="javascript:void(0)">
+           <img border="0" src="http://int1.fp.sandpiper.net/reuters/marketing/images/20071114/deals9572.jpg" title="Reuters Deals Today"/>
+          </a>
+         </div>
+         <div class="promoTeaser">
+          <h5>
+           <a href="javascript:void(0)">
+            <span __boilernet_label="0">
+             Deals Today
+            </span>
+           </a>
+          </h5>
+          <p class="teaser">
+           <span __boilernet_label="0" class="x-nc-sel0">
+            The latest Reuters articles on M&amp;A, IPOs, hedge funds and more
+           </span>
+          </p>
+          <span class="teaserLink">
+           <a href="javascript:void(0)">
+            <span __boilernet_label="0">
+             Subscribe Now
+            </span>
+           </a>
+          </span>
+         </div>
+        </div>
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="ad728x90">
+     <div>
+      <div class="ad" id="advert_460307">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="linebreak">
+   </div>
+   <div class="breadcrumbs">
+    <div class="slimlineIndices">
+     <div class="standalone label" id="slimlineIndices">
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        DJIA
+       </span>
+      </a>
+      <span __boilernet_label="0">
+       :
+      </span>
+      <span class="changeDown">
+       <strong>
+        <span __boilernet_label="0">
+         12466.16
+        </span>
+       </strong>
+      </span>
+      <img border="0" src="/resources/images/changeDown.gif"/>
+      <span __boilernet_label="0">
+       |
+      </span>
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Nasdaq
+       </span>
+      </a>
+      <span __boilernet_label="0">
+       :
+      </span>
+      <span class="changeDown">
+       <strong>
+        <span __boilernet_label="0">
+         2394.59
+        </span>
+       </strong>
+      </span>
+      <img border="0" src="/resources/images/changeDown.gif"/>
+     </div>
+    </div>
+    <span __boilernet_label="0" class="label">
+     You are here:
+    </span>
+    <span __boilernet_label="0" class="pathing">
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Home
+      </span>
+     </a>
+     &gt;
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       News
+      </span>
+     </a>
+     &gt;
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Entertainment
+      </span>
+     </a>
+     &gt;       Article
+    </span>
+   </div>
+   <div class="linebreak">
+   </div>
+   <div>
+    <div class="NONE" style="margin-bottom: 0px;">
+    </div>
+   </div>
+   <div>
+   </div>
+   <div id="maincontent">
+    <div class="leftrail">
+     <span id="VerticalMenu1_VerticalMenu1">
+      <div class="navigation">
+       <div class="navOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Home
+         </span>
+        </a>
+       </div>
+       <div class="navOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Business &amp; Finance
+         </span>
+        </a>
+       </div>
+       <div class="navOn">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          News
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          U.S.
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Politics
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          International
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Technology
+         </span>
+        </a>
+       </div>
+       <div class="subnavOn">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Entertainment
+         </span>
+        </a>
+       </div>
+       <div class="subNav2">
+        <div class="subnav2Off">
+         <a href="javascript:void(0)">
+          <span __boilernet_label="0">
+           Film
+          </span>
+         </a>
+        </div>
+        <div class="subnav2Off">
+         <a href="javascript:void(0)">
+          <span __boilernet_label="0">
+           Music
+          </span>
+         </a>
+        </div>
+        <div class="subnav2Off">
+         <a href="javascript:void(0)">
+          <span __boilernet_label="0">
+           People
+          </span>
+         </a>
+        </div>
+        <div class="subnav2Off">
+         <a href="javascript:void(0)">
+          <span __boilernet_label="0">
+           Television
+          </span>
+         </a>
+        </div>
+        <div class="subnav2Off">
+         <a href="javascript:void(0)">
+          <span __boilernet_label="0">
+           Theater
+          </span>
+         </a>
+        </div>
+        <div class="subnav2Off">
+         <a href="javascript:void(0)">
+          <span __boilernet_label="0">
+           Industry
+          </span>
+         </a>
+        </div>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Sports
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Lifestyle
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Oddly Enough
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Environment
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Health
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Science
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Special Coverage
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Video
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Pictures
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          You Witness
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Blogs
+         </span>
+        </a>
+       </div>
+       <div class="subnavOff">
+        <a href="javascript:void(0)">
+         <span __boilernet_label="0">
+          Reader Feedback
+         </span>
+        </a>
+       </div>
+      </div>
+     </span>
+     <div>
+      <div class="ad125" id="advert_460310">
+      </div>
+     </div>
+     <div class="Tnavigation">
+      <div class="TnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Do More With Reuters
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         RSS
+        </span>
+       </a>
+       <a href="javascript:void(0)">
+        <img border="0" src="/resources/images/iconFeed.gif"/>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Mobile
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Podcasts
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Newsletters
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         You Witness News
+        </span>
+       </a>
+      </div>
+      <div class="TnavOff">
+       <span __boilernet_label="0">
+        Partner Services
+       </span>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         CareerBuilder
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Affiliate Network
+        </span>
+       </a>
+      </div>
+      <div class="TnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Professional Products
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Support (Customer Zone)
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Reuters Media
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Financial Products
+        </span>
+       </a>
+      </div>
+      <div class="TsubnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         Find a financial adviser
+        </span>
+       </a>
+      </div>
+      <div class="TnavOff">
+       <a href="javascript:void(0)">
+        <span __boilernet_label="0">
+         About Reuters
+        </span>
+       </a>
+      </div>
+     </div>
+    </div>
+    <div class="content">
+     <div class="contentBand" id="topContent">
+     </div>
+     <div class="contentBand">
+      <div class="article primaryContent">
+       <h1>
+        <span __boilernet_label="1" class="x-nc-sel1">
+         Mischa Barton jailed on drunken driving charge
+        </span>
+       </h1>
+       <div class="timestampHeader">
+        <span __boilernet_label="1" class="x-nc-sel3">
+         Thu Dec 27, 2007 8:13pm EST
+        </span>
+       </div>
+       <div id="headerTools">
+       </div>
+       <span id="trackingEnabledModule" moduleid="460314" modulename="Article Tools" name="trackingEnabledModule">
+        <div class="articleTools" id="atools">
+         <div class="articleUtilities" id="autilities">
+          <a href="javascript:void(0)" id="toolEmail">
+           <span __boilernet_label="0">
+            Email
+           </span>
+          </a>
+          <span __boilernet_label="0">
+           |
+          </span>
+          <a href="javascript:void(0)" id="toolPrint">
+           <span __boilernet_label="0">
+            Print
+           </span>
+          </a>
+          <span __boilernet_label="0">
+           |
+          </span>
+          <div id="shareLink">
+           <span __boilernet_label="0">
+            Share
+           </span>
+          </div>
+          <span __boilernet_label="0">
+           |
+          </span>
+          <a href="javascript:void(0)" id="toolReprints">
+           <span __boilernet_label="0">
+            Reprints
+           </span>
+          </a>
+          <span __boilernet_label="0">
+           |
+          </span>
+          <a href="javascript:void(0)" id="toolSingle">
+           <span __boilernet_label="0">
+            Single Page
+           </span>
+          </a>
+          <span __boilernet_label="0">
+           |
+          </span>
+          <span id="toolRecommend">
+          </span>
+         </div>
+         <div class="articleTextSizerFull" id="textSizer">
+          <span __boilernet_label="0">
+           [
+          </span>
+          <a class="control" href="javascript:void(0)">
+           <span __boilernet_label="0">
+            -
+           </span>
+          </a>
+          <span __boilernet_label="0">
+           ]
+          </span>
+          <a href="javascript:void(0)">
+           <span __boilernet_label="0">
+            Text
+           </span>
+          </a>
+          <span __boilernet_label="0">
+           [
+          </span>
+          <a class="control" href="javascript:void(0)">
+           <span __boilernet_label="0">
+            +
+           </span>
+          </a>
+          <span __boilernet_label="0">
+           ]
+          </span>
+         </div>
+        </div>
+        <div class="linebreak">
+        </div>
+       </span>
+       <div id="resizeableText">
+        <span id="midArticle_start">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          LOS ANGELES (Reuters) - Actress Mischa Barton was arrested and briefly jailed on Thursday on suspicion of drunken driving, marijuana possession and driving without a license, Los Angeles police said.
+         </span>
+         <span id="midArticle_byline">
+         </span>
+        </p>
+        <span id="midArticle_0">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          Barton, 21, best known for her role as Marissa Cooper on the hit Fox television drama "The O.C.," was pulled over while driving over in West Hollywood around 3 a.m.
+         </span>
+        </p>
+        <span id="midArticle_1">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          Police said her vehicle was straddling two lanes of traffic and said she failed to signal when making a turn.
+         </span>
+        </p>
+        <span id="midArticle_2">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          "During Ms. Barton's detention, it was determined that she was an unlicensed driver and was driving while under the influence of an alcoholic beverage," the official report said.
+         </span>
+        </p>
+        <span id="midArticle_3">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          She was also suspected to be in possession of marijuana and an unidentified controlled substance, said Sgt. John Hocking.
+         </span>
+        </p>
+        <span id="midArticle_4">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          Barton was jailed in lieu of $10,000 bail and spent about seven hours behind bars before being released, according to the Los Angeles Sheriff's Department.
+         </span>
+        </p>
+        <span id="midArticle_5">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          Barton's publicist did not return calls for comment.
+         </span>
+        </p>
+        <span id="midArticle_6">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          The English-born actress made her movie debut in the 1997 Sundance Film Festival favorite "Lawn Dogs" and appeared in such films as "The Sixth Sense" and "Notting Hill."
+         </span>
+        </p>
+        <span id="midArticle_7">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel2">
+          Barton is the latest in a string of young Hollywood celebrities to be arrested this year, including Paris Hilton, Nicole Richie and Lindsay Lohan.
+         </span>
+        </p>
+        <span id="midArticle_8">
+        </span>
+        <p>
+         <span __boilernet_label="1" class="x-nc-sel3">
+          Reuters/Nielsen
+         </span>
+        </p>
+        <span class="x-nc-sel3">
+        </span>
+        <span class="x-nc-sel3">
+         <span id="midArticle_9">
+          <span class="x-nc-sel3">
+          </span>
+         </span>
+        </span>
+        <span class="x-nc-sel3">
+        </span>
+        <span class="x-nc-sel3">
+         <span id="midArticle_10">
+          <span class="x-nc-sel3">
+          </span>
+         </span>
+        </span>
+        <span class="x-nc-sel3">
+        </span>
+        <span class="x-nc-sel3">
+         <div class="linebreak">
+          <span class="x-nc-sel3">
+          </span>
+         </div>
+        </span>
+        <span class="x-nc-sel3">
+        </span>
+        <span class="x-nc-sel3">
+         <div class="pageNavigation" style="margin-bottom: 10px;">
+          <span class="x-nc-sel3">
+          </span>
+         </div>
+        </span>
+        <span class="x-nc-sel3">
+        </span>
+       </div>
+       <span class="x-nc-sel3">
+       </span>
+       <span class="x-nc-sel3">
+        <p class="copyright" id="copyrightNotice">
+         <span __boilernet_label="1" class="x-nc-sel3">
+          Â© Reuters 2008 All rights reserved
+         </span>
+        </p>
+       </span>
+       <span id="trackingEnabledModule" moduleid="1390428" modulename="Share Links" name="trackingEnabledModule">
+        <div>
+         <div class="NONE" style="margin-bottom: 0px;">
+          <div>
+           <div id="shareFooter">
+            <div class="dividerInlineH">
+            </div>
+            <h3>
+             <span __boilernet_label="0">
+              Share:
+             </span>
+            </h3>
+            <div id="shfDelicious">
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Del.icio.us
+              </span>
+             </a>
+            </div>
+            <div id="shfDigg">
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Digg
+              </span>
+             </a>
+            </div>
+            <div id="shfMixx">
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Mixx
+              </span>
+             </a>
+            </div>
+            <div id="shfYahoo">
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               My Web
+              </span>
+             </a>
+            </div>
+            <div id="shfFacebook">
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Facebook
+              </span>
+             </a>
+            </div>
+            <div id="shfNewsvine">
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Newsvine
+              </span>
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div>
+        </div>
+        <span id="trackingEnabledModule" moduleid="460316" modulename="Next Article" name="trackingEnabledModule">
+         <div class="linebreak">
+         </div>
+        </span>
+        <div>
+         <div style="height: 17px;">
+         </div>
+        </div>
+        <div>
+         <div class="NONE" style="margin-bottom: 0px;">
+         </div>
+         <div class="linebreak">
+         </div>
+        </div>
+        <div>
+         <div style="height: 19px;">
+         </div>
+        </div>
+        <div>
+         <div class="NONE" style="margin-bottom: 0px;">
+          <div id="sphereFooter">
+          </div>
+         </div>
+         <div class="linebreak">
+         </div>
+        </div>
+        <div>
+         <div style="height: 19px;">
+         </div>
+        </div>
+        <div>
+         <div class="NONE" style="margin-bottom: 0px;">
+          <div>
+           <div class="NONE" style="margin-bottom: 0px;">
+            <span modulename="B011608_1345_ALSO" name="trackingEnabledModule">
+             <div class="module">
+              <div class="moduleHeaderInline">
+               <h3>
+                <span __boilernet_label="0">
+                 Also on Reuters
+                </span>
+               </h3>
+              </div>
+              <div class="moduleBody">
+               <div class="upsellThumbnail" id="upsell1">
+                <div class="upsellImage">
+                 <a href="javascript:void(0)">
+                  <img border="0" src="http://static.reuters.com/resources/r/?m=02&amp;d=20080116&amp;t=2&amp;i=2798471&amp;w=148" style="margin-top: -6px;" title="Bulldog back on top 10 U.S. dog list after 75 years"/>
+                 </a>
+                </div>
+                <a href="javascript:void(0)">
+                 <span __boilernet_label="0">
+                  Bulldog back on top 10 U.S. dog list after 75 years
+                 </span>
+                </a>
+               </div>
+               <div class="upsellThumbnail" id="upsell2">
+                <div class="upsellImage">
+                 <a href="javascript:void(0)">
+                  <img border="0" src="http://int1.fp.sandpiper.net/reuters/editorial/images/20080116/cmb-maria--148.jpg" style="margin-top: -11px;" title="Highlights from the Australian Open"/>
+                 </a>
+                </div>
+                <a href="javascript:void(0)">
+                 <span __boilernet_label="0" class="mediatype">
+                  Slideshow:
+                 </span>
+                 <span __boilernet_label="0">
+                  Highlights from the Australian Open
+                 </span>
+                </a>
+               </div>
+               <div class="upsellThumbnail" id="upsell3">
+                <div class="upsellImage">
+                 <a href="javascript:void(0)">
+                  <img border="0" src="http://static.reuters.com/resources/r/?m=02&amp;d=20080116&amp;t=2&amp;i=2797846&amp;w=148" style="margin-top: -5px;" title="Tom Cruise lauds power of Scientology in Web video"/>
+                 </a>
+                </div>
+                <a href="javascript:void(0)">
+                 <span __boilernet_label="0">
+                  Tom Cruise lauds power of Scientology in Web video
+                 </span>
+                </a>
+               </div>
+              </div>
+             </div>
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div>
+         <div class="NONE" style="margin-bottom: 0px;">
+          <div class="linebreak" style="height: 18px;">
+          </div>
+         </div>
+        </div>
+        <div>
+        </div>
+        <div>
+         <div class="ad" id="googleAd">
+         </div>
+         <div class="linebreak">
+         </div>
+        </div>
+       </span>
+      </div>
+      <div class="primaryInlineRail" id="inlineRail">
+       <div class="inlineRelatedContent">
+        <table border="0" cellpadding="0" cellspacing="0" style="float: left;">
+         <tbody>
+          <tr>
+           <td align="center" id="articlePhoto" valign="middle">
+            <a href="javascript:void(0)">
+             <img border="0" src="/resources/r/?m=02&amp;d=20071227&amp;t=2&amp;i=2602594&amp;w=192&amp;r=2007-12-27T190846Z_01_N27410211_RTRUKOP_0_PICTURE0"/>
+            </a>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <span id="trackingEnabledModule" moduleid="460325" modulename="Related Video" name="trackingEnabledModule">
+         <div class="module" id="relatedVideo">
+          <div class="moduleHeader">
+           <h3>
+            <span __boilernet_label="0">
+             Related Video
+            </span>
+           </h3>
+          </div>
+          <div class="moduleBody">
+           <div class="relatedVideo">
+            <div class="relatedVideoPhoto">
+             <a href="javascript:void(0)">
+              <img border="0" src="http://thumbstv.reuters.com/t_assets/20071228/ftpo1198018901019.jpg" width="94"/>
+             </a>
+            </div>
+            <div class="relatedVideoText">
+             <p>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Talk of the Town: Mischa busted
+               </span>
+              </a>
+              <br/>
+              <br/>
+              <span class="inlineLinks">
+               <a class="playVideo" href="javascript:void(0)">
+                <span __boilernet_label="0">
+                 Play Video
+                </span>
+               </a>
+              </span>
+             </p>
+            </div>
+           </div>
+           <div class="x-nc-invisible">
+           </div>
+          </div>
+         </div>
+        </span>
+        <div>
+         <div id="sphereSideVideo">
+         </div>
+        </div>
+        <span id="trackingEnabledModule" moduleid="460326" modulename="Related News" name="trackingEnabledModule">
+        </span>
+        <div>
+         <div id="sphereSideNews">
+         </div>
+         <div class="hidden" id="sphereSideAttribution" style="margin-bottom: 16px;">
+          <div class="dividerInlineH">
+          </div>
+          <span __boilernet_label="0" class="timestamp">
+           powered by
+           <img border="0" src="/resources/images/iconSphere.gif" style="margin-bottom: -2px;"/>
+           Sphere
+          </span>
+         </div>
+        </div>
+        <div>
+         <div class="adButtonBox articlePos">
+          <div class="adButtonBoxHeader">
+           <h3>
+            <span __boilernet_label="0">
+             Featured Broker
+            </span>
+            <span __boilernet_label="0" class="adtext">
+             sponsored link
+            </span>
+           </h3>
+          </div>
+          <div class="adButtonModule first">
+           <div>
+            <div class="ad" id="advert_478780">
+            </div>
+           </div>
+          </div>
+          <div class="adButtonModule">
+          </div>
+          <div class="adButtonModule adRow">
+          </div>
+          <div class="adButtonModule last">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="secondaryContent">
+       <div>
+        <div class="NONE" style="margin-bottom: 0px;">
+        </div>
+       </div>
+       <div>
+        <div class="NONE" style="margin-bottom: 0px;">
+         <div>
+         </div>
+         <div id="customRightRail">
+         </div>
+         <div id="smMap">
+         </div>
+         <div id="mpuN">
+         </div>
+        </div>
+       </div>
+       <div>
+        <div class="NONE" style="margin-bottom: 0px;">
+         <div class="linebreak">
+         </div>
+         <div>
+          <div class="NONE" style="margin-bottom: 0px;">
+           <div class="tabs small flexible">
+            <h3>
+             <span __boilernet_label="0">
+              Editor's Choice
+             </span>
+            </h3>
+            <ul>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <div id="ecPictures">
+          <div class="NONE" style="margin-bottom: 0px;">
+           <span modulename="B011608_1302_ECPIC" name="trackingEnabledModule">
+            <div class="module editorschoice">
+             <div class="moduleBody">
+              <div class="ecPhoto">
+               <a href="javascript:void(0)">
+                <img border="0" src="http://i.today.reuters.com/pictures/galleries/Stories/633308185815625000/XLargeThumbnails/08_mdf1332660.JPG" title="An athlete practices during an official training session at the Biathlon World Cup in Anterselva, northern Italy January 15, 2008. REUTERS/Tony Gentile"/>
+               </a>
+              </div>
+              <p style="margin-top: 2px;">
+               <span __boilernet_label="0">
+                A selection of our best photos from the past 24 hours.
+               </span>
+               <span class="inlineLinks">
+                <a href="javascript:void(0)">
+                 <span __boilernet_label="0">
+                  View Slideshow
+                 </span>
+                </a>
+               </span>
+              </p>
+             </div>
+            </div>
+           </span>
+          </div>
+         </div>
+         <div class="hidden" id="ecVideo">
+          <div class="NONE" style="margin-bottom: 0px;">
+           <span modulename="B011608_1443_ECVID" name="trackingEnabledModule">
+            <div class="module editorschoice">
+             <div class="moduleBody">
+              <div class="ecVideo">
+               <div class="ecVideoThumb">
+                <a href="javascript:void(0)">
+                 <img border="0" src="http://thumbstv.reuters.com/t_assets/20080116/ftpo1198018903239.jpg" style="margin-top: -8px;" title="English fever hits China" width="90"/>
+                </a>
+               </div>
+               <div class="ecVideoLink">
+                <a href="javascript:void(0)">
+                 <img border="0" src="http://static.reuters.com/resources/images/iconVideo.gif" style="margin-right: 4px;"/>
+                 <span __boilernet_label="0">
+                  English fever
+                 </span>
+                </a>
+               </div>
+              </div>
+              <div class="ecVideo">
+               <div class="ecVideoThumb">
+                <a href="javascript:void(0)">
+                 <img border="0" src="http://thumbstv.reuters.com/t_assets/20080116/ftpo1198018903289.jpg" style="margin-top: -8px;" title="This protest is a load of balls" width="90"/>
+                </a>
+               </div>
+               <div class="ecVideoLink">
+                <a href="javascript:void(0)">
+                 <img border="0" src="http://static.reuters.com/resources/images/iconVideo.gif" style="margin-right: 4px;"/>
+                 <span __boilernet_label="0">
+                  Load of balls
+                 </span>
+                </a>
+               </div>
+              </div>
+              <div class="ecVideo">
+               <div class="ecVideoThumb">
+                <a href="javascript:void(0)">
+                 <img border="0" src="http://thumbstv.reuters.com/t_assets/20080116/WAO1198007505466.jpg" style="margin-top: -8px;" title="Violence interrupts Australian Open" width="90"/>
+                </a>
+               </div>
+               <div class="ecVideoLink">
+                <a href="javascript:void(0)">
+                 <img border="0" src="http://static.reuters.com/resources/images/iconVideo.gif" style="margin-right: 4px;"/>
+                 <span __boilernet_label="0">
+                  Tennis brawl
+                 </span>
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </span>
+          </div>
+         </div>
+         <div class="hidden" id="ecArticles">
+          <div class="NONE" style="margin-bottom: 0px;">
+           <span modulename="B011608_1452_ECART" name="trackingEnabledModule">
+            <div class="module editorschoice">
+             <div class="moduleBody">
+              <div class="headlineMed">
+               <span class="storytype">
+                <a href="javascript:void(0)">
+                 <span __boilernet_label="0">
+                  US:
+                 </span>
+                </a>
+               </span>
+               <a href="javascript:void(0)">
+                <span __boilernet_label="0">
+                 Domestic abuse becoming workplace concern
+                </span>
+               </a>
+              </div>
+              <div class="headlineMed">
+               <span class="storytype">
+                <a href="javascript:void(0)">
+                 <span __boilernet_label="0">
+                  Health:
+                 </span>
+                </a>
+               </span>
+               <a href="javascript:void(0)">
+                <span __boilernet_label="0">
+                 Cashiers vulnerable to flu from banknotes
+                </span>
+               </a>
+              </div>
+              <div class="headlineMed">
+               <span class="storytype">
+                <a href="javascript:void(0)">
+                 <span __boilernet_label="0">
+                  Sports:
+                 </span>
+                </a>
+               </span>
+               <a href="javascript:void(0)">
+                <span __boilernet_label="0">
+                 Tired of lies, Marion Jones tells Oprah
+                </span>
+               </a>
+              </div>
+             </div>
+            </div>
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div>
+        <div class="ad" id="advert_1457342">
+        </div>
+       </div>
+       <div class="linebreak">
+       </div>
+       <div>
+        <div class="NONE" style="margin-bottom: 0px;">
+         <div class="tabs small" style="margin-bottom: 6px;">
+          <h3>
+           <span __boilernet_label="0">
+            Most Popular on Reuters
+           </span>
+          </h3>
+          <ul>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <span id="trackingEnabledModule" moduleid="460334" modulename="Most Popular Articles" name="trackingEnabledModule">
+        <div id="popularArticles">
+         <div class="NONE">
+          <div class="module">
+           <ol>
+            <div class="inlineThumbnail">
+             <a href="javascript:void(0)">
+              <img border="0" src="/resources/r/?m=&amp;d=20080116&amp;t=2&amp;i=2797846&amp;w=98&amp;r="/>
+             </a>
+            </div>
+            <li>
+             <h5>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Tom Cruise lauds power of Scientology in Web video
+               </span>
+              </a>
+              <span class="inlineLinks">
+              </span>
+             </h5>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Obama, Clinton tied in 2008 Democratic race
+              </span>
+             </a>
+             <span __boilernet_label="0" class="inlineLinks">
+              |
+              <span class="playVideo">
+               <a href="javascript:void(0)">
+                <span __boilernet_label="0">
+                 Video
+                </span>
+               </a>
+              </span>
+             </span>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Drug-resistant staph found to be passed in gay sex
+              </span>
+             </a>
+             <span class="inlineLinks">
+             </span>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               "Oh, I'm not actually recording, honey..."
+              </span>
+             </a>
+             <span class="inlineLinks">
+             </span>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Diane Keaton swears on TV, FCC stammers
+              </span>
+             </a>
+             <span class="inlineLinks">
+             </span>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               New material pushes the boundary of blackness
+              </span>
+             </a>
+             <span class="inlineLinks">
+             </span>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               British prostitutes slain in killing spree: court
+              </span>
+             </a>
+             <span class="inlineLinks">
+             </span>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               German experts crack Mona Lisa smile
+              </span>
+             </a>
+             <span class="inlineLinks">
+             </span>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Chertoff says Europe poses terrorism threat
+              </span>
+             </a>
+             <span class="inlineLinks">
+             </span>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Police ask suspect: aren't you dead?
+              </span>
+             </a>
+             <span class="inlineLinks">
+             </span>
+            </li>
+           </ol>
+           <div class="listFooter">
+            <div class="dividerH">
+            </div>
+            <div class="rssLink label">
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Most Popular Articles RSS Feed
+              </span>
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </span>
+       <span id="trackingEnabledModule" moduleid="460335" modulename="Most Popular Videos" name="trackingEnabledModule">
+        <div class="hidden" id="popularVideos">
+         <div class="NONE">
+          <div class="module">
+           <div class="videoOvrlay">
+            <div class="videoOvrlayBtnBG">
+             <img src="/resources/images/btn_vidOvrlay.gif"/>
+            </div>
+            <a href="javascript:void(0)">
+             <span class="ovrlayThumb">
+              <img border="0" src="http://thumbstv.reuters.com/t_assets/20080114/WAO1198007505115.jpg" width="98"/>
+             </span>
+             <span class="videoOvrlayBtn">
+              <img border="0" height="18" src="/resources/images/spacer.gif" width="18"/>
+              <span __boilernet_label="0">
+               Video
+              </span>
+             </span>
+             <span class="videoOvrlayScrim">
+             </span>
+            </a>
+           </div>
+           <ol>
+            <li>
+             <h5>
+              <a href="javascript:void(0)">
+               <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+               <span __boilernet_label="0">
+                Home on a tricycle
+               </span>
+              </a>
+             </h5>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               Researchers grow heart in lab
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               West Bank militant leader killed
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               Romney wins Michigan primary
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               Ready to wear technology
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               Japan's speediest rodent
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               Mine fire burning  since 1962
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               New tension in Kenya
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               And Finally... A bridge to pick at
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="javascript:void(0)">
+              <img border="0" class="inlineLinkIcon" src="/resources/images/iconVideoLink.gif"/>
+              <span __boilernet_label="0">
+               Apple launches web movie rentals
+              </span>
+             </a>
+            </li>
+           </ol>
+           <div class="listFooter">
+            <div class="dividerH">
+            </div>
+            <div class="rssLink label">
+             <a href="javascript:void(0)">
+              <span __boilernet_label="0">
+               Most Popular Videos RSS Feed
+              </span>
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </span>
+       <div class="hidden" id="popularSearches">
+        <div class="NONE" style="margin-bottom: 0px;">
+         <span modulename="B122707_1744_MSEARCH" name="trackingEnabledModule">
+          <div class="module" style="margin-bottom: 2px;">
+           <div class="moduleBody" style="margin-right: -3px; padding-right: 3px;">
+            <ol>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Benazir Bhutto
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Pakistan
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                gold
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Kosovo
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                insurance
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Turkey
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Sarkozy
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Serbia
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                sports
+               </span>
+              </a>
+             </li>
+             <li>
+              <a href="javascript:void(0)">
+               <span __boilernet_label="0">
+                Sudan
+               </span>
+              </a>
+             </li>
+            </ol>
+           </div>
+          </div>
+         </span>
+        </div>
+       </div>
+       <div class="hidden" id="recommended">
+        <div class="NONE">
+         <div class="module">
+         </div>
+        </div>
+       </div>
+       <div>
+        <div style="border-top: 1px solid rgb(204, 204, 204); margin-bottom: 12px;">
+        </div>
+       </div>
+       <div>
+       </div>
+       <div>
+        <div class="NONE" style="margin-bottom: 0px;">
+        </div>
+       </div>
+       <div>
+       </div>
+       <div>
+        <div class="NONE" style="margin-bottom: 0px;">
+         <span modulename="B011008_0939_REUTERS" name="trackingEnabledModule">
+          <div class="module marketing">
+           <div class="moduleHeaderInline">
+            <h3>
+             <span __boilernet_label="0">
+              Reuters Oddly Enough
+             </span>
+            </h3>
+           </div>
+           <div class="moduleBody">
+            <span __boilernet_label="0">
+             Funny, quirky, strange-but-true stories from around the world.
+            </span>
+            <div class="moduleBody">
+             <div class="inlineThumbnail">
+              <a href="javascript:void(0)">
+               <img border="0" src="http://int1.fp.sandpiper.net/reuters/marketing/images/20071101/oddpicasso9572.jpg" title=""/>
+              </a>
+             </div>
+             <div class="headlineMed">
+              <a href="javascript:void(0)">
+               <strong>
+                <span __boilernet_label="0">
+                 Watch the videos
+                </span>
+               </strong>
+              </a>
+             </div>
+             <div class="headlineMed">
+              <a href="javascript:void(0)">
+               <strong>
+                <span __boilernet_label="0">
+                 Read the stories
+                </span>
+               </strong>
+              </a>
+             </div>
+             <div class="headlineMed">
+              <a href="javascript:void(0)">
+               <strong>
+                <span __boilernet_label="0">
+                 Get the daily newsletter
+                </span>
+               </strong>
+              </a>
+             </div>
+             <div class="headlineMed">
+              <a href="javascript:void(0)">
+               <strong>
+                <span __boilernet_label="0">
+                 Check out the blog
+                </span>
+               </strong>
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+         </span>
+        </div>
+       </div>
+       <div>
+        <div class="NONE" style="margin-bottom: 0px;">
+         <div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="footer" id="Footer1">
+    <p>
+     <strong>
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Reuters.com:
+       </span>
+      </a>
+     </strong>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Help and Contact Us
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Advertise With Us
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Mobile
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Newsletters
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       RSS
+      </span>
+     </a>
+     <a href="javascript:void(0)">
+      <img border="0" src="/resources/images/iconFeed.gif"/>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Interactive TV
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Labs
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Reuters in Second Life
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Archive
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Site Index
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Video Index
+      </span>
+     </a>
+    </p>
+    <p>
+     <strong>
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Reuters Corporate:
+       </span>
+      </a>
+     </strong>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Copyright
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Disclaimer
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Privacy
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Professional Products
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Professional Products Support
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       About Reuters
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      |
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       Careers
+      </span>
+     </a>
+    </p>
+    <div class="dividerInlineH">
+    </div>
+    <p>
+     <strong>
+      <span __boilernet_label="0">
+       International Editions:
+      </span>
+     </strong>
+     <span __boilernet_label="0" id="editions">
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Africa
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Arabic
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Argentina
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Brazil
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Canada
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Chinese Simplified
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Chinese Traditional
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        France
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Germany
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        India
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Italy
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Japan
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Latin America
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Mexico
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Russia
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        Spain
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        United Kingdom
+       </span>
+      </a>
+      |
+      <a href="javascript:void(0)">
+       <span __boilernet_label="0">
+        United States
+       </span>
+      </a>
+     </span>
+    </p>
+    <div class="dividerInlineH">
+    </div>
+    <p>
+     <span __boilernet_label="0" class="footnote">
+      Reuters is the world's largest international multimedia news agency, providing investing news, world news, business news, technology news, headline news, small business news, news alerts, personal finance, stock market, and mutual funds information available on Reuters.com, video, mobile, and interactive television platforms. Reuters journalists are subject to the Reuters Editorial Handbook which requires fair presentation and disclosure of relevant interests.
+     </span>
+    </p>
+    <p class="footnote">
+     <span __boilernet_label="0">
+      NYSE and AMEX quotes delayed by at least 20 minutes. Nasdaq delayed by at least 15 minutes. For a complete list of exchanges and delays, please
+     </span>
+     <a href="javascript:void(0)">
+      <span __boilernet_label="0">
+       click here
+      </span>
+     </a>
+     <span __boilernet_label="0">
+      .
+     </span>
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

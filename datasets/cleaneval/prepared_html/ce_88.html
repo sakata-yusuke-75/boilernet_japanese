@@ -1,0 +1,3869 @@
+<html>
+ <body bgcolor="#ffffff" leftmargin="0" marginheight="0" marginwidth="0" onload="prepmenus(); done=true" rightmargin="0" topmargin="0">
+  <text encoding="iso-8859-1" id="http://java.sun.com/developer/technicalArticles/javaopensource/plg.html" title="Project Looking Glass: Its Architecture and a Sneak Preview of the API">
+   <title>
+    <span __boilernet_label="0">
+     &lt;span __num="0"&gt;     Project Looking Glass: Its Architecture and a Sneak Preview of the API    &lt;/span&gt;
+    </span>
+   </title>
+   <a name="top">
+   </a>
+   <div class="a1 a1r2">
+    <div class="a1v0">
+     <a class="skiplink" href="#skip2content">
+      <span __boilernet_label="0" __num="1">
+       Skip to Content
+      </span>
+     </a>
+     <span class="toolbarlinks">
+      <a href="/global/mh/java/">
+       <span __boilernet_label="0" __num="2">
+        Java
+       </span>
+      </a>
+      <a href="/global/mh/solaris/">
+       <span __boilernet_label="0" __num="3">
+        Solaris
+       </span>
+      </a>
+      <a class="dividelink" href="/global/mh/communities/">
+       <span __boilernet_label="0" __num="4">
+        Communities
+       </span>
+      </a>
+      <a href="http://developers.sun.com/global/my_profile.html">
+       <span __boilernet_label="0" __num="5">
+        My SDN Account
+       </span>
+      </a>
+      <a class="dividelink" href="http://developers.sun.com/global/join_sdn.html">
+       <span __boilernet_label="0" __num="6">
+        Join SDN
+       </span>
+      </a>
+     </span>
+    </div>
+   </div>
+   <div class="a2w0">
+    <div class="a2" id="a2v1">
+     <div class="a2w1">
+      <div class="a2w2">
+       <div class="a2w3">
+        <div class="a2w4">
+         <div class="a2topiclinks">
+          <div class="a2search">
+           <form accept-charset="utf-8" action="http://developers.sun.com/search/onesearch/index.jsp" method="GET">
+            <span class="rightarrowwhite">
+             <span __boilernet_label="0" __num="7">
+              �
+             </span>
+            </span>
+            <a href="http://developers.sun.com/global/search_tips.html">
+             <span __boilernet_label="0" __num="8">
+              search tips
+             </span>
+            </a>
+           </form>
+          </div>
+          <a href="http://java.sun.com" id="sunlogo" title="Home Page">
+           <img alt="Home Page" border="0" height="58" src="/im/a.gif" width="98"/>
+          </a>
+          <a href="http://developers.sun.com" title="Sun Developer Network">
+           <img alt="Sun Developer Network" border="0" height="33" id="venuespacer" src="/im/a.gif" width="400"/>
+          </a>
+          <ul id="mtopics">
+           <li id="mtopic1">
+            <a class="tpclink a2menu" href="/global/mh/api/index.html" id="glink1" title="See All APIs">
+             <span __boilernet_label="0" __num="9">
+              APIs
+             </span>
+            </a>
+           </li>
+           <li id="mtopic2">
+            <a class="tpclink a2menu" href="/global/mh/downloads/index.html" id="glink2" title="See All Downloads">
+             <span __boilernet_label="0" __num="10">
+              Downloads
+             </span>
+            </a>
+           </li>
+           <li id="mtopic3">
+            <a class="tpclink a2menu" href="/global/mh/tech/index.html" id="glink3" title="See All Technologies &amp; Solutions">
+             <span __boilernet_label="0" __num="11">
+              Technologies
+             </span>
+            </a>
+           </li>
+           <li id="mtopic4">
+            <a class="tpclink a2menu" href="/global/mh/products/index.html" id="glink4" title="See All Products">
+             <span __boilernet_label="0" __num="12">
+              Products
+             </span>
+            </a>
+           </li>
+           <li id="mtopic5">
+            <a class="tpclink a2menu" href="/global/mh/support/index.html" id="glink5" title="See All Support">
+             <span __boilernet_label="0" __num="13">
+              Support
+             </span>
+            </a>
+           </li>
+           <li id="mtopic6">
+            <a class="tpclink a2menu" href="/global/mh/training/index.html" id="glink6" title="See All Training">
+             <span __boilernet_label="0" __num="14">
+              Training
+             </span>
+            </a>
+           </li>
+           <li id="mtopic7">
+            <a class="tpclink a2menu" href="/global/mh/suncom/index.html" id="glink7" title="See All Sun.com">
+             <span __boilernet_label="0" __num="15">
+              Sun.com
+             </span>
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <table border="0" cellpadding="0" cellspacing="0" class="vatop" width="100%">
+    <tbody>
+     <tr>
+      <td>
+       <div class="breadcrumb">
+        <a href="http://developers.sun.com/index.html">
+         <span __boilernet_label="0" __num="16">
+          Developers Home
+         </span>
+        </a>
+        <span __boilernet_label="0" __num="17">
+         &gt;
+        </span>
+        <a href="http://developers.sun.com/prodtech/index.html">
+         <span __boilernet_label="0" __num="18">
+          Products &amp; Technologies
+         </span>
+        </a>
+        <span __boilernet_label="0" __num="19">
+         &gt;
+        </span>
+        <a href="http://java.sun.com/index.jsp">
+         <span __boilernet_label="0" __num="20">
+          Java Technology
+         </span>
+        </a>
+        <span __boilernet_label="0" __num="21">
+         &gt;
+        </span>
+        <a href="http://java.sun.com/reference/index.html">
+         <span __boilernet_label="0" __num="22">
+          Reference
+         </span>
+        </a>
+        <span __boilernet_label="0" __num="23">
+         &gt;
+        </span>
+        <a href="http://java.sun.com/reference/techart/index.html">
+         <span __boilernet_label="0" __num="24">
+          Technical Articles and Tips
+         </span>
+        </a>
+        <span __boilernet_label="0" __num="25">
+         &gt;
+        </span>
+        <a href="http://java.sun.com/developer/technicalArticles/index.html">
+         <span __boilernet_label="0" __num="26">
+          Developer Technical Articles &amp; Tips
+         </span>
+        </a>
+        <span __boilernet_label="0" __num="27">
+         &gt;
+        </span>
+        <a href="http://java.sun.com/developer/technicalArticles/javaopensource/index.html">
+         <span __boilernet_label="0" __num="28">
+          Java Technology Open-Source Projects
+         </span>
+        </a>
+        <span __boilernet_label="0" __num="29">
+         &gt;
+        </span>
+       </div>
+      </td>
+      <td align="right" nowrap="">
+       <div class="breadcrumb">
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td colspan="2">
+       <img alt=" " border="0" height="1" src="/im/a.gif" width="770"/>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <span class="sp5">
+   </span>
+   <br/>
+   <div class="pagetitle2">
+    <span __boilernet_label="1">
+     Article
+    </span>
+   </div>
+   <div class="smallpagetitle">
+    <h1>
+     <span __boilernet_label="1">
+      Project Looking Glass: Its Architecture and a Sneak Preview of the API
+     </span>
+    </h1>
+   </div>
+   <table border="0" cellpadding="10" cellspacing="0" width="100%">
+    <tbody>
+     <tr>
+      <td valign="top" width="100%">
+       <a name="skip2content">
+       </a>
+       <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+         <tr>
+          <td class="smaller" valign="top">
+           <em>
+           </em>
+          </td>
+          <td width="10">
+          </td>
+          <td align="right" valign="bottom">
+           <div class="sitelinks" style="padding:0px;">
+            <table border="0" cellpadding="0" cellspacing="0">
+             <tbody>
+              <tr>
+               <td align="right" valign="bottom">
+               </td>
+               <td class="smaller" nowrap="" valign="bottom">
+                <a href="/jsp_utils/PrintPage.jsp" onclick="openPopup('','printFriendlyView',710,650,'no',1,1,0,0,0,0); return true;" target="printFriendlyView">
+                 <img alt="Print-friendly Version" border="0" height="12" hspace="4" src="/im/ic_print.gif" width="14"/>
+                 <span __boilernet_label="0" __num="32">
+                  Print-friendly Version
+                 </span>
+                </a>
+                <br/>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+         <tr>
+          <td class="smaller" valign="top">
+           <em>
+            <span __boilernet_label="0" __num="33">
+             By
+            </span>
+            <a href="/features/authors.html#nourie">
+             <span __boilernet_label="0" __num="34">
+              Dana Nourie
+             </span>
+            </a>
+            <br/>
+            <span __boilernet_label="1">
+             Hideya Kawahara, November 2004
+            </span>
+           </em>
+          </td>
+          <td width="10">
+          </td>
+          <td align="right" valign="bottom">
+           <div class="sitelinks" style="padding:0px;">
+            <table border="0" cellpadding="0" cellspacing="0">
+             <tbody>
+              <tr>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <br/>
+       <p>
+        <span __boilernet_label="1">
+         Project Looking Glass (LG3D) exploits Java technology to bring a richer user experience to the desktop and to applications, through 3D windowing and visualization capabilities. This article covers Project Looking Glass' main features and API, its basic organization, and the functionality of important classes. You'll get an understanding of its high level architecture and where further development contributions are needed.
+        </span>
+       </p>
+       <table border="0" cellpadding="2" cellspacing="0" width="380">
+        <tbody>
+         <tr>
+          <td align="center" class="grey3">
+           <img alt="Figure 1: An LG3D Desktop" border="0" height="269" src="/developer/technicalArticles/javaopensource/images/applicationsScreenThumb.jpg" width="370"/>
+           <div class="pad3">
+            <span class="dkcaption1">
+             <b>
+              <span __boilernet_label="0" __num="37">
+               Figure 1
+              </span>
+             </b>
+             <span __boilernet_label="0" __num="38">
+              : An LG3D Desktop.
+             </span>
+            </span>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <span class="sp20">
+       </span>
+       <br/>
+       <p>
+        <span __boilernet_label="1">
+         Project Looking Glass is an open source development project, so you can decide what areas you would like to dig into. The project supports both unmodified existing applications in a 3D space and APIs for 3D window managers and application development.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Because Project Looking Glass is a work in progress, the details specified in this article are subject to change. The APIs are not final but are continuously evolving, improving, and expanding as more developers contribute to this project. Suggestions for improvement are invited via the
+        </span>
+        <a href="http://www.javadesktop.org/forums/forum.jspa?forumID=56">
+         <span __boilernet_label="1">
+          LG3D discussion forum
+         </span>
+        </a>
+        <span __boilernet_label="1">
+         .
+        </span>
+       </p>
+       <b>
+        <span __boilernet_label="1">
+         Supported Key Features
+        </span>
+       </b>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         LG3D breaks past two boundaries in the world of user experience design: the 2D-ness of current desktop environments, and the way in which these desktop environments evolve. At a very high level, the project focuses on providing a solid platform for the exploration of the 3D desktop environment, and exploring creative ideas by developing 3D window managers (SceneManagers) and applications on top of the platform.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Currently, Sun focuses on providing core functionality to kickstart the 3D exploration and refine the initial platform. The current platform supports the following key features:
+        </span>
+       </p>
+       <ul>
+        <li>
+         <span __boilernet_label="1">
+          Existing application (X11 client) initial integration
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Client-server scene graph platform
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Server-side animation execution
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Support for generic event systems
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Initial set of core APIs for building 3D widget sets
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Utilities for animated user feedback
+         </span>
+        </li>
+       </ul>
+       <p>
+       </p>
+       <b>
+        <span __boilernet_label="1">
+         Java Technology-based APIs and Implementation
+        </span>
+       </b>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         Java technology is the primary development language because of the productivity gains it brings, its language safety features, and the rich set of supporting APIs it provides. These benefits promote more aggressive exploration of the new 3D desktop frontier. In the future, C++ bindings will be provided so that existing native applications can access the features of the LG3D platform.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The LG3D API leverages the Java 3D API and provides additional features, including an animation system (to simplify writing rich user-experience applications) and APIs for 3D window manager development and interaction. The Java 3D API provides a set of object-oriented interfaces that support a simple, high-level programming model that can be used to build, render, and control the behavior of 3D objects and visual environments. Because LG3D is built on top of the Java 3D API, the platform leverages all these favorable features.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         A feature subset of the Java 3D API is exposed to the client side. This enables the future possibility of running the same client application program in a resource-limited environment like a set-top box or car navigation system.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Client-Server Scene Graphs
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The client-server Java 3D Scene Graph software allows multiple processes to share the same virtual 3D universe. This technology allows the platform to execute a LG3D-aware 3D application in a separate process (even on a remote machine), while it displays a 3D user interface integrated within the single virtual universe with which the user interacts. Like the X client-server model, this enables clean isolation among applications and the platform.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The platform provides an abstraction layer for communication protocol. The first developer's release uses RMI for convenience.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Note:
+         </span>
+        </b>
+        <i>
+         <span __boilernet_label="1">
+          Client-server
+         </span>
+        </i>
+        <span __boilernet_label="1">
+         here does not imply client and server machines connected through a network but rather processes typically running on the same machine. A client is an application that issues requests to render its user interface. Typically, the machine runs a single server that receives rendering requests from clients and constructs the screen image.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Server-side Animation Execution
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Animation typically operates on a scene graph per frame. A mechanism to execute animation on the server side is provided, so that client and server do not need to communicate per frame. The client specifies types of animation with parameters, such as duration.The platform provides several predefined animations. In addition, animation can be realized by leveraging animation support in model loaders. With those features, the limitations regarding server-side behavior is not considered critical.
+        </span>
+       </p>
+       <b>
+        <span __boilernet_label="1">
+         Existing Application Integration -- The Abstraction Layer
+        </span>
+       </b>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         The abstraction layer can be roughly divided into two major areas: the Foundation Window System (FWS) module, and the Native Window representation module.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The FWS module provides the integration with the underlying window system, including application visual capture and event delivery integration. The module includes a set of interfaces for implementation of different kind of plug-ins for a native window system.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Currently there are two implementations, the X11 version and the AWT version. The X Window System (commonly X11 or X) is a windowing system for bitmap displays. It is the standard graphical interface on UNIX and UNIX-like operating systems like Linux, and is available for most modern operating systems. The X11 integration allows X applications to be run and displayed within the LG3D platform. The AWT version allows the platform to run operating systems that support required Java platform and Java 3D extension versions (such as Solaris and Windows), but without support for applications running in the native window system. This module resides under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          org.jdesktop.lg3d.displayserver.fws
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         package.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The Native Window representation module sits on top of the FWS, and provides abstracted representation of the native window application's visual aspects.
+        </span>
+       </p>
+       <b>
+        <span __boilernet_label="1">
+         High Level Architecture
+        </span>
+       </b>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         The LG3D platform's high-level architecture is illustrated in Figure 2, showing the X11 integration. An unmodified X Client Application communicates with the X Server, which is enhanced with the X Client Capture functionality. This enhanced X Server captures the client's visual representation and sends it to the LG3D Display Server, which manages rendering of the 3D space, using the Java 3D platform. For LG3D-aware 3D application development, the platform provides LG3D Java libraries that expose the Java API. The libraries communicate with the Display Server for constructing 3D visuals and exchanging events.
+        </span>
+       </p>
+       <table border="0" cellpadding="2" cellspacing="0" width="410">
+        <tbody>
+         <tr>
+          <td align="center" class="grey3">
+           <img alt="Figure 2: LDG3 High Level Diagram" border="0" height="265" src="/developer/technicalArticles/javaopensource/images/client-side.jpg" width="400"/>
+           <div class="pad3">
+            <span class="dkcaption1">
+             <b>
+              <span __boilernet_label="0" __num="73">
+               Figure 2
+              </span>
+             </b>
+             <span __boilernet_label="0" __num="74">
+              : LDG3 High Level Diagram.
+             </span>
+            </span>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <span class="sp20">
+       </span>
+       <br/>
+       <p>
+        <span __boilernet_label="1">
+         The Scene Manager resides in the Display Server process. It communicates with the Display Server control and implements a policy regarding 3D application user interaction and arrangement in the 3D space.
+        </span>
+       </p>
+       <b>
+        <span __boilernet_label="1">
+         The Client-side API
+        </span>
+       </b>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         The client-side API can be categorized into the following three areas:
+        </span>
+       </p>
+       <ul>
+        <li>
+         <span __boilernet_label="1">
+          Java 3D-based scene graph classes
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          the LG3D 3D component classes
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          the LG3D utility classes
+         </span>
+        </li>
+       </ul>
+       <p>
+        <span __boilernet_label="1">
+         The following diagram shows the relationships among major classes from the first twocategories, a few from the third, and some of the Scene Manager-relatedclasses.
+        </span>
+       </p>
+       <table border="0" cellpadding="2" cellspacing="0" width="310">
+        <tbody>
+         <tr>
+          <td align="center" class="grey3">
+           <img alt="Figure 3: Client-Side Classes" border="0" height="204" src="/developer/technicalArticles/javaopensource/images/ClientSideClassesThumb.jpg" width="300"/>
+           <div class="pad3">
+            <span class="dkcaption1">
+             <b>
+              <span __boilernet_label="0" __num="82">
+               Figure 3
+              </span>
+             </b>
+             <span __boilernet_label="0" __num="83">
+              : Client-Side Classes.
+             </span>
+            </span>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <a href="/developer/technicalArticles/javaopensource/images/ClientSideClasses.jpg">
+        <span __boilernet_label="0" __num="84">
+         Click to enlarge
+        </span>
+       </a>
+       <br/>
+       <span class="sp20">
+       </span>
+       <br/>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Java 3D-based Scene Graph Classes
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The Java 3D Scene Graph API is the primary rendering API for developing a LG3D-aware 3D applications and scene managers. It is located under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          org.jdesktop.lg3d.sg
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         package, and it exposes a feature subset of the Java 3D API to the client side. The exposed classes are almost the same as those of Java 3D, except that features that complicate implementation, such as
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SharedGroup node
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         , have been removed. All the methods deal with type
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          double
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         have also been removed or replaced with a float version.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         This Scene Graph API is the basis for creating 3D visual effects of 3D applications and windowmanagers. In addition, the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          org.jdesktop.lg3d.utils.shape
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         package provides pre-built utility shapes and appearances for convenience.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          LG3D Component Classes
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The 3D Component API resides in the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          org.jdesktop.lg3d.wg
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         package and provides core functions for developing widgets in the LG3D Glass environment. The design is still in preliminary stages, and will be refined in the near future. The following table shows key classes residing in the package. (These classes are analogous to those of AWT without the tailing "3D.")
+        </span>
+       </p>
+       <div>
+        <b class="dkgrey">
+         <span __boilernet_label="1">
+          3D Component Classes
+         </span>
+        </b>
+       </div>
+       <div class="pad2x0x10x0">
+        <table border="0" cellpadding="0" cellspacing="0" class="vatop" summary="list of 3D Component Classes" width="90%">
+         <tbody>
+          <tr>
+           <th align="left" class="headerbar6" scope="col" width="15%">
+            <div class="headerpadding2">
+             <b>
+              <span __boilernet_label="1">
+               Class
+              </span>
+             </b>
+            </div>
+           </th>
+           <th align="left" class="headerbar6" scope="col" width="85%">
+            <div class="headerpadding2">
+             <b>
+              <span __boilernet_label="1">
+               Description
+              </span>
+             </b>
+            </div>
+           </th>
+          </tr>
+          <tr>
+           <td colspan="3">
+            <img alt=" " border="0" height="2" src="http://developers.sun.com/images/a.gif" width="1"/>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               Component3D
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              The top level superclass of all the LG3D widget components. It supports visual rendering by adding scene graph node children created with the Java 3D-based Scene Graph API. Note that a restriction has been implemented not to allow a
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Component3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              object to be added to another
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Component3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              object as a child.
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Container3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              needs to be used as a parent container in such cases. This class is also an event source and implements
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               LgEventSource
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              interface. Details of mouse event handling is described later. This class also includes built-in support for transition animation.
+             </span>
+            </div>
+            <br/>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               Container3D
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Extends
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Component3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              . A
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Container3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              object is a component that can hold other components as children, but cannot hold Java 3D-based scene graph objects. Typically, such a raw scene graph object is wrapped by a
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Component3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              once before being added to a
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Container3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              object.This class is typically used together with
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               LayoutManager3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              .
+             </span>
+            </div>
+            <br/>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               Frame3D
+              </span>
+             </code>
+            </div>
+            <br/>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Extends
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Container3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              . It is analogous to AWT's Frame class: theroot container for an LG3D-aware 3D application. For example, it interacts with a Scene Manager (3DWindow Manager) for positioning.
+             </span>
+            </div>
+            <br/>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               Cursor3D
+              </span>
+             </code>
+            </div>
+            <br/>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Extends
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Component3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              and is the root class of all 3D cursors.An application can define its own cursor by extending this class, or by using one of theconstructors that takes a
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               Component3D
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              object as the cursor implementation. It alsoprovides a way to register and retrieve cursors, as well as work with predefined cursors that a SceneManager is required to initialize.
+             </span>
+            </div>
+            <br/>
+           </td>
+          </tr>
+          <tr>
+           <td class="headerbar6" colspan="3">
+            <img alt=" " border="0" height="1" src="http://developers.sun.com/images/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <span class="sp10">
+       </span>
+       <br/>
+       <span class="sp10">
+       </span>
+       <br/>
+       <p>
+        <span __boilernet_label="1">
+         The following code shows a simple example that uses the preceding key LG3D component classes. It displays a colored cube on the screen. Please refer to the
+        </span>
+        <a href="https://lg3d-core.dev.java.net/">
+         <span __boilernet_label="0" __num="136">
+          Javadoc API guide
+         </span>
+        </a>
+        <span __boilernet_label="0" __num="137">
+         for details on each method.
+        </span>
+       </p>
+       <div>
+        <b>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <table border="0" cellpadding="10" cellspacing="0" class="grey4" width="100%">
+        <tbody>
+         <tr>
+          <td>
+           <pre><span __boilernet_label="0" __num="138">public class SimpleApp {  public SimpleApp() {    Frame3D frame3d = new Frame3D();    ColorCube cube = new ColorCube(0.05f);    Compnent3D comp = new Component3D();    comp.addChild(cube);    comp.setCursor(Cursor3D.SMALL_CURSOR);    frame3d.addChild(comp);    frame3d.setCapabilities();    frame3d.setActive(true);    frame3d.setVisible(true);  }}</span></pre>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <span class="sp20">
+       </span>
+       <br/>
+       <b>
+        <span __boilernet_label="1">
+         Transition Animation Support
+        </span>
+       </b>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Component3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class has two sets of methods for transformational change. One is the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          set*()
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method family, and the other is the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          change*()
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         family:
+        </span>
+       </p>
+       <div>
+        <b class="dkgrey">
+         <span __boilernet_label="1">
+          3D Component Class Methods for Change
+         </span>
+        </b>
+       </div>
+       <div class="pad2x0x10x0">
+        <table border="0" cellpadding="0" cellspacing="0" class="vatop" summary="list of 3D Component Classes" width="40%">
+         <tbody>
+          <tr>
+           <th align="left" class="headerbar6" scope="col" width="50%">
+            <div class="headerpadding2">
+             <b>
+              <code>
+               <span __boilernet_label="1">
+                set*()
+               </span>
+              </code>
+              <span __boilernet_label="1">
+               Family
+              </span>
+             </b>
+            </div>
+           </th>
+           <th align="left" class="headerbar6" scope="col" width="50%">
+            <div class="headerpadding2">
+             <b>
+              <code>
+               <span __boilernet_label="1">
+                change*()
+               </span>
+              </code>
+              <span __boilernet_label="1">
+               Family
+              </span>
+             </b>
+            </div>
+           </th>
+          </tr>
+          <tr>
+           <td colspan="3">
+            <img alt=" " border="0" height="2" src="http://developers.sun.com/images/a.gif" width="1"/>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               setTranslation()
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               changeTranslation()
+              </span>
+             </code>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               setRotationAngle()
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               changeRotationAngle()
+              </span>
+             </code>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               setRotationAngle()
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               changeScale()
+              </span>
+             </code>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               setVisible()
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               changeVisibility()
+              </span>
+             </code>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td class="headerbar6" colspan="3">
+            <img alt=" " border="0" height="1" src="http://developers.sun.com/images/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <span class="sp10">
+       </span>
+       <br/>
+       <span class="sp10">
+       </span>
+       <br/>
+       <p>
+        <span __boilernet_label="1">
+         The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          set*()
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         methods make specified changes immediately, whereas the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          change*()
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         changes may be delayed. For example, invoking
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          setScale(2.0f)
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         changes the scale to 2.0 immediately, whereas invoking
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          changeScale(2.0f)
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         may take a few second while showingtransition animation. The transition animation is pluggable. The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          caller
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         invokes either event based on the situation.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         This framework is effective for simplifying the implementation of a component's natural motion shown in LG3D demos.
+        </span>
+       </p>
+       <div>
+        <b>
+         <span __boilernet_label="1">
+          Model Loader
+         </span>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         Support for model loaders is considered a key feature of LG3D technology, as it brings visual designers into the development loop. The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          ModelLoader
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class provides a simple yet powerful mechanism to load a 3D model from a file, and it supports many formats using the Java 3D loader mechanism.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          ModelLoader
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class extends
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Component3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         , and the constructor takes a model file name, a Java 3D model loader class object, and a matrix for static transformation of the model.
+        </span>
+       </p>
+       <div>
+        <b>
+         <span __boilernet_label="1">
+          Event Adapter and Animation Classes
+         </span>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         These components are located under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          org.jdesktop.lg3d.utils
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         package and form a major part of the LG3D utility classes.
+        </span>
+       </p>
+       <table border="0" cellpadding="2" cellspacing="0" width="310">
+        <tbody>
+         <tr>
+          <td align="center" class="grey3">
+           <img alt="Figure 5: Mouse Event Propagation" border="0" height="143" src="/developer/technicalArticles/javaopensource/images/EventAdapterThumb.jpg" width="300"/>
+           <div class="pad3">
+            <span class="dkcaption1">
+             <b>
+              <span __boilernet_label="0" __num="185">
+               Figure 5
+              </span>
+             </b>
+             <span __boilernet_label="0" __num="186">
+              : Mouse Event Propagation.
+             </span>
+            </span>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <a href="/developer/technicalArticles/javaopensource/images/EventAdapter.jpg">
+        <span __boilernet_label="0" __num="187">
+         Click to enlarge
+        </span>
+       </a>
+       <br/>
+       <span class="sp20">
+       </span>
+       <br/>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Event Adapter
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Classes under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          eventadapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         subpackage implement the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          LgEventListener
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface and keep at least one reference to an object that implements the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface.An
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Event Adapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object is a receiver of events. It predigests the information provided through events and invokes the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          performAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method of an associated
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         or
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action Adapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Action Adapter
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Classes under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          actionadapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         subpackage implement the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface and keep at least one reference to an object that implements the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface. An
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action Adapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object typically converts one kind of input into another by performing some processing against values propagated by
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          performAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         invocation. A action adapter class typically acts as a converter among different action types.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Classes under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         subpackage implement the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface. These receive predigested information from an
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Event Adapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         or
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action Adapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object through a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          performAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method invocation and perform visual feedback. An
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object typically keeps a reference to an
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action Behavior
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object in order to perform visual feedback based on animation.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Action Behavior
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Classes under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          behavior
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         subpackage extend the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          ActionBehavior
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         abstract class and implement basic animation. An
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action Behavior
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object typically keeps a reference to a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Component3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object and a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          TransitionSmoother
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         , and performs animation using them.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Transition Smoother
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Classes under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          smoother
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         subpackage provide reusable natural motion for action implementation. These classes implement the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          TransitionSmoother
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface and generate reusable natural motion used in
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          ActionBehavior
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         implementation.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The following code fragment uses event adapter and animation components. It rotates the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          targetComp
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object by 180 degrees back and forth in 1,000 milliseconds every time the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          sourceComp
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object is clicked:
+        </span>
+       </p>
+       <table border="0" cellpadding="10" cellspacing="0" class="grey4" width="100%">
+        <tbody>
+         <tr>
+          <td>
+           <pre><span __boilernet_label="1">new MouseClickedEventAdapter(sourceComp  new ToggleAdapter(    new RotateAction(targetComp, (float)Math.PI, 1000)));</span></pre>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <span class="sp20">
+       </span>
+       <br/>
+       <p>
+        <code>
+         <span __boilernet_label="1">
+          MouseClickedEventAdapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is an Event Adapter class, which extends the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          LgEventLister
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface and registers itself to listen to
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          MouseEvent
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         . In the example, the event source to listen to is specified through the argument, which is the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          sourceComp Component3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object. Whenever it receives a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          MouseEvent
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         from the object, it invokes the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          performAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method of an associated
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         or
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action Adapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object. In the example, a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          ToggleAdapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object is specified as an argument in the constructor.
+        </span>
+       </p>
+       <p>
+        <code>
+         <span __boilernet_label="1">
+          ToggleAdapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is an
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action Adapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         . It keeps an internal boolean state that gets toggled whenever the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          performAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method is invoked. It then invokes the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          performAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method of an associated object with the boolean state information. In the example, a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          RotateAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object is specified as an argument in the constructor.
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          RotateAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is an
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Action
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class. The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          performAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method rotates the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          targetComp
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object based on the boolean argument. If it is true, it rotates the object by the given angle duration. In this case, the angle is ? (pi) in radians, which is 180 degrees, within the given duration, which is 1000 milliseconds. If the argument were false, it rotate the object back to the default position, which is 0 degree. By combining this method with the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          ToggleAdapter
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object, the flipping back-and-force motion is achieved.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          RotateAction
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object internally creates an instance of the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          RotationChanger
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class and actually performs the rotation animation. It also creates an instance of the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          NaturalFloatSmoother
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class passing the duration parameter, 1000 milliseconds. This Transition Smoother object is then given the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          RotationChanger
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object through the constructor argument for its use to perform a natural flipping motion.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          RotationChanger
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class is one of the predefined behaviors that execute on the server side. The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          NaturalFloatSmoother
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class implements the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          TransitionSmoother
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface, which is the key class that implements all of the natural motion you see in the LG3D demo. The implementation algorithm and parameters are defined based on a heuristic approach. The algorithm is a bit expensive â€“ because of its frame-rate conversion. Optimizations can be performed once an area is identified as a hot spot.
+        </span>
+       </p>
+       <div>
+        <b>
+         <span __boilernet_label="1">
+          The Scene Manager
+         </span>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         The Scene Manager takes over the role of window manager for a 3D scene, since typical LG3D-aware 3D application user interfaces have unique shapes not limited to a window shape. The Scene Manager interacts with the user and applications. It implements management policy for applications running in the environment and is responsible for arranging those in the 3D space.
+        </span>
+       </p>
+       <table border="0" cellpadding="2" cellspacing="0" width="453">
+        <tbody>
+         <tr>
+          <td align="center" class="grey3">
+           <img alt="Figure 6: A Visual Set Up" border="0" height="224" src="/developer/technicalArticles/javaopensource/images/VisualSetUp.jpg" width="443"/>
+           <div class="pad3">
+            <span class="dkcaption1">
+             <b>
+              <span __boilernet_label="0" __num="314">
+               Figure 6
+              </span>
+             </b>
+             <span __boilernet_label="0" __num="315">
+              : A Visual Set Up.
+             </span>
+            </span>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <span class="sp20">
+       </span>
+       <br/>
+       <p>
+        <span __boilernet_label="1">
+         Scene Manager design is a major area of future exploration. In order to stimulate many ideas, an initial framework for componentized Scene Manager technology has been provided. In the implementation, attention has been paid to two-and-a-half dimension as well as full three dimension experiences under the same abstraction. The following list shows the key Scene Manager components, along with its abstract class or interface name.
+        </span>
+       </p>
+       <ul>
+        <li>
+         <span __boilernet_label="1">
+          Application Container (
+         </span>
+         <code>
+          <span __boilernet_label="1">
+           AppContainer
+          </span>
+         </code>
+         <span __boilernet_label="1">
+          abstract class)
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Taskbar (
+         </span>
+         <code>
+          <span __boilernet_label="1">
+           Taskbar
+          </span>
+         </code>
+         <span __boilernet_label="1">
+          abstract class)
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Background (
+         </span>
+         <code>
+          <span __boilernet_label="1">
+           Background
+          </span>
+         </code>
+         <span __boilernet_label="1">
+          abstract class)
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Global Light (
+         </span>
+         <code>
+          <span __boilernet_label="1">
+           GlobalLights
+          </span>
+         </code>
+         <span __boilernet_label="1">
+          abstract class)
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Cursor Module (
+         </span>
+         <code>
+          <span __boilernet_label="1">
+           CursorModule
+          </span>
+         </code>
+         <span __boilernet_label="1">
+          interface)
+         </span>
+        </li>
+       </ul>
+       <p>
+        <span __boilernet_label="1">
+         These components are located under the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          �lg3d.scenemanager.utils
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         package.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The following diagram shows the relationships among those Scene Manager components and other related LG3D classes. Note that Application Container is usually invisible.
+        </span>
+       </p>
+       <table border="0" cellpadding="2" cellspacing="0" width="310">
+        <tbody>
+         <tr>
+          <td align="center" class="grey3">
+           <img alt="Figure 7: Scene Manager Classes" border="0" height="222" src="/developer/technicalArticles/javaopensource/images/SceneManagerClassesThumb.jpg" width="300"/>
+           <div class="pad3">
+            <span class="dkcaption1">
+             <b>
+              <span __boilernet_label="0" __num="336">
+               Figure 7
+              </span>
+             </b>
+             <span __boilernet_label="0" __num="337">
+              : Scene Manager Classes.
+             </span>
+            </span>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <a href="/developer/technicalArticles/javaopensource/images/SceneManagerClasses.jpg">
+        <span __boilernet_label="0" __num="338">
+         Click to enlarge
+        </span>
+       </a>
+       <br/>
+       <span class="sp20">
+       </span>
+       <br/>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          SceneManagerBase
+         </span>
+        </b>
+       </p>
+       <p>
+        <code>
+         <span __boilernet_label="1">
+          SceneManagerBase
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is an implementation of
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SceneManager
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         that integrates other Scene Manager components. It communicates with
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          DisplayServerControl
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         through the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          DisplayServerManagerInterface
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         .
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          DisplayServerControl
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is the main body of the LG3D Display Server module that is responsible for all the rendering that happens in the 3D space. The communication includes obtaining display-specific information like the field of view, setting view transform, and specifying the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          CursorModule
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         .
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          DisplayServerControl
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         in turn communicates with
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SceneManagerBase
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         through the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SceneManager
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface. The communication includes adding and removing a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Frame3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         When
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          setActive
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method of
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Frame3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is invoked with an argument set to true,
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          DisplayServerControl
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         eventually receives server-side representation of the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Frame3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object. The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          DisplayServerControl
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         then in turn passes the object to the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SceneManagerBase
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object. Note that the native window abstraction layer also provides a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Frame3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object as the top level object with which Scene Manager interacts. In this way, there is no difference between an LG3D-aware 3D application and a 3D-mapped native window.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Application Container
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Application Container
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is a key foundation for implementing the user interaction and application navigation capabilities of Scene Manager. It is also useful for achieving two-and-a-half dimension desktop experience. The application container is a subclass of
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Container3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         and is specialized for hosting applications, such as
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Frame3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         objects.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         An application container usually leverages the 3D layout manager to implement easy-to-access application arrangements in the container. It is key to leveraging the 3D space when arranging the applications. Based on a Scene Manager implementation exercise, the 3D layout manager turned out to be a flexible platform for achieving the goal while allowing implementations to be componentized.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         A single Scene Manager can host multiple application containers. The Scene Manager implements the concept of the current application container. It receives a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Frame3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object when a new LG3D-aware application is activated. The current container can be switched dynamically. This feature is typically used to implement virtual desktop switching.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          The Background
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         In the LG3D 3D desktop environment, the background is more than just a static image behind application windows. It actually defines the 3D environment with which the user can interact and where application containers can be positioned.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The Background can comprise any 3D geometry as it is a subclass of
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Container3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         , to which any geometry can be added and any behavior can be integrated.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         In addition to setting up the geometry to render on the background, the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Background
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object also hosts application containers. The object usually keeps a reference to a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SceneManager
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object that is passed through the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          initialize
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         method, and invokes the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SceneManager
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         object to manage application containers including obtaining and switching current. Since
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Application Container
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is just a subclass of
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Container3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         , the background object can place it anywhere in the 3D scene. It also can allow the user to handle multiple application containers by switching the current application container and changing the view so that the current one remains accessible to the user.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         For more details, you may want to check out the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SimpleImageBackground
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class, which is a simple example implementation of background with comments.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Global Lights
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         Light is also componentized. Instead of a static global light that the default implementation provides (StandardGlobalLights), you can develop lights that dynamically change angle and color based on time of the day, for example. Or, a Scene Manager may want to use lighting effects to provide an alert or focus to the user.
+        </span>
+       </p>
+       <p>
+        <b>
+         <span __boilernet_label="1">
+          Cursor Module
+         </span>
+        </b>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         A
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          CursorModule
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         class implements policies on how cursor is displayed. It provides Scene Manager hooks for the addition and removal of
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Cursor3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         objects, and a hook for positioning the current cursor. For example, in the default implementation
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          StandardCursorModule
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         , the maximum distance of the current cursor from the user's point of view is limited to a certain value so that the cursor will appear to the user at a reasonable size. Without this policy, a cursor could be drawn so far away on the surface of the background that the user would have difficulty finding it.
+        </span>
+       </p>
+       <b>
+        <span __boilernet_label="1">
+         Interaction Events Between Frame3D and Scene Manager
+        </span>
+       </b>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         The generic event system is employed as the main communication method between
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          Frame3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         and Scene Manager, to achieve both loosely coupled componentization and the interplay of a rich set of user actions and requests between them.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         This area needs more investigation. Currently, a few adhoc events have been introduced to achieve the initial demo features.
+        </span>
+       </p>
+       <div>
+        <b>
+         <span __boilernet_label="1">
+          Existing 2D Application Integration
+         </span>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         The 2D application integration framework can be roughly divided into two major areas: the Foundation Window System (FWS) module and the Native Window representation module.
+        </span>
+       </p>
+       <table border="0" cellpadding="2" cellspacing="0" width="310">
+        <tbody>
+         <tr>
+          <td align="center" class="grey3">
+           <img alt="Figure 8: 2D Integration Classes" border="0" height="222" src="/developer/technicalArticles/javaopensource/images/2DIntegrationClassesThumb.jpg" width="300"/>
+           <div class="pad3">
+            <span class="dkcaption1">
+             <b>
+              <span __boilernet_label="0" __num="425">
+               Figure 8
+              </span>
+             </b>
+             <span __boilernet_label="0" __num="426">
+              : 2D Integration Classes.
+             </span>
+            </span>
+           </div>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <a href="/developer/technicalArticles/javaopensource/images/2DIntegrationClasses.jpg">
+        <span __boilernet_label="0" __num="427">
+         Click to enlarge
+        </span>
+       </a>
+       <br/>
+       <span class="sp20">
+       </span>
+       <br/>
+       <p>
+        <span __boilernet_label="1">
+         The FWS module provides the integration with the underlying window system, including application visual capture and event delivery integration. Since these interfaces are not a part of the client API and not visible to client application developers, this document does not cover any details.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The Native Window representation module sits on top of the FWS, and provides abstracted representation of native window application's visual aspect. It is in the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          org.jdesktop.lg3d.displayserver.nativewindow
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         package. Its two primary design goals are to
+        </span>
+       </p>
+       <ul>
+        <li>
+         <span __boilernet_label="1">
+          Allow a pluggable Look and Feel
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Encapsulate complexity around native window capture and communication
+         </span>
+        </li>
+       </ul>
+       <p>
+        <span __boilernet_label="1">
+         The classes in this package attempt to abstract and hide all the complexity around the native application visual capture, as well as necessary communication with the application side. Figure 8 illustrates the relationships among the major classes.
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          NativeWindow3D
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         is the top level class with which
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          SceneManager
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interacts. It extends Frame3D and behaves just like another LG3D-aware 3D application. It also implements the methods declared in
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          NativeWindowMonitor
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         , which are used for the native 2D window manager to give notifications about status changes, and so on. The implementation, in turn, uses
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          NativeWindowControl
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         interface to communicate back to the native window manager, so that it can perform actions on the 2D applicationassociated with this object.
+        </span>
+       </p>
+       <p>
+        <code>
+         <span __boilernet_label="1">
+          NativeWindowLookAndFeel
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         defines the native window's appearance and visual texture. At this level, typically, window decoration is constructed. The current implementation includes
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          GlassyNativeWindowLookAndFeel
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         in the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          lg3d.scenemanager.utils.decoration
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         package as an example.
+        </span>
+       </p>
+       <p>
+        <code>
+         <span __boilernet_label="1">
+          NativeWindowObject
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         and
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          TiledNativeWindowImage
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         exist to hide all the complexity related to native window capture support. Texture is used for presenting captured 2D window surfaces in the 3D space, but it has a size limitation that is sometimes smaller than maximum 2D window size. To deal with large 2D window capture, we use composite multiple textures created from a set of
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          ImageComponent2Ds
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         . The details are hidden under these classes.
+        </span>
+       </p>
+       <div>
+        <b>
+         <span __boilernet_label="1">
+          Window Decoration Customization
+         </span>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         By subclassing
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          NativeWindowLookAndFeel
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         , you can develop your own window decoration. If you want a native window representation this is not on a simple quad � on a wavy sheet, for example &amp;ndash you will need to implement a version of
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          NativeWindowObject
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         that supports the shape you want.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         An API to map multiple native window representations on surfaces of a single object is under development, which will be used to put another view on the back side of the window.
+        </span>
+       </p>
+       <div>
+        <b>
+         <span __boilernet_label="1">
+          A Quick Tour of the Project Looking Glass Source Code
+         </span>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         Now that you've learned the basic architecture of Project Looking Glass and understand its important classes, you are invited to download the code and to begin contributing your programming skills. To work on this project, you need to be a
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          java.net
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         member, which is free upon registration. Then you can download and install a working version of the software and the source code.
+        </span>
+       </p>
+       <p>
+        <span __boilernet_label="1">
+         The Project Looking Glass source code is located in the
+        </span>
+        <code>
+         <span __boilernet_label="1">
+          lg3d-core/src
+         </span>
+        </code>
+        <span __boilernet_label="1">
+         CVS repository. The following table is an overview of the various files in the the repository.
+        </span>
+       </p>
+       <div>
+        <b class="dkgrey">
+         <span __boilernet_label="1">
+          Repository Files
+         </span>
+        </b>
+       </div>
+       <div class="pad2x0x10x0">
+        <table border="0" cellpadding="0" cellspacing="0" class="vatop" summary="files in the repository" width="100%">
+         <tbody>
+          <tr>
+           <th align="left" class="headerbar6" scope="col" width="20%">
+            <div class="headerpadding2">
+             <b>
+              <span __boilernet_label="1">
+               Directory
+              </span>
+             </b>
+            </div>
+           </th>
+           <th align="left" class="headerbar6" scope="col" width="80%">
+            <div class="headerpadding2">
+             <b>
+              <span __boilernet_label="1">
+               Description
+              </span>
+             </b>
+            </div>
+           </th>
+          </tr>
+          <tr>
+           <td colspan="3">
+            <img alt=" " border="0" height="2" src="http://developers.sun.com/images/a.gif" width="1"/>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               build/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              The build files are stored in this directory.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               build-tools/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Tools for building Project Looking Glass.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               build.xml
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              The Ant build control file.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               ext/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Components released with Project Looking Glass: escher (Java bindings to X11) and a stable build of
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               lg3d-x11
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              .
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               ext-unbundled/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              A directory in which you can put components not licensed for distribution with Project Looking Glass (that is, junit, Java3D loaders, and so forth.) You can also install your own build of
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               lg3d-x11
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              here instead of using
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               $LGX11HOME
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              .
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               src/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              The root of the
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               lg3d-core
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              source tree.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               classes/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              All
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               .java
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              files. Refer to the Javadocs in the binary bundle in
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               docs/javadoc/api
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              for more information.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               devscripts/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Various Project Looking Glass development scripts. These utilize classes in the
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               build/
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              directory.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               HelloUniverse
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Runs the Java3D rotating cube demo in a Project Looking Glass session.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               README
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Documentation for some scripts in this directory.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               displayserver
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Runs the Display Server.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               lg3d-dev
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Runs a Project Looking Glass session in a window (developer or No X mode).
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               lg3d-session
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Runs a Project Looking Glass session in full screen mode, with X11 support.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               setup
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              A helper script used by the other scripts.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               etc/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Contains various configuration files.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               jz/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              An obsolete directory.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               lg3d/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               README
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Documentation for the various
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               lgconfig*
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              files.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               lgconfig*
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Configuration scripts for the various modes in which Project Looking Glass can be run.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               logging.properties
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Configuration file that controls the verbosity of logging output to the Display Server log file,
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               /var/tmp/lgserver.log
+              </span>
+             </code>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               displayconfig/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              For the adventurous. Contains files that allow Project Looking Glass to be run in more complex display environments such as multi-screen, stereo, or power walls. The choice of configurations is controlled by the
+             </span>
+             <code>
+              <span __boilernet_label="1">
+               lgconfig.xml
+              </span>
+             </code>
+             <br/>
+             <b>
+              <span __boilernet_label="1">
+               WARNING!
+              </span>
+             </b>
+             <span __boilernet_label="1">
+              Alternate display configurations have not been extensively tested yet.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               native/org/jdesktop/lg3d/displayserver/fws/x11/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              The C code for X11 integration.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               resources/images/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Assorted images used by Project Looking Glass.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               scripts/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Scripts for running the Project Looking Glass release. These utilize classes from the release JAR files.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               displayserver
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Runs the Display Server (users should not run this directly).
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               lg3d-dev
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Runs a Project Looking Glass session in a window (developer or No X mode).
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               lg3d-session
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Runs a Project Looking Glass session in full screen mode, with X11 support.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               setup
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              A helper script uses by the other scripts. (Users should not run this directly).
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               tests/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <span __boilernet_label="1">
+              Eventually will hold the test suite for Project Looking Glass.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr class="grey5">
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               www/
+              </span>
+             </code>
+            </div>
+           </td>
+           <td>
+            <div class="datacell">
+             <code>
+              <span __boilernet_label="1">
+               java.net
+              </span>
+             </code>
+             <span __boilernet_label="1">
+              site pages and various documentation.
+             </span>
+            </div>
+           </td>
+          </tr>
+          <tr>
+           <td class="headerbar6" colspan="3">
+            <img alt=" " border="0" height="1" src="http://developers.sun.com/images/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <span class="sp10">
+       </span>
+       <br/>
+       <span class="sp20">
+       </span>
+       <br/>
+       <div>
+        <b>
+         <span __boilernet_label="1">
+          Areas That Require Developer Participation
+         </span>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p>
+        <span __boilernet_label="1">
+         The following areas need developer participation:
+        </span>
+       </p>
+       <ul>
+        <li>
+         <span __boilernet_label="1">
+          LG3D 3D API refinements, refinements, refinements!
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Exploration of 3D Window Manager UI design, using the following documents as starting points:
+         </span>
+         <ul>
+          <li>
+           <a href="https://lg3d-core.dev.java.net/lg3d-ui-design.html">
+            <span __boilernet_label="1">
+             Project Looking Glass UI Design Discussions
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="https://lg3d-core.dev.java.net/lg3d-related-technologies.html">
+            <span __boilernet_label="1">
+             Related Technologies
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          Exploration of new 3D applications
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          C++ client-side API and implementation
+         </span>
+        </li>
+        <li>
+         <span __boilernet_label="1">
+          GNOME/KDE compatibility
+         </span>
+        </li>
+       </ul>
+       <p>
+        <span __boilernet_label="1">
+         Also check
+        </span>
+        <a href="https://lg3d-x11.dev.java.net/">
+         <span __boilernet_label="1">
+          the
+         </span>
+         <code>
+          <span __boilernet_label="1">
+           lg3d-x11
+          </span>
+         </code>
+         <span __boilernet_label="1">
+          project page
+         </span>
+        </a>
+        <span __boilernet_label="1">
+         for the topics specific to X11 integration.
+        </span>
+       </p>
+       <div>
+        <b>
+         <span __boilernet_label="0" __num="566">
+          For More Information
+         </span>
+        </b>
+       </div>
+       <div class="contentdivider">
+        <table border="0" cellpadding="0" cellspacing="0" class="grey4" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <img alt=" " border="0" height="4" src="/im/a.gif" width="1"/>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <ul>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/">
+          <span __boilernet_label="0" __num="567">
+           Project Looking Glass
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/">
+          <code>
+           <span __boilernet_label="0" __num="568">
+            lg3d-core.dev.java.net
+           </span>
+          </code>
+         </a>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/lg3d-faq.html">
+          <span __boilernet_label="0" __num="569">
+           FAQ - Frequently Asked Questions
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/lg3d-getting-started.html">
+          <span __boilernet_label="0" __num="570">
+           Getting started with Project Looking Glass
+          </span>
+         </a>
+        </li>
+        <ul>
+         <li>
+          <a href="https://lg3d-core.dev.java.net/nvidia-driver-install-tips.html">
+           <span __boilernet_label="0" __num="571">
+            NVIDIA Driver Installation Tips
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://lg3d-core.dev.java.net/dri-driver-install-ati-radeon.html">
+           <span __boilernet_label="0" __num="572">
+            DRI Driver installation for ATI Radeon
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://lg3d-core.dev.java.net/jds-3d-acceleration.html">
+           <span __boilernet_label="0" __num="573">
+            3D Acceleration on a Tadpole Talin JDS Laptop (ATI Radeon M9)
+           </span>
+          </a>
+         </li>
+         <li>
+          <a href="https://lg3d-core.dev.java.net/dri-driver-install-ati-radeon-nonrpm.html">
+           <span __boilernet_label="0" __num="574">
+            ATI Binary driver installation instructions for non-RPM-based distributions
+           </span>
+          </a>
+         </li>
+        </ul>
+        <li>
+         <span __boilernet_label="0" __num="575">
+          Project Looking Glass Tutorials:
+         </span>
+         <ul>
+          <li>
+           <a href="https://lg3d-core.dev.java.net/tutorial/tutorial1.html">
+            <span __boilernet_label="0" __num="576">
+             Tutorial 1 - An introduction to the LG3D framework
+            </span>
+           </a>
+           <span __boilernet_label="0" __num="577">
+            - The basics of creating a 3D application within the LG3D framework
+           </span>
+          </li>
+          <li>
+           <a href="https://lg3d-core.dev.java.net/tutorial/tutorial2.html">
+            <span __boilernet_label="0" __num="578">
+             Tutorial 2 - Simple manipulations and user interaction
+            </span>
+           </a>
+           <span __boilernet_label="0" __num="579">
+            - Simple manipulations and user interaction with a 3D application.
+           </span>
+          </li>
+          <li>
+           <a href="https://lg3d-core.dev.java.net/tutorial/tutorial3.html">
+            <span __boilernet_label="0" __num="580">
+             Tutorial 3 - Complex manipulations and user interaction
+            </span>
+           </a>
+           <span __boilernet_label="0" __num="581">
+            - More complex manipulations and user interaction with a 3D application. Create a sphere with the Earth texture and a small handle to move it.
+           </span>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/lg3d-developers-guide.html">
+          <span __boilernet_label="0" __num="582">
+           Project Looking Glass Developer's Guide
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="http://www.javadesktop.org/forums/forum.jspa?forumID=56">
+          <code>
+           <span __boilernet_label="0" __num="583">
+            javadesktop.org
+           </span>
+          </code>
+          <span __boilernet_label="0" __num="584">
+           Forum: Project Looking Glass 3D
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/issues/query.cgi">
+          <span __boilernet_label="0" __num="585">
+           Issue Tracker Query
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/files/documents/1834/5964/J1-2004-TS1586-final.pdf">
+          <span __boilernet_label="0" __num="586">
+           JavaOne 2004 slides (PDF 900KB)
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/files/documents/1834/7596/LG3DAPIOverview-DRAFT.pdf">
+          <span __boilernet_label="0" __num="587">
+           DRAFT - LG3D API Design Overview (PDF 330KB)
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/lg3d-related-technologies.html">
+          <span __boilernet_label="0" __num="588">
+           Related Technologies
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="https://lg3d-core.dev.java.net/lg3d-ui-design.html">
+          <span __boilernet_label="0" __num="589">
+           UI Design Discussions
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="http://wiki.java.net/bin/view/Javadesktop/ProjectLookingGlass#KnowledgeBase">
+          <span __boilernet_label="0" __num="590">
+           TWiki.Javadesktop.ProjectLookingGlass
+          </span>
+         </a>
+        </li>
+        <li>
+         <a href="http://java.sun.com/developer/community/chat/JavaLive/2004/jl1026.html">
+          <span __boilernet_label="0" __num="591">
+           Chat Transcript with Guests Hideya Kawahara, Paul Byrne, and Deron Johnson
+          </span>
+         </a>
+        </li>
+       </ul>
+       <br/>
+       <form action="https://www2.sun.de/dc/servlets/incoming" method="post" name="form" onsubmit="return onRateSubmitHandler()" target="rr">
+        <table border="0" cellpadding="1" cellspacing="0" class="dkgrey" style="margin-top:7px" width="100%">
+         <tbody>
+          <tr>
+           <td>
+            <table border="0" cellpadding="4" cellspacing="0" class="white" width="100%">
+             <tbody>
+              <tr>
+               <td class="dkgrey1">
+                <b>
+                 <span __boilernet_label="0" __num="593">
+                  Rate and Review
+                 </span>
+                </b>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <span __boilernet_label="0" __num="594">
+                 Tell us what you think of the content of this page.
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <b>
+                 <span __boilernet_label="0" __num="595">
+                  Excellent
+                 </span>
+                 <span __boilernet_label="0" __num="596">
+                  Good
+                 </span>
+                 <span __boilernet_label="0" __num="597">
+                  Fair
+                 </span>
+                 <span __boilernet_label="0" __num="598">
+                  Poor
+                 </span>
+                </b>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <b>
+                 <span __boilernet_label="0" __num="599">
+                  Comments:
+                 </span>
+                </b>
+                <br/>
+                <textarea cols="60" name="custom_2" rows="3" wrap="virtual"></textarea>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <b>
+                 <span __boilernet_label="0" __num="600">
+                  Your email address (no reply is possible without an address):
+                 </span>
+                </b>
+                <br/>
+                <a href="http://sun.com/privacy/" target="_new">
+                 <span __boilernet_label="0" __num="601">
+                  Sun Privacy Policy
+                 </span>
+                </a>
+                <br/>
+                <br/>
+                <span __boilernet_label="0" __num="602">
+                 Note: We are not able to respond to all submitted comments.
+                </span>
+               </td>
+              </tr>
+              <tr>
+               <td>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </form>
+      </td>
+      <td valign="top">
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <img alt=" " border="0" height="1" src="/im/a.gif" width="560"/>
+      </td>
+      <td>
+       <img alt=" " border="0" height="1" src="/im/a.gif" width="170"/>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <table border="0" cellpadding="0" cellspacing="10" width="100%">
+    <tbody>
+     <tr>
+      <td>
+       <table border="0" cellpadding="0" cellspacing="0" class="vatop" width="100%">
+        <tbody>
+         <tr>
+          <td class="grey3" colspan="4" valign="top">
+           <img alt="" border="0" height="2" src="/im/a.gif" width="1"/>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           <img alt="" border="0" height="1" src="/im/a.gif" width="190"/>
+           <br/>
+           <a href="http://www.sun.com">
+            <img alt="" border="0" height="29" src="/im/logo_sun_small_sdn.gif" vspace="5" width="61"/>
+           </a>
+          </td>
+          <td valign="top" width="100%">
+           <img alt="" border="0" height="1" src="/im/a.gif" width="350"/>
+           <br/>
+           <div class="footer">
+            <a href="http://developers.sun.com/global/aboutsun.html">
+             <span __boilernet_label="0" __num="603">
+              About Sun
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="604">
+             |
+            </span>
+            <a href="http://developers.sun.com/global/aboutsdn.html">
+             <span __boilernet_label="0" __num="605">
+              About This Site
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="606">
+             |
+            </span>
+            <a href="http://developers.sun.com/global/newsletters.html">
+             <span __boilernet_label="0" __num="607">
+              Newsletters
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="608">
+             |
+            </span>
+            <a href="http://developers.sun.com/global/contact.html">
+             <span __boilernet_label="0" __num="609">
+              Contact Us
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="610">
+             |
+            </span>
+            <a href="http://developers.sun.com/global/employment.html">
+             <span __boilernet_label="0" __num="611">
+              Employment
+             </span>
+            </a>
+            <br/>
+            <a href="http://developers.sun.com/global/howtobuy.html">
+             <span __boilernet_label="0" __num="612">
+              How to Buy
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="613">
+             |
+            </span>
+            <a href="http://developers.sun.com/global/licensing.html">
+             <span __boilernet_label="0" __num="614">
+              Licensing
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="615">
+             |
+            </span>
+            <a href="http://developers.sun.com/global/termsofuse.html">
+             <span __boilernet_label="0" __num="616">
+              Terms of Use
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="617">
+             |
+            </span>
+            <a href="http://developers.sun.com/global/privacy.html">
+             <span __boilernet_label="0" __num="618">
+              Privacy
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="619">
+             |
+            </span>
+            <a href="http://developers.sun.com/global/trademarks.html">
+             <span __boilernet_label="0" __num="620">
+              Trademarks
+             </span>
+            </a>
+            <br/>
+            <span class="sp10">
+            </span>
+            <br/>
+            <br/>
+            <span class="sp10">
+            </span>
+            <br/>
+            <span __boilernet_label="0" __num="621">
+             Copyright 1994-2006 Sun Microsystems, Inc.
+            </span>
+           </div>
+          </td>
+          <td>
+           <img alt="" border="0" height="1" src="/im/a.gif" width="40"/>
+          </td>
+          <td valign="top">
+           <div class="footer">
+            <b>
+             <a href="http://developers.sun.com/global/aboutsdn.html">
+              <span __boilernet_label="0" __num="622">
+               A Sun Developer Network Site
+              </span>
+             </a>
+            </b>
+           </div>
+           <div class="footer">
+            <img alt="" border="0" height="1" src="/im/a.gif" width="170"/>
+            <br/>
+            <span __boilernet_label="0" __num="623">
+             Unless otherwise licensed, code in all technical manuals herein (including articles, FAQs, samples) is provided under this
+            </span>
+            <a href="http://developers.sun.com/global/berkeley_license.html">
+             <span __boilernet_label="0" __num="624">
+              License
+             </span>
+            </a>
+            <span __boilernet_label="0" __num="625">
+             .
+            </span>
+            <br/>
+            <span class="sp5">
+            </span>
+            <br/>
+            <a href="http://developers.sun.com/global/rss_sdn.html">
+             <img align="top" alt="XML" border="0" height="14" src="/im/button_xml.gif" width="36"/>
+            </a>
+            <a href="http://developers.sun.com/global/content_feeds.html">
+             <span __boilernet_label="0" __num="626">
+              Content Feeds
+             </span>
+            </a>
+           </div>
+          </td>
+         </tr>
+         <tr>
+          <td class="grey3" colspan="4" valign="top">
+           <img alt="" border="0" height="2" src="/im/a.gif" width="1"/>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </text>
+ </body>
+</html>
