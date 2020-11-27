@@ -13,7 +13,7 @@ from sklearn.utils import class_weight
 from leaf_classifier import LeafClassifier
 
 
-def get_dataset(dataset_file, batch_size, repeat=True):
+def get_dataset(dataset_file, batch_size, repeat=True, shuffle=True):
     def _read_example(example):
         desc = {
             'doc_feature_list': tf.io.VarLenFeature(tf.int64),
@@ -24,14 +24,23 @@ def get_dataset(dataset_file, batch_size, repeat=True):
                tf.sparse.to_dense(seq_features['doc_label_list'])
 
     buffer_size = 10 * batch_size
-    dataset = tf.data.TFRecordDataset([dataset_file]) \
-        .map(_read_example, num_parallel_calls=4) \
-        .prefetch(buffer_size) \
-        .padded_batch(
-            batch_size=batch_size,
-            padded_shapes=([None, None], [None, 1]),
-            padding_values=(tf.constant(0, dtype=tf.int64), tf.constant(0, dtype=tf.int64))) \
-        .shuffle(buffer_size=buffer_size)
+    if shuffle:
+        dataset = tf.data.TFRecordDataset([dataset_file]) \
+            .map(_read_example, num_parallel_calls=4) \
+            .prefetch(buffer_size) \
+            .padded_batch(
+                batch_size=batch_size,
+                padded_shapes=([None, None], [None, 1]),
+                padding_values=(tf.constant(0, dtype=tf.int64), tf.constant(0, dtype=tf.int64))) \
+            .shuffle(buffer_size=buffer_size)
+    else:
+         dataset = tf.data.TFRecordDataset([dataset_file]) \
+            .map(_read_example, num_parallel_calls=4) \
+            .prefetch(buffer_size) \
+            .padded_batch(
+                batch_size=batch_size,
+                padded_shapes=([None, None], [None, 1]),
+                padding_values=(tf.constant(0, dtype=tf.int64), tf.constant(0, dtype=tf.int64)))
     if repeat:
         return dataset.repeat()
     return dataset

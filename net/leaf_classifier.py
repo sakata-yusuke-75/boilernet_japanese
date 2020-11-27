@@ -93,3 +93,14 @@ class LeafClassifier(object):
             y_true.extend(b_y.numpy().flatten())
             y_pred.extend(np.around(self.model.predict_on_batch(b_x)).flatten())
         return y_true, y_pred
+
+    def eval_recall(self, dataset, steps, desc=None, balance=0):
+        """Evaluate the model on the test data and return the metrics."""
+        y_true, y_pred = [], []
+        for b_x, b_y in tqdm(dataset, total=steps, desc=desc):
+            # somehow this cast is necessary
+            b_x = tf.dtypes.cast(b_x, 'float32')
+
+            y_true.extend(b_y.numpy().flatten())
+            y_pred.extend(np.around(self.model.predict_on_batch(b_x) + 0.4).flatten())
+        return y_true, y_pred

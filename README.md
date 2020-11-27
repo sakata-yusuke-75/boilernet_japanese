@@ -1,5 +1,8 @@
-# BoilerNet
-This is the implementation of our paper [Boilerplate Removal using a Neural Sequence Labeling Model](https://dl.acm.org/doi/abs/10.1145/3366424.3383547).
+# boilernetの日本語対応
+boilernetを日本語対応したモデルです。
+googletrendsデータセットをgoogle翻訳で日本語にしたものとそれを用いて学習したモデルを公開しています。
+訓練時のパラメータやデータセットの詳細などは元のgithubをご参照ください。
+https://github.com/mrjleo/boilernet
 
 ## Requirements
 This code is tested with Python 3.7.5 and
@@ -10,18 +13,28 @@ This code is tested with Python 3.7.5 and
 * beautifulsoup4==4.8.1
 * html5lib==1.0.1
 * scikit-learn==0.21.3
+* transformer==3.1.0
+* scipy==1.4.1
+
 
 ## Usage
-The following datasets are included and ready to use:
-* L3S-GN1
-* CleanEval
+以下のデータセットについて使用可能です。
 * GoogleTrends-2017
+
+また以降のコードを動かす前にnltkのダウンロードを済ませておかないとパースに失敗します。
+```
+python -c "import nltk; nltk.download('punkt')
+```
+
+前処理と学習の方法については元論文を参照してください。
+ここでは追加した日本語文書学習方用の引数と日本語文書の予測方法について記述します。
 
 ### Preprocessing
 ```
 usage: preprocess.py [-h] [-s SPLIT_DIR] [-w NUM_WORDS] [-t NUM_TAGS]
                      [--save SAVE]
                      DIRS [DIRS ...]
+                     [-td TRAIN_DIR][-l LANGUAGE]
 
 positional arguments:
   DIRS                  A list of directories containing the HTML files
@@ -35,71 +48,46 @@ optional arguments:
   -t NUM_TAGS, --num_tags NUM_TAGS
                         Only use the top-l HTML tags
   --save SAVE           Where to save the results
+  -td TRAIN_DIR, --train_dir TRAIN_DIR
+                        訓練時に前処理済みファイルを保存したディレクトリです。この引数が存在する場合はこのディレクトリの語彙を用いてDIRSのデータを前処理します。
+  -language LANGUAGE
+                        この引数にJapaneseが入っているとトークナイザーを日本語対応のものに切り替えます。デフォルトはEnglishです。
 ```
-First, preprocess your dataset, for example:
+学習の際はtrain_dirの引数は入れないでください。
+予測の際はtrain_dirに訓練に用いたにディレクトリを,DATA_DIRに予測したいhtmlファイルが入ったディレクトリを指定してください。
+以下に一例を載せます。
 ```
-python3 net/preprocess.py datasets/googletrends/prepared_html/ -s datasets/googletrends/50-30-100-split/ -w 1000 -t 50 --save ~/googletrends_data
+python3 net/preprocess.py ~/source/ -w 5000 -t 50 --save ~/local_data_japan -td ~/googletrends_japanese_data_5000 -j Japanese
 ```
 
 ### Training
-The training script takes care of both training and evaluating on dev- and testset:
-```
-usage: train.py [-h] [-l NUM_LAYERS] [-u HIDDEN_UNITS] [-d DROPOUT]
-                [-s DENSE_SIZE] [-e EPOCHS] [-b BATCH_SIZE]
-                [--interval INTERVAL] [--working_dir WORKING_DIR]
-                DATA_DIR
+学習のスクリプトの使用方法は元コードから変更が無いため割愛します。
 
-positional arguments:
-  DATA_DIR              Directory of files produced by the preprocessing
-                        script
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -l NUM_LAYERS, --num_layers NUM_LAYERS
-                        The number of RNN layers
-  -u HIDDEN_UNITS, --hidden_units HIDDEN_UNITS
-                        The number of hidden LSTM units
-  -d DROPOUT, --dropout DROPOUT
-                        The dropout percentage
-  -s DENSE_SIZE, --dense_size DENSE_SIZE
-                        Size of the dense layer
-  -e EPOCHS, --epochs EPOCHS
-                        The number of epochs
-  -b BATCH_SIZE, --batch_size BATCH_SIZE
-                        The batch size
-  --interval INTERVAL   Calculate metrics and save the model after this many
-                        epochs
-  --working_dir WORKING_DIR
-                        Where to save checkpoints and logs
+### Prediction
 ```
+usage: preprocess.py [-w WORKING_DIR] [-i PREDICT_INPUT_DIR]
+                     [-o PREDICT_OUTPUT_DIR] 
+                     [-r PREDICT_RAW_DIR]
+                     [-p CHECKPOINT_NUMBER]
+                     [-b BALANCE]
 
-For example, the model can be trained like this:
+arguments:
+  -w WORKING_DIR
+          訓練時に用いたWORKING_DIR
+  -i PREDICT_INPUT_DIR
+          前処理済みの予測したいデータのディレクトリ
+  -o PREDICT_OUTPUT_DIR
+          予測後の本文のテキスト情報、削除されたテキスト情報を出力するディレクトリ
+  -r PREDICT_RAW_DIR
+          前処理前の予測したいデータのディレクトリ
+  -p CHECKPOINT_NUMBER
+          予測に用いるモデルの保存されているチェックポイントの番号
+  -b BALANCE
+          予測値に足し合わせる数
+          0.4にすると、本来0.5以上で本文と予測される所を0.1以上で本文と予測されるようになります
 ```
-python3 net/train.py ~/googletrends_data/ -e 50 --working_dir ~/googletrends_train
+使用例としては以下のようになります。
+```
+python net net/predict.py -w ~/googletrends_japanese_train_5000 -i ~/local_data_japan -o ~/日本語対応_recall調整版 -r ~/source/ -p 9
 ```
 
-## Hyperparameters
-In order to reproduce the paper results, use the following hyperparameters:
-* `-s datasets/googletrends/50-30-100-split/ -w 1000 -t 50` (during preprocessing)
-* `-l 2 -u 256 -d 0.5 -s 256 -e 50 -b 16 --interval 1` (during training)
-
-Select the checkpoint with the highest F1 score on the validation set.
-
-## Citation
-```
-@inproceedings{10.1145/3366424.3383547,
-author = {Leonhardt, Jurek and Anand, Avishek and Khosla, Megha},
-title = {Boilerplate Removal Using a Neural Sequence Labeling Model},
-year = {2020},
-isbn = {9781450370240},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3366424.3383547},
-doi = {10.1145/3366424.3383547},
-booktitle = {Companion Proceedings of the Web Conference 2020},
-pages = {226–229},
-numpages = {4},
-location = {Taipei, Taiwan},
-series = {WWW ’20}
-}
-```

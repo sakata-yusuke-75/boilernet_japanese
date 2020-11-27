@@ -14,7 +14,8 @@ from bs4 import BeautifulSoup, Comment, NavigableString
 from tqdm import tqdm
 
 from misc import util
-
+#berttokenizerを追加
+from transformers.tokenization_bert_japanese import BertJapaneseTokenizer
 
 def get_leaves(node, tag_list=[], label=0):
     """Return all leaves (NavigableStrings) in a BS4 tree."""
@@ -33,25 +34,30 @@ def get_leaves(node, tag_list=[], label=0):
     return result
 
 
-def get_leaf_representation(node, tag_list, label):
+def get_leaf_representation(node, tag_list, label, tokenize = None):
     """Return dicts of words and HTML tags that representat a leaf."""
     tags_dict = defaultdict(int)
     for tag in tag_list:
         tags_dict[tag] += 1
     words_dict = defaultdict(int)
-    for word in nltk.word_tokenize(node.string):
+    if tokenize is None:
+        tokenize = nltk.word_tokenize
+        words = tokenize(node.string)
+    else:
+        words = tokenize.convert_ids_to_tokens(tokenize.encode(node.string)[1:-1])
+    for word in words:#nltk.word_tokenize(node.string):
         words_dict[word.lower()] += 1
     return dict(words_dict), dict(tags_dict), label
 
 
-def process(doc, tags, words):
+def process(doc, tags, words, tokenize = None):
     """
     Process "doc", updating the tag and word counts.
     Return the document representation, the HTML tags and the words.
     """
     result = []
     for leaf, tag_list, is_content in get_leaves(doc.find_all('html')[0]):
-        leaf_representation = get_leaf_representation(leaf, tag_list, is_content)
+        leaf_representation = get_leaf_representation(leaf, tag_list, is_content, tokenize =tokenize)
         result.append(leaf_representation)
         words_dict, tags_dict, _ = leaf_representation
         for word, count in words_dict.items():
@@ -61,7 +67,28 @@ def process(doc, tags, words):
     return result
 
 
-def parse(filenames):
+def process_doc(doc, tags, words):
+    """
+    Process "doc", updating the tag and word counts.
+    Return the document representation, the HTML tags and the words.
+    """
+    result = []
+    for leaf, tag_list, is_content in get_leaves(doc.find_all('html')[0]):
+        result.append(leaf)
+    return result
+
+def process_testdata(doc, tags, words, tokenize = None):
+    """
+    Process "doc", updating the tag and word counts.
+    Return the document representation, the HTML tags and the words.
+    """
+    result = []
+    for leaf, tag_list, is_content in get_leaves(doc.find_all('html')[0]):
+        leaf_representation = get_leaf_representation(leaf, tag_list, is_content, tokenize = tokenize)
+        result.append(leaf_representation)
+    return result
+
+def parse_doc(filenames):
     """
     Read and parse all HTML files.
     Return the parsed documents and a set of all words and HTML tags.
@@ -75,11 +102,53 @@ def parse(filenames):
             with open(f, 'rb') as hfile:
                 doc = BeautifulSoup(hfile, features='html5lib')
             basename = os.path.basename(f)
-            result[basename] = process(doc, tags, words)
+            result[basename] = process_doc(doc, tags, words)
         except:
             tqdm.write('error processing {}'.format(f))
     return result, tags, words
 
+def parse(filenames, language = "English"):
+    """
+    Read and parse all HTML files.
+    Return the parsed documents and a set of all words and HTML tags.
+    """
+    result = {}
+    tags = defaultdict(int)
+    words = defaultdict(int)
+    tokenize = None
+    if language == "Japanese":
+        tokenize = BertJapaneseTokenizer.from_pretrained('cl-tohoku/bert-base-japanese-whole-word-masking')
+        
+
+    for f in tqdm(filenames):
+        #try:
+        with open(f, 'rb') as hfile:
+            doc = BeautifulSoup(hfile, features='html5lib')
+        basename = os.path.basename(f)
+        result[basename] = process(doc, tags, words, tokenize = tokenize)
+        # except:
+        #     tqdm.write('error processing {}'.format(f))
+    return result, tags, words
+
+def parse_testdata(filenames, tags, words, language = "English"):
+    """
+    Read and parse all HTML files.
+    Return the parsed documents and a set of all words and HTML tags.
+    """
+    result = {}
+    tokenize = None
+    if language == "Japanese":
+        tokenize = BertJapaneseTokenizer.from_pretrained('cl-tohoku/bert-base-japanese-whole-word-masking')
+
+    for f in tqdm(filenames):
+        try:
+            with open(f, 'rb') as hfile:
+                doc = BeautifulSoup(hfile, features='html5lib')
+            basename = os.path.basename(f)
+            result[basename] = process_testdata(doc, tags, words, tokenize = tokenize)
+        except:
+            tqdm.write('error processing {}'.format(f))
+    return result, tags, words
 
 def get_feature_vector(words_dict, tags_dict, word_map, tag_map):
     """Return a feature vector for an item to be classified."""
@@ -140,10 +209,10 @@ def save(save_path, word_map, tag_map, train_set, dev_set=None, test_set=None):
     os.makedirs(save_path, exist_ok=True)
 
     with open(os.path.join(save_path, 'words.json'), 'w', encoding='utf-8') as fp:
-        json.dump(word_map, fp)
+        json.dump(word_map, fp,  ensure_ascii=False)
 
     with open(os.path.join(save_path, 'tags.json'), 'w', encoding='utf-8') as fp:
-        json.dump(tag_map, fp)
+        json.dump(tag_map, fp,  ensure_ascii=False)
 
     info = {}
     info['num_words'] = len(word_map)
@@ -184,14 +253,23 @@ def main():
     ap.add_argument('-w', '--num_words', type=int, help='Only use the top-k words')
     ap.add_argument('-t', '--num_tags', type=int, help='Only use the top-l HTML tags')
     ap.add_argument('--save', default='result', help='Where to save the results')
+    ap.add_argument('-td', '--train_dir', help='A list of directories containing the HTML files')
+    ap.add_argument('-l', '--language', help='A list of directories containing the HTML files')
     args = ap.parse_args()
 
     filenames = []
     for d in args.DIRS:
         filenames.extend(util.get_filenames(d))
-    data, tags, words = parse(filenames)
-    tags = get_vocabulary(tags, args.num_tags)
-    words = get_vocabulary(words, args.num_words)
+    if args.train_dir:
+        with open(os.path.join(args.train_dir, 'words.json'), 'r', encoding='utf-8') as fp:
+            words = json.load(fp)
+        with open(os.path.join(args.train_dir, 'tags.json'), 'r', encoding='utf-8') as fp:
+            tags = json.load(fp)
+        data, tags, words = parse_testdata(filenames,tags,words,language=args.language)
+    else:
+        data, tags, words = parse(filenames, language=args.language)
+        tags = get_vocabulary(tags, args.num_tags)
+        words = get_vocabulary(words, args.num_words)
 
     if args.split_dir:
         train_set_file = os.path.join(args.split_dir, 'train_set.txt')

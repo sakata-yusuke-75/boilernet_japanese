@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html><head></head><body>
+  <div id="wrapper">
+   <div class="alert alert-success" id="divAlertUseCookies" style="z-index: 10;position: fixed;bottom: 5px;left:2%;width: 96%; margin-bottom: 0px; border-radius: 0px; text-align: center; display: none">
+    <span __boilernet_label="0" __num="0">
+     更新されたものを読むことをお勧めします
+    </span>
+    <a href="/page/privacy">
+     <span __boilernet_label="0" __num="1">
+      個人情報保護方針
+     </span>
+    </a>
+    <a class="btn btn-success" href="javascript:void(0)" id="lnkAcceptCookieAlert">
+     <span __boilernet_label="0" __num="2">
+      隠す
+     </span>
+    </a>
+   </div>
+   <header class="masthead" id="masthead" style="background-color: rgb(100, 100, 102); height: auto;">
+    <div class="container">
+     <div class="row">
+      <div class="col-lg-5 col-md-6 col-sm-8 col-xs-11" id="mhLogo">
+       <a href="/">
+        <img src="https://media.noria.com/sites/reliableplant.com/images/site/header/RPlogo_450x80_091318.png" style="width: 100%; padding: 20px 20px 10px 15px; max-width: 500px;"/>
+       </a>
+      </div>
+      <div class="pull-right socialhead" style="">
+       <a href="https://www.facebook.com/noriacorp/" target="_blank">
+        <i aria-hidden="true" class="fa fa-facebook-square socialIcon_fb">
+        </i>
+       </a>
+       <a href="https://twitter.com/NoriaCorp" target="_blank">
+        <i aria-hidden="true" class="fa fa-twitter-square socialIcon_tw">
+        </i>
+       </a>
+       <a href="https://www.linkedin.com/company/noria-corporation/" target="_blank">
+        <i aria-hidden="true" class="fa fa-linkedin-square socialIcon_li">
+        </i>
+       </a>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs pull-right magImgContainer" style="overflow: hidden; height: 135px;">
+       <a class="magWidgetImg" href="/Page/subscriptions">
+        <img class="pull-right" id="magWidgetOverlay" src="https://media.noria.com/sites/reliableplant.com/images/magazines/ReliablePlant/covers_digital/RPNews_Issue_430x559_092618.png"/>
+       </a>
+      </div>
+      <div class="col-lg-2 col-md-3 pull-right contentHeadline hidden-sm hidden-xs" style="margin-top: 30px; padding: 10px; text-align: center; color: rgb(255, 207, 1); text-shadow: 0px 0px 15px #4f4f4f;">
+       <a href="/Page/subscriptions" id="subscribeLinkHeader">
+        <span __boilernet_label="0" __num="3">
+         今日購読してください！
+        </span>
+       </a>
+      </div>
+     </div>
+    </div>
+    <div style="background-color: #16612d;padding-top: 10px;padding-bottom: 10px;">
+     <div class="container">
+      <div class="row">
+       <div class="col-sm-4 col-xs-12 footerBody" style="margin-left: 20px;">
+        <a href="https://www.noria.com/" style="display: flex;line-height: 29px;" target="_blank">
+         <div style="display:inline-block;">
+          <span __boilernet_label="0" __num="4">
+           によって公開
+          </span>
+         </div>
+         <img alt="Noria Corporation" src="https://media.noria.com/sites/Email_Media/General/HeaderLogo.png" style="display: block;height: 29px;"/>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+   <div class="affix-top" id="nav">
+    <div class="navbar navbar-default navbar-static" id="bsMenu">
+     <div class="container">
+      <div class="navbar-header">
+       <div id="divToggleSearch">
+       </div>
+       <a class="navbar-brand" href="/" style="padding: 0; display: none;">
+        <img src="https://media.noria.com/sites/reliableplant.com/images/site/header/RPlogo_450x80_091318.png" style="height: 42px; padding: 5px 3px 0 5px; margin-right: 10px;"/>
+       </a>
+      </div>
+      <div aria-expanded="false" class="navbar-collapse collapse" id="mainNav" style="height: 1px;">
+       <ul class="nav navbar-nav">
+        <li class="dropdown newsDD menuItem">
+         <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle navLink" data-toggle="dropdown" href="#" role="button">
+          <span __boilernet_label="0" __num="7">
+           ニュースレター
+          </span>
+          <span class="caret">
+          </span>
+         </a>
+         <ul class="dropdown-menu ddNews">
+          <li>
+           <a href="/Newsletter/Show?type=ReliablePlant">
+            <span __boilernet_label="0" __num="8">
+             信頼できるプラント
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="/Newsletter/Show?type=LubeTips">
+            <span __boilernet_label="0" __num="9">
+             潤滑油-ヒント
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="/Newsletter/Show?type=MachineryLubrication">
+            <span __boilernet_label="0" __num="10">
+             機械の潤滑
+            </span>
+           </a>
+          </li>
+          <li class="divider" role="separator">
+          </li>
+          <li>
+           <a href="/Newsletter/All">
+            <span __boilernet_label="0" __num="11">
+             すべてのオプション
+            </span>
+           </a>
+          </li>
+          <div class="ddShadow">
+          </div>
+         </ul>
+        </li>
+        <li class="divider-vertical">
+        </li>
+        <li class="dropdown catDD menuItem">
+         <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle navLink" data-toggle="dropdown" href="#" role="button">
+          <span __boilernet_label="0" __num="12">
+           トピック
+          </span>
+          <span class="caret">
+          </span>
+         </a>
+         <ul class="dropdown-menu ddCat">
+          <li>
+           <a href="/Meta/Tags/maintenance%20and%20reliability">
+            <span __boilernet_label="0" __num="13">
+             メンテナンスと信頼性
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="/Meta/Tags/lean%20manufacturing">
+            <span __boilernet_label="0" __num="14">
+             リーン生産方式
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="/Meta/Tags/energy%20management">
+            <span __boilernet_label="0" __num="15">
+             エネルギー管理
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="/Meta/Tags/workplace%20safety">
+            <span __boilernet_label="0" __num="16">
+             職場の安全
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="/Meta/Tags/talent%20management">
+            <span __boilernet_label="0" __num="17">
+             タレントマネジメント
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="/Meta/Tags/iiot">
+            <span __boilernet_label="0" __num="18">
+             IIoT
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="/Meta/Tags/reliability-centered%20maintenance">
+            <span __boilernet_label="0" __num="19">
+             RCM
+            </span>
+           </a>
+          </li>
+          <li class="divider" role="separator">
+          </li>
+          <li>
+           <a href="/Meta/Topics">
+            <span __boilernet_label="0" __num="20">
+             すべてのトピック
+            </span>
+           </a>
+          </li>
+          <div class="ddShadow">
+          </div>
+         </ul>
+        </li>
+        <li class="divider-vertical">
+        </li>
+        <li class="menuItem navLink">
+         <a href="/Articles/ViewAll/Videos">
+          <span __boilernet_label="0" __num="21">
+           ビデオ
+          </span>
+         </a>
+        </li>
+        <li class="divider-vertical">
+        </li>
+        <li class="dropdown catDD menuItem">
+         <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle navLink" data-toggle="dropdown" href="#" role="button">
+          <span __boilernet_label="0" __num="22">
+           トレーニングとイベント
+          </span>
+          <span class="caret">
+          </span>
+         </a>
+         <ul class="dropdown-menu ddCat">
+          <li>
+           <a href="https://www.noria.com/train/lubrication-training/" target="_blank">
+            <span __boilernet_label="0" __num="23">
+             機械潤滑レベル1
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="https://www.noria.com/train/lubrication-training-ii/" target="_blank">
+            <span __boilernet_label="0" __num="24">
+             機械潤滑レベル2
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="https://www.noria.com/train/oil-analysis/" target="_blank">
+            <span __boilernet_label="0" __num="25">
+             オイル分析レベル2
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="https://www.noria.com/train/oil-analysis-iii/" target="_blank">
+            <span __boilernet_label="0" __num="26">
+             オイル分析レベル3
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="https://store.noria.com/collections/online-training" target="_blank">
+            <span __boilernet_label="0" __num="27">
+             オンライントレーニング
+            </span>
+           </a>
+          </li>
+          <li class="divider" role="separator">
+          </li>
+          <li>
+           <a href="https://conference.reliableplant.com" target="_blank">
+            <span __boilernet_label="0" __num="28">
+             信頼できるプラント会議
+            </span>
+           </a>
+          </li>
+          <li>
+           <a href="https://conference.machinerylubrication.com" target="_blank">
+            <span __boilernet_label="0" __num="29">
+             機械潤滑会議
+            </span>
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="divider-vertical">
+        </li>
+        <li class="menuItem navLink">
+         <a href="https://store.noria.com" target="_blank">
+          <span __boilernet_label="0" __num="30">
+           本
+          </span>
+         </a>
+        </li>
+        <li class="divider-vertical">
+        </li>
+        <li class="menuItem navLink">
+         <a href="/BuyersGuide">
+          <span __boilernet_label="0" __num="31">
+           バイヤーズガイド
+          </span>
+         </a>
+        </li>
+       </ul>
+       <div class="navbar-form navbar-right hidden-xs hidden-xxs" id="divSearchForm">
+        <form _lpchecked="1" action="/Articles/Search" method="post">
+         <a href="javascript:void(0);" id="lnkShowSearch">
+          <i aria-hidden="true" class="fa fa-search" style="color: #777777">
+          </i>
+         </a>
+        </form>
+       </div>
+      </div>
+      <div id="search">
+       <div style="display: inline-block">
+       </div>
+       <form action="/Articles/Search" method="post">
+       </form>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container">
+    <div id="fb-root">
+    </div>
+    <div class="row">
+     <div class="col-xs-12">
+      <div class="row">
+       <div class="col-xs-12">
+        <div class="flexLeader">
+         <div class="dynamicAd" data-custom1="" data-custom2="" data-id="ad_131828609727311462_59" data-pid="0" data-zid="59" id="ad_131828609727311462_59">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="article1">
+     <div class="row">
+      <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12 articleBox">
+       <div class="oldArt">
+        <div class="col-xs-12" id="ArticleButtonsTop">
+         <ul id="ArticleOperations" style="margin: 0px; margin-left: 2px">
+          <li id="AO1">
+           <a href="/Articles/Print/15573" target="_blank">
+            <i aria-hidden="true" class="fa fa-print">
+            </i>
+            <span>
+             <span __boilernet_label="0" __num="34">
+              印刷
+             </span>
+            </span>
+           </a>
+          </li>
+         </ul>
+         <div style="display: inline; float: right">
+          <a href="javascript:void(0)" onclick="javascript:shareLinkedIn('https://www.reliableplant.com/Read/15573/story-behind-steel-logo-on-steelers'-helmet');">
+           <div id="linkedInSharer">
+           </div>
+          </a>
+         </div>
+         <div style="display: inline; float: right; margin-right: 2px">
+          <a class="twitter-share-button twitter-share-button-error" data-count="vertical" data-text="Reliable Plant - The story behind the steel logo on Steelers' helmet" data-twitter-extracted-i1538387383487899428="true" data-url="https://www.reliableplant.com/Read/15573/story-behind-steel-logo-on-steelers'-helmet" data-via="NoriaCorp" href="https://twitter.com/share">
+           <span __boilernet_label="0" __num="35">
+            つぶやき
+           </span>
+          </a>
+         </div>
+         <div style="display: inline; float: right">
+          <div -helmet'="" class="fb-like fb_iframe_widget" data-action="like" data-href="https://www.reliableplant.com/Read/15573/story-behind-steel-logo-on-steelers" data-layout="button_count" data-share="true" data-show-faces="false" data-size="small" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%www.reliableplant.com%2FRead%2F15573%2Fhydraulic-tools&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false&amp;size=small" fb-xfbml-state="rendered">
+           <span style="vertical-align: bottom; height: 20px;">
+           </span>
+          </div>
+         </div>
+        </div>
+        <h1 class="ArtTitle">
+         <span __boilernet_label="1" __num="36">
+          スティーラーズのヘルメットのスチールロゴの裏話
+         </span>
+        </h1>
+        <span class="ArtByline">
+         <span class="ArtByLineEntry">
+          <a class="ArtAuthorByline" href="/Authors/Detail/608">
+           <span __boilernet_label="1" __num="37">
+            RPニュースワイヤー
+           </span>
+          </a>
+          <span __boilernet_label="1" __num="38">
+           、
+          </span>
+          <span class="ArtCompanyByline">
+           <span __boilernet_label="1" __num="39">
+            ノリア株式会社
+           </span>
+          </span>
+         </span>
+        </span>
+        <br/>
+        <div>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="40">
+            トロイ・ポラマル、コカ・コーラ、鉄鋼の共通点は何ですか？運命がそれを持っているように、スティーラーズのセーフティポラマルはコカコーラアドスーパーボウルサンデーに登場し、「ミーンジョーグリーンが彼にコークスを手渡す子供に慰められる」1980年のコマーシャルの思い出を呼び戻すだけではありません。 「しかし、2つの強力なブランドとスティーラーズのディフェンシブラインの圧倒的な強さを彼と一緒に運ぶでしょう。
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="41">
+            ピッツバーグスティーラーズの有名な3つ星のロゴは、スポーツで最もよく知られているシンボルの1つです。これは、スチールの固有の強度と靭性が、スティーラーズの非常に宣伝された骨を砕く防御に完全に一致するためです。スティーラーズのヘルメットにあるスチールの商標ロゴだけが、これらの強みを世界的に認め、評価しています。
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="42">
+            アートルーニーがNFLフランチャイズを購入してから70年後、スーパーボウルで5回勝利した後、チームとそれが代表するスティールシティの強さを象徴するようになりました。しかし、星のような数字が何を意味し、ロゴがどこから来たのかを知っているファンは何人いますか？
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="43">
+            実際、円内の3つの4先の尖った星のような人物は、幾何学的な起源からハイポサイクロイドと呼ばれ、ルーニーがサッカーチームにスティールマークを採用した1962年にNFLに到達しました。 Steelersのロゴは、American Iron and Steel Institute（AISI）に属するSteelmarkのロゴに基づいています。 Steelmarkは、もともとUnited States Steel Corporationが鉄鋼の属性を宣伝するために作成したものです。黄色は、作業を明るくします。オレンジはあなたの余暇を明るくします。そして青はあなたの世界を広げます。ロゴの意味は、鉄鋼の製造に使用される3つの材料を表すために後で修正されました。鉄鉱石の場合はオレンジ。鉄スクラップの場合は青。
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="44">
+            1960年代初頭、ロゴが完成する前に、スティーラーズはスティールマーク内の「スティーラーズ」という単語を「スティーラーズ」に変更するためにAISIに請願しなければなりませんでした。クリーブランドのリパブリック・スチールは、スティーラーズにヘルメットのロゴとしてスティールマークを使用することを提案しました。
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="45">
+            スティーラーズは、ヘルメットの片側だけにロゴを表示する唯一のNFLチームです。スティーラーズはオールゴールドのヘルメットのロゴの外観を望んでいると確信していなかったため、当初、これは一時的な措置でした。彼らは全面的に行く前にそれらをテストしたかった。
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="46">
+            当時の機器マネージャーは、ヘルメットの片側、つまり右側にのみロゴを配置するように指示されていました。 1962年のスティーラーズは9-5でフィニッシュし、これまでのフランチャイズ史上最も多くの勝利を収めたチームになりました。チームはイースタンカンファレンスで2位に終わり、プレイオフボウルの資格を得ました。彼らは最初のポストシーズンゲームのために何か特別なことをしたかったので、ヘルメットの色を金から黒に変更しました。これは新しいロゴを強調するのに役立ちました。
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="47">
+            ヘルメットの片側だけにロゴを付けることによって生み出された関心と、チームの新たな成功のために、スティーラーズはヘルメットを永久にそのままにしておくことにしました。今日のヘルメットは、ロゴが最初に適用された方法を反映しており、変更されたことはありません。
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+          <span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Arial','sans-serif';  ">
+           <span __boilernet_label="1" __num="48">
+            AISIは、公共政策の分野で北米の鉄鋼業界の声として機能し、市場での鉄鋼の優先材料としての主張を前進させます。 AISIはまた、新しい鋼と製鋼技術の開発と応用において主導的な役割を果たしています。 AISIは、統合および電気炉の鉄鋼メーカーを含む25のメンバー企業と、鉄鋼業界のサプライヤーまたは顧客である130の関連メンバーで構成されています。 AISIのメンバー企業は、米国と北米の両方の鉄鋼生産能力の70％以上を占めています。
+           </span>
+          </span>
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p class="MsoNormal" style="MARGIN: 0in 0in 0pt">
+         </p>
+         <p>
+          <span class="hs-cta-wrapper" id="hs-cta-wrapper-5d0e774b-7906-4bb3-9a89-5c896fbb0780">
+           <span class="hs-cta-node hs-cta-5d0e774b-7906-4bb3-9a89-5c896fbb0780" id="hs-cta-5d0e774b-7906-4bb3-9a89-5c896fbb0780" style="visibility: visible;">
+            <a href="https://cta-redirect.hubspot.com/cta/redirect/3951034/5d0e774b-7906-4bb3-9a89-5c896fbb0780">
+             <img alt="Begin a Free Subscription to Machinery Lubrication" class="hs-cta-img" id="hs-cta-img-5d0e774b-7906-4bb3-9a89-5c896fbb0780" src="https://no-cache.hubspot.com/cta/default/3951034/5d0e774b-7906-4bb3-9a89-5c896fbb0780.png" style="border-width: 0px;"/>
+            </a>
+           </span>
+          </span>
+         </p>
+         <div id="authorBox">
+          <br/>
+          <b>
+           <span __boilernet_label="0" __num="49">
+            著者について
+           </span>
+          </b>
+          <div class="AuthorFooter" itemscope="" itemtype="https://schema.org/Person">
+           <div>
+            <div id="AuthorDetails">
+             <div>
+              <span itemprop="name">
+               <b>
+                <a href="/Authors/Detail/608">
+                 <span __boilernet_label="0" __num="50">
+                  RPニュースワイヤー
+                 </span>
+                </a>
+               </b>
+              </span>
+             </div>
+            </div>
+           </div>
+           <div style="clear: both">
+           </div>
+          </div>
+         </div>
+        </div>
+        <div>
+        </div>
+        <div class="divSuggestedArticles">
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12" id="sidebarContainer">
+       <div class="col-xs-12">
+        <div class="Skyscraper">
+         <div class="dynamicAd" data-custom1="" data-custom2="" data-id="ad_131828609727311462_34" data-pid="0" data-zid="34" id="ad_131828609727311462_34">
+         </div>
+        </div>
+        <div class="list-group sbFeatureArticles col-sm-12 col-xs-12">
+         <a class="list-group-item active" href="#">
+          <div class="list-group-item-heading">
+           <span __boilernet_label="0" __num="51">
+            関連記事
+           </span>
+          </div>
+         </a>
+         <a class="list-group-item" href="/Read/30623/workplace-safety-industries">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="sba_section">
+            <span __boilernet_label="0" __num="52">
+             職場の安全性が懸念される4つのリスクの高い産業
+            </span>
+           </div>
+          </div>
+         </a>
+         <a class="list-group-item" href="/Read/30318/machine-criticality-ratings">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="sba_section">
+            <span __boilernet_label="0" __num="53">
+             機械の臨界評価の値
+            </span>
+           </div>
+          </div>
+         </a>
+         <a class="list-group-item" href="/Read/28651/discipline-diligence-key">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="sba_section">
+            <span __boilernet_label="0" __num="54">
+             規律と勤勉さが根本原因分析の鍵
+            </span>
+           </div>
+          </div>
+         </a>
+         <a class="list-group-item" href="/Read/30710/lean-plant-cleaner">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="sba_section">
+            <span __boilernet_label="0" __num="55">
+             リーン原則を使用して、プラントをよりクリーンで効率的にします
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="Square col-sm-12 col-xs-6 col-xxs">
+         <div class="dynamicAd" data-custom1="" data-custom2="" data-id="ad_131828609727311462_39" data-pid="0" data-zid="39" id="ad_131828609727311462_39">
+         </div>
+        </div>
+        <div class="list-group sbFeatureArticles col-sm-12 col-xs-12">
+         <a class="list-group-item active" href="/whitepaper">
+          <div class="list-group-item-heading">
+           <span __boilernet_label="0" __num="56">
+            注目のホワイトペーパー
+           </span>
+          </div>
+         </a>
+         <a class="list-group-item" href="/Whitepaper/RequestPaper/447">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="wpa_section">
+            <span __boilernet_label="0" __num="57">
+             重要なシステムにおける可溶性ワニスの緩和
+            </span>
+           </div>
+          </div>
+         </a>
+         <a class="list-group-item" href="/Whitepaper/RequestPaper/446">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="wpa_section">
+            <span __boilernet_label="0" __num="58">
+             ハイブリッド分析：機械と人間による監視の価値
+            </span>
+           </div>
+          </div>
+         </a>
+         <a class="list-group-item" href="/Whitepaper/RequestPaper/445">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="wpa_section">
+            <span __boilernet_label="0" __num="59">
+             持続的な潤滑剤選択の秘密を発見する
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="list-group sbFeatureArticles col-sm-12 col-xs-12">
+         <a class="list-group-item active" href="/BuyersGuide">
+          <div class="list-group-item-heading">
+           <span __boilernet_label="0" __num="60">
+            バイヤーズガイド
+           </span>
+          </div>
+         </a>
+         <a class="list-group-item" href="/BuyersGuide/Category/Info/1">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="sba_section">
+            <span __boilernet_label="0" __num="61">
+             潤滑剤
+            </span>
+           </div>
+          </div>
+         </a>
+         <a class="list-group-item" href="/BuyersGuide/Category/Info/4">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="sba_section">
+            <span __boilernet_label="0" __num="62">
+             オイルろ過
+            </span>
+           </div>
+          </div>
+         </a>
+         <a class="list-group-item" href="/BuyersGuide/Category/Info/28">
+          <div class="list-group-item-heading contentBody sba_section">
+           <div class="sba_section">
+            <span __boilernet_label="0" __num="63">
+             潤滑剤の保管と取り扱い
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-xs-12">
+       <div class="row">
+        <div class="col-xs-12">
+         <div class="flexLeader">
+          <div class="dynamicAd" data-custom1="" data-custom2="" data-id="ad_131828609727311462_60" data-pid="0" data-zid="60" id="ad_131828609727311462_60">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="article2" style="display: none">
+    </div>
+    <div id="article3" style="display: none">
+    </div>
+    <div id="article4" style="display: none">
+    </div>
+    <div id="article5" style="display: none">
+    </div>
+   </div>
+  </div>
+  <footer>
+   <div style="background-color: #646466;">
+    <div class="container" style="padding-top: 10px; padding-bottom: 10px;">
+     <div class="row">
+      <div class="col-sm-3" style="text-align: center;">
+       <img src="https://media.noria.com/sites/reliableplant.com/images/site/header/RPlogo_450x80_091318.png" style="width: 100%; padding: 20px; max-width: 350px; display: inline-block"/>
+      </div>
+      <div class="col-sm-9">
+       <div class="col-sm-4" style="padding: 10px">
+        <div class="footerHeadline">
+         <span __boilernet_label="0" __num="64">
+          詳細情報を入手する
+         </span>
+        </div>
+        <div class="footerBody">
+         <a href="/Glossary">
+          <span __boilernet_label="0" __num="65">
+           用語集
+          </span>
+         </a>
+         <div class="bulletSep">
+          <span __boilernet_label="0" __num="66">
+           âˆ™
+          </span>
+         </div>
+         <div class="hardSep">
+          <br/>
+         </div>
+         <a href="https://www.noria.com/about-us/" target="_blank">
+          <span __boilernet_label="0" __num="67">
+           ノリアについて
+          </span>
+         </a>
+         <div class="bulletSep">
+          <span __boilernet_label="0" __num="68">
+           âˆ™
+          </span>
+         </div>
+         <div class="hardSep">
+          <br/>
+         </div>
+         <a href="/page/privacy">
+          <span __boilernet_label="0" __num="69">
+           個人情報保護方針
+          </span>
+         </a>
+         <div class="hardSep">
+          <br/>
+         </div>
+         <a href="/page/advertise" target="_blank">
+          <span __boilernet_label="0" __num="70">
+           広告掲載のご案内
+          </span>
+         </a>
+        </div>
+       </div>
+       <div class="col-sm-4" style="padding: 10px">
+        <div class="footerHeadline">
+         <span __boilernet_label="0" __num="71">
+          お問い合わせ
+         </span>
+        </div>
+        <div class="footerBody">
+         <a href="https://www.noria.com/contact-us/" target="_blank">
+          <span __boilernet_label="0" __num="72">
+           私達にメッセージを送ります
+          </span>
+         </a>
+         <br/>
+         <span __boilernet_label="0" __num="73">
+          800-597-5460
+         </span>
+         <div class="bulletSep">
+          <span __boilernet_label="0" __num="74">
+           âˆ™
+          </span>
+         </div>
+         <div class="hardSep">
+          <br/>
+         </div>
+         <span __boilernet_label="0" __num="75">
+          ファックス：918-746-0925
+         </span>
+        </div>
+       </div>
+       <div class="col-sm-4" style="padding: 10px">
+        <div class="footerHeadline">
+         <span __boilernet_label="0" __num="76">
+          その他のノリアサイト
+         </span>
+        </div>
+        <div class="footerBody">
+         <a href="https://www.machinerylubrication.com/" target="_blank">
+          <span __boilernet_label="0" __num="77">
+           機械の潤滑
+          </span>
+         </a>
+         <div class="bulletSep">
+          <span __boilernet_label="0" __num="78">
+           âˆ™
+          </span>
+         </div>
+         <div class="hardSep">
+          <br/>
+         </div>
+         <a href="https://conference.reliableplant.com" target="_blank">
+          <span __boilernet_label="0" __num="79">
+           信頼できるプラント会議
+          </span>
+         </a>
+         <div class="bulletSep">
+          <span __boilernet_label="0" __num="80">
+           âˆ™
+          </span>
+         </div>
+         <div class="hardSep">
+          <br/>
+         </div>
+         <a href="https://www.noria.com/" target="_blank">
+          <span __boilernet_label="0" __num="81">
+           ノリア
+          </span>
+         </a>
+         <div class="bulletSep">
+          <span __boilernet_label="0" __num="82">
+           âˆ™
+          </span>
+         </div>
+         <div class="hardSep">
+          <br/>
+         </div>
+         <a href="https://store.noria.com/" target="_blank">
+          <span __boilernet_label="0" __num="83">
+           ノリア書店
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div style="background-color: #035293; padding-top: 10px; padding-bottom: 10px;">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-5 col-sm-7 col-lg-push-6 col-md-push-6 col-sm-push-3 footerBody" style="line-height: 36px">
+        <div style="display: inline-block;">
+         <span __boilernet_label="0" __num="84">
+          1328 E. 43rd Court、Tulsa、OK 74105
+         </span>
+        </div>
+        <div style="display: inline-block;">
+         <span __boilernet_label="0" __num="85">
+          âˆ™
+         </span>
+        </div>
+        <div style="display: inline-block;">
+         <span __boilernet_label="0" __num="86">
+          ©2018Noria Corporation
+         </span>
+        </div>
+       </div>
+       <div class="col-md-1 col-sm-2 col-xs-4 col-lg-push-6 col-md-push-6 col-sm-push-3 col-xs-push-4">
+        <a href="https://www.noria.com/" target="_blank">
+         <img alt="Lube Tips Newsletter" src="https://media.noria.com/sites/Email_Media/General/HeaderLogo.png" style="width: 100%"/>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+ 
+</body></html>
