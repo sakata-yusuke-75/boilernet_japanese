@@ -19,9 +19,9 @@ python -c "import nltk; nltk.download('punkt')
 ここでは追加した日本語文書学習用の引数と日本語文書の予測方法について記述します。
 大きく以下の3つのステップです。
 
-- 予測したいhtmlファイルを格納したディレクトリを用意
-- 上記をpreprocess.pyで前処理
-- 前処理結果をpredict.pyで予測
+1. 予測したいhtmlファイルを格納したディレクトリを用意
+2. 上記をpreprocess.pyで前処理
+3. 前処理結果をpredict.pyで予測
 
 ### Preprocessing
 ```
@@ -48,10 +48,10 @@ optional arguments:
                         この引数にJapaneseが入っているとトークナイザーを日本語対応のものに切り替えます。デフォルトはEnglishです。
 ```
 学習の際はtrain_dirの引数は入れないでください。
-予測の際はtrain_dirに訓練に用いたディレクトリを,DATA_DIRに予測したいhtmlファイルが入ったディレクトリを指定してください。
+予測の際はtrain_dirに訓練に用いた前処理済みデータセットが保存されているディレクトリを,DATA_DIRに予測したいhtmlファイルが入ったディレクトリを指定してください。
 以下に一例を載せます。
 ```
-python3 net/preprocess.py ~/predict_source/ -w 5000 -t 50 --save ~/predict_data_japan -td ~/googletrends_japanese_data_5000 -j Japanese
+python3 net/preprocess.py ~/predict_source/ -w 5000 -t 50 --save ./preprocessed/predict_data_japan -td ./preprocessed/googletrends_japanese_data -j Japanese
 ```
 
 ### Prediction
@@ -73,18 +73,19 @@ arguments:
           前処理前の予測したいデータのディレクトリ
   -p CHECKPOINT_NUMBER
           予測に用いるモデルの保存されているチェックポイントの番号
+          WORKING_DIR内のtrain.csvを見て精度の良いモデルを選択してください
   -b BALANCE
           予測値に足し合わせる数
           0.4にすると、本来0.5以上で本文と予測される所を0.1以上で本文と予測されるようになります
 ```
 使用例としては以下のようになります。
 ```
-python net net/predict.py -w ~/googletrends_japanese_train_5000 -i ~/predict_data_japan -o ~/predict_output -r ~/predict_source/ -p 9
+python net net/predict.py -w ./working_dir/googletrends_japanese_train -i ./preprocessed/predict_data_japan -o ~/predict_output -r ~/predict_source/ -p 9
 ```
 
 -oで指定した出力ディレクトリに抽出された本文(filename_predict.txt)と除外された文章(filename_predict.txt)のtxtファイルが別々に出力されます。
 
-また再学習を行う際の学習方法は以下に記述します。変更点はほぼ無いため詳細は元のgithubをごらんください。
+また再学習を行う際の学習方法は以下に記述します。ファイルの保存場所などは少し変更していますが大筋の変更点はほぼ無いため、詳細は元のgithubをごらんください。
 
 ### Training
 ```
@@ -119,5 +120,5 @@ optional arguments:
 
 使用例は以下です。
 ```
-python3 net/train.py ~/googletrends_data/ -e 50 --working_dir ~/googletrends_japanese_train
+python3 net/train.py ./preprocessed/googletrends_japanese_data/ -e 50 --working_dir ./working_dir/googletrends_japanese_train
 ```
