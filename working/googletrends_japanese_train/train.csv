@@ -1,0 +1,3 @@
+epoch,dev_f1,dev_precision,dev_recall,dev_support,loss,test_f1,test_precision,test_recall,test_support
+0,nan,nan,nan,nan,0.49426256895065307,nan,nan,nan,nan
+1,nan,nan,nan,nan,0.6050584629962319,nan,nan,nan,nan

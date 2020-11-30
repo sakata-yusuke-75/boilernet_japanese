@@ -1,7 +1,7 @@
 # boilernetの日本語対応
 boilernetを日本語対応したモデルです。
 googletrendsデータセットをgoogle翻訳で日本語にしたものとそれを用いて学習したモデルを公開しています。
-訓練時のパラメータやデータセットの詳細などは[BoilerNetのgithub](https://github.com/mrjleo/boilernet)をご参照ください。
+訓練時のパラメータやデータセットの詳細などは[BoilerNet](https://github.com/mrjleo/boilernet)のgithubをご参照ください。
 また本コードはPython 3.7.5 で動作します。必要なライブラリの詳細はrequirements.txtをご参照ください。
 
 ## Usage
@@ -48,7 +48,7 @@ optional arguments:
 予測の際はtrain_dirに訓練に用いた前処理済みデータセットが保存されているディレクトリを,DATA_DIRに予測したいhtmlファイルが入ったディレクトリを指定してください。
 以下に一例を載せます。
 ```
-python3 net/preprocess.py ~/predict_source/ -w 5000 -t 50 --save ./preprocessed/predict_data_japan -td ./preprocessed/googletrends_japanese_data -j Japanese
+python3 net/preprocess.py ~/predict_source/ -w 5000 -t 50 --save ./preprocessed/predict_data -td ./preprocessed/googletrends_japanese_data -j Japanese
 ```
 
 ### Prediction
@@ -77,7 +77,7 @@ arguments:
 ```
 使用例としては以下のようになります。
 ```
-python3 net/predict.py -w ./working_dir/googletrends_japanese_train -i ./preprocessed/predict_data_japan -o ~/predict_output -r ~/predict_source/ -p 9
+python3 net/predict.py -w ./working/googletrends_japanese_train -i ./preprocessed/predict_data -o ~/predict_output -r ~/predict_source/ -p 9
 ```
 
 -oで指定した出力ディレクトリに抽出された本文(filename_predict.txt)と除外された文章(filename_delete.txt)のtxtファイルが別々に出力されます。
@@ -117,5 +117,5 @@ optional arguments:
 
 使用例は以下です。
 ```
-python3 net/train.py ./preprocessed/googletrends_japanese_data/ -e 50 --working_dir ./working_dir/googletrends_japanese_train
+python3 net/train.py ./preprocessed/googletrends_japanese_data/ -e 50 --working_dir ./working/googletrends_japanese_train
 ```

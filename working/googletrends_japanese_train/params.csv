@@ -1,0 +1,9 @@
+DATA_DIR,./preprocessed/googletrends_japanese_data/
+num_layers,2
+hidden_units,256
+dropout,0.5
+dense_size,256
+epochs,50
+batch_size,16
+interval,5
+working_dir,./working/googletrends_japanese_train
