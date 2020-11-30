@@ -1,16 +1,13 @@
 # boilernetの日本語対応
 boilernetを日本語対応したモデルです。
 googletrendsデータセットをgoogle翻訳で日本語にしたものとそれを用いて学習したモデルを公開しています。
-訓練時のパラメータやデータセットの詳細などは元のgithubをご参照ください。
-https://github.com/mrjleo/boilernet
-
-## Requirements
-Python 3.7.5 で動作します。必要なライブラリの詳細はrequirements.txtをご参照ください。
+訓練時のパラメータやデータセットの詳細などは[BoilerNetのgithub](https://github.com/mrjleo/boilernet)をご参照ください。
+また本コードはPython 3.7.5 で動作します。必要なライブラリの詳細はrequirements.txtをご参照ください。
 
 ## Usage
 本文抽出ツールとしての使用方法について記述します。
 
-また以降のコードを動かす前にnltkのダウンロードを済ませておかないとパースに失敗します。
+また以降のコードを動かす前にnltkのダウンロードを済ませておかないとパースに失敗します。(エラーがtry文の中で止まるので気付きにくいです。)
 ```
 python -c "import nltk; nltk.download('punkt')
 ```
@@ -80,12 +77,12 @@ arguments:
 ```
 使用例としては以下のようになります。
 ```
-python net net/predict.py -w ./working_dir/googletrends_japanese_train -i ./preprocessed/predict_data_japan -o ~/predict_output -r ~/predict_source/ -p 9
+python3 net/predict.py -w ./working_dir/googletrends_japanese_train -i ./preprocessed/predict_data_japan -o ~/predict_output -r ~/predict_source/ -p 9
 ```
 
--oで指定した出力ディレクトリに抽出された本文(filename_predict.txt)と除外された文章(filename_predict.txt)のtxtファイルが別々に出力されます。
+-oで指定した出力ディレクトリに抽出された本文(filename_predict.txt)と除外された文章(filename_delete.txt)のtxtファイルが別々に出力されます。
 
-また再学習を行う際の学習方法は以下に記述します。ファイルの保存場所などは少し変更していますが大筋の変更点はほぼ無いため、詳細は元のgithubをごらんください。
+また再学習を行う際の学習方法は以下に記述します。ファイルの保存場所などは少し変更していますが大筋の変更点はほぼ無いため、詳細はBoilerNetのgithubをご覧ください。
 
 ### Training
 ```
