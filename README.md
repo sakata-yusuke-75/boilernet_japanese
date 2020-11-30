@@ -5,29 +5,23 @@ googletrendsデータセットをgoogle翻訳で日本語にしたものとそ�
 https://github.com/mrjleo/boilernet
 
 ## Requirements
-This code is tested with Python 3.7.5 and
-* tensorflow==2.1.0
-* numpy==1.17.3
-* tqdm==4.39.0
-* nltk==3.4.5
-* beautifulsoup4==4.8.1
-* html5lib==1.0.1
-* scikit-learn==0.21.3
-* transformer==3.1.0
-* scipy==1.4.1
-
+Python 3.7.5 で動作します。必要なライブラリの詳細はrequirements.txtをご参照ください。
 
 ## Usage
-以下のデータセットについて使用可能です。
-* GoogleTrends-2017
+本文抽出ツールとしての使用方法について記述します。
 
 また以降のコードを動かす前にnltkのダウンロードを済ませておかないとパースに失敗します。
 ```
 python -c "import nltk; nltk.download('punkt')
 ```
 
-前処理と学習の方法については元論文を参照してください。
-ここでは追加した日本語文書学習方用の引数と日本語文書の予測方法について記述します。
+前処理と学習の詳細については元論文を参照してください。
+ここでは追加した日本語文書学習用の引数と日本語文書の予測方法について記述します。
+大きく以下の3つのステップです。
+
+- 予測したいhtmlファイルを格納したディレクトリを用意
+- 上記をpreprocess.pyで前処理
+- 前処理結果をpredict.pyで予測
 
 ### Preprocessing
 ```
@@ -49,19 +43,16 @@ optional arguments:
                         Only use the top-l HTML tags
   --save SAVE           Where to save the results
   -td TRAIN_DIR, --train_dir TRAIN_DIR
-                        訓練時に前処理済みファイルを保存したディレクトリです。この引数が存在する場合はこのディレクトリの語彙を用いてDIRSのデータを前処理します。
+                        訓練時に前処理済みファイルを保存したディレクトリです。この引数が存在する場合はこのディレクトリの辞書を用いてDIRSのデータを前処理します。
   -language LANGUAGE
                         この引数にJapaneseが入っているとトークナイザーを日本語対応のものに切り替えます。デフォルトはEnglishです。
 ```
 学習の際はtrain_dirの引数は入れないでください。
-予測の際はtrain_dirに訓練に用いたにディレクトリを,DATA_DIRに予測したいhtmlファイルが入ったディレクトリを指定してください。
+予測の際はtrain_dirに訓練に用いたディレクトリを,DATA_DIRに予測したいhtmlファイルが入ったディレクトリを指定してください。
 以下に一例を載せます。
 ```
-python3 net/preprocess.py ~/source/ -w 5000 -t 50 --save ~/local_data_japan -td ~/googletrends_japanese_data_5000 -j Japanese
+python3 net/preprocess.py ~/predict_source/ -w 5000 -t 50 --save ~/predict_data_japan -td ~/googletrends_japanese_data_5000 -j Japanese
 ```
-
-### Training
-学習のスクリプトの使用方法は元コードから変更が無いため割愛します。
 
 ### Prediction
 ```
@@ -88,6 +79,45 @@ arguments:
 ```
 使用例としては以下のようになります。
 ```
-python net net/predict.py -w ~/googletrends_japanese_train_5000 -i ~/local_data_japan -o ~/日本語対応_recall調整版 -r ~/source/ -p 9
+python net net/predict.py -w ~/googletrends_japanese_train_5000 -i ~/predict_data_japan -o ~/predict_output -r ~/predict_source/ -p 9
 ```
 
+-oで指定した出力ディレクトリに抽出された本文(filename_predict.txt)と除外された文章(filename_predict.txt)のtxtファイルが別々に出力されます。
+
+また再学習を行う際の学習方法は以下に記述します。変更点はほぼ無いため詳細は元のgithubをごらんください。
+
+### Training
+```
+usage: train.py [-h] [-l NUM_LAYERS] [-u HIDDEN_UNITS] [-d DROPOUT]
+                [-s DENSE_SIZE] [-e EPOCHS] [-b BATCH_SIZE]
+                [--interval INTERVAL] [--working_dir WORKING_DIR]
+                DATA_DIR
+
+positional arguments:
+  DATA_DIR              Directory of files produced by the preprocessing
+                        script
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l NUM_LAYERS, --num_layers NUM_LAYERS
+                        The number of RNN layers
+  -u HIDDEN_UNITS, --hidden_units HIDDEN_UNITS
+                        The number of hidden LSTM units
+  -d DROPOUT, --dropout DROPOUT
+                        The dropout percentage
+  -s DENSE_SIZE, --dense_size DENSE_SIZE
+                        Size of the dense layer
+  -e EPOCHS, --epochs EPOCHS
+                        The number of epochs
+  -b BATCH_SIZE, --batch_size BATCH_SIZE
+                        The batch size
+  --interval INTERVAL   Calculate metrics and save the model after this many
+                        epochs
+  --working_dir WORKING_DIR
+                        Where to save checkpoints and logs
+```
+
+使用例は以下です。
+```
+python3 net/train.py ~/googletrends_data/ -e 50 --working_dir ~/googletrends_japanese_train
+```
